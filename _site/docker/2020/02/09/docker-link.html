@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="https://gmpg.org/xfn/11" rel="profile" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+
+  <title>
+    
+      Docker volume &middot; Hydeout
+    
+  </title>
+
+  
+
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/assets/css/main.css" />
+  
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface" />
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/favicon.png" />
+<link rel="shortcut icon" href="/favicon.ico" />
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml" />
+
+  <!-- Additional head bits without overriding original head -->
+</head>
+
+
+  <body class="post">
+
+    <div id="sidebar">
+  <header>
+    <div class="site-title">
+      <a href="/">
+        
+          <span class="back-arrow icon"><svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+  <path d="M0 0h24v24H0z" fill="none"/>
+  <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+</svg></span>
+        
+        Hydeout
+      </a>
+    </div>
+    <p class="lead">The <a href="http://hyde.getpoole.com" target="_blank">Hyde</a> theme for <a href="http://jekyllrb.com" target="_blank">Jekyll</a>, refreshed.</p>
+  </header>
+  <nav id="sidebar-nav-links">
+  
+    <a class="home-link "
+        href="/">Home</a>
+  
+  
+
+  
+
+  
+
+
+  
+
+  
+    
+  
+
+  
+    
+      <a class="page-link "
+          href="/about.html">About</a>
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+
+  
+
+
+  
+
+  
+    
+      <a class="category-link "
+          href="/category/Docker">Docker</a>
+    
+  
+
+  
+    
+  
+
+  
+    
+      <a class="category-link "
+          href="/category/edge-case.html">Edge Case</a>
+    
+  
+
+  
+    
+  
+
+  
+
+  
+    
+      <a class="category-link "
+          href="/category/markup.html">Markup</a>
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+
+  <!-- Optional additional links to insert in sidebar nav -->
+</nav>
+
+
+  
+
+  <nav id="sidebar-icon-links">
+  
+
+  <a id="subscribe-link"
+     class="icon" title="Subscribe" aria-label="Subscribe"
+     href="/feed.xml">
+    <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <circle cx="6.18" cy="17.82" r="2.18"/>
+    <path d="M4 4.44v2.83c7.03 0 12.73 5.7 12.73 12.73h2.83c0-8.59-6.97-15.56-15.56-15.56zm0 5.66v2.83c3.9 0 7.07 3.17 7.07 7.07h2.83c0-5.47-4.43-9.9-9.9-9.9z"/>
+</svg>
+  </a>
+
+  
+  
+  
+  
+
+  
+    <a id="tags-link"
+       class="icon"
+       title="Tags" aria-label="Tags"
+       href="/tags.html">
+      <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z"/>
+</svg>
+    </a>
+  
+
+  
+    <a id="search-link"
+       class="icon"
+       title="Search" aria-label="Search"
+       href="/search.html">
+      <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+    <path d="M0 0h24v24H0z" fill="none"/>
+</svg>
+    </a>
+  
+
+  <!-- Optional additional links to insert for icons links -->
+</nav>
+
+  <p>
+  &copy; 2020.
+  <a href="/LICENSE.md">MIT License.</a>
+</p>
+
+</div>
+
+    <main class="container">
+      <header>
+  <h1 class="post-title">Docker volume</h1>
+</header>
+<div class="content">
+  <div class="post-meta">
+  <span class="post-date">09 Feb 2020</span>
+  <span class="post-categories">
+    
+      &bull;
+
+      
+      
+      
+
+      
+        <a href="/category/Docker">
+          Docker
+        </a>
+      
+    
+  </span>
+</div>
+
+
+  <div class="post-body">
+    <ul>
+  <li>docker volume 이란?</li>
+</ul>
+
+<p>도커는 이미지로 컨테이너를 생성하면 이미지는 읽기전용이라 쓰기가 불가능 합니다.</p>
+
+<p>그렇기 때문에 컨테이너 계층에 변화되는 데이터들이 저장이 되는데,
+이럴경우에 컨테이너가 삭제되면 그동안 저장된 데이터들이 삭제 됩니다.
+그렇게되면 복구도 불가능해지기 때문에
+컨테이너의 데이터들을 영속적으로 데이터 활용 할 수 있는 방법이 
+docker volume 을 이용하면 가능합니다.</p>
+
+<p>docker run -d
+—name {컨테이너 이름}
+-e ~~
+— link 
+-p 80
+images</p>
+
+<p>ex) -d 컨테이너를 백그라운드에서 동작하는 어플리케이션으로 실행하도록 합니다.
+-e : 환경변수 설정, 내가 volume 찾아본 이유는 postgre sql 을 이용하려고 찾아보았는데 
+이런경우에는 postgresql에서 이용할 비밀번호를 저장 할때 이부분을 이용한다.</p>
+
+<p>-e test_DB_PASSWORD=1234
+—link test:postgresql	=&gt; test라는 컨테이너를 postgres 라는 이름으로 접근하겠다는 뜻</p>
+
+<p>내가 사용한 데이터들을 볼륨으로 만들어낼 수 있고
+어떤 컨테이너에  가져다 붙혀서 사용할 수 있다.</p>
+
+<p>** volume 만드는 방법
+docker  create volume —name test</p>
+
+<p><img src="https://user-images.githubusercontent.com/40929370/74097973-dbca6800-4b55-11ea-94aa-85a5a62715aa.png" alt="image" /></p>
+
+<p><img src="https://user-images.githubusercontent.com/40929370/74097980-fbfa2700-4b55-11ea-9677-7f6cd5030032.png" alt="image" /></p>
+
+<p><img src="https://user-images.githubusercontent.com/40929370/74097985-06b4bc00-4b56-11ea-9e35-0a7adb2fdf6f.png" alt="image" /></p>
+
+
+    
+
+
+
+<div class="post-tags">
+  
+</div>
+  </div>
+
+  
+  <section class="comments">
+    <h2>Comments</h2>
+    
+  <p>
+    You are seeing this because your Disqus shortname is not properly set. To
+    configure Disqus, you should edit your <code>_config.yml</code> to include
+    either a <code>disqus.shortname</code> variable.
+  </p>
+
+  <p>
+    If you do not wish to use Disqus, override the
+    <code>comments.html</code> partial for this theme.
+  </p>
+
+
+  </section>
+
+  <section class="related">
+  <h2>Related Posts</h2>
+  <ul class="posts-list">
+    
+      <li>
+        <h3>
+          <a href="/docker/2020/02/09/docker-volume.html">
+            Docker volume
+            <small>09 Feb 2020</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/docker/2020/02/09/docker-inspect.html">
+            Docker inspect
+            <small>09 Feb 2020</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/docker/2020/02/09/docker-compose.html">
+            Docker-Compose
+            <small>09 Feb 2020</small>
+          </a>
+        </h3>
+      </li>
+    
+  </ul>
+</section>
+
+</div>
+
+    </main>
+
+    <!-- Optional footer content -->
+
+  </body>
+</html>
