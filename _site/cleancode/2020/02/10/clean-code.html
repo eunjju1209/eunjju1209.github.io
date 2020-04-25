@@ -78,6 +78,10 @@
 
   
     
+  
+
+  
+    
       <a class="page-link "
           href="/about.html">About</a>
     
@@ -108,6 +112,13 @@
 
 
   
+    
+  
+
+  
+    
+      <a class="category-link "
+          href="/category/Algorithm">Algorithm</a>
     
   
 
@@ -242,31 +253,31 @@
 
 <p>책에서 권장하지 않는 예제 소스가 있었는데 매우, 내가 회사에서 짜놓은 소스와 비슷해서 반성의 의미로 적어놓으려고 한다.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>private void printGuessStatistics(char candidate, int count) {
-    String number;
-    String verb;
-    String  pluralModifier;
-    
-    if (count == 0) {
-        number  = "no";
-        verb    = "are";
-        pluralModifier = "s";
-    } else if (count  == 1)  {
-        number = "1";
-        verb = "is";
-        pluralModifier  = "";
-    } else  {
-        number = Interger.toString(count);
-        verb =  "are";
-        pluralModifier = "s";
-    }
-    
-    String guessMessage = String.format(
-        "There %s %s %s%s", verb, number, candidate, pluralModifier 
-    );
-    
-    print(guessMessage);
-}
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="kd">private</span> <span class="kt">void</span> <span class="nf">printGuessStatistics</span><span class="o">(</span><span class="kt">char</span> <span class="n">candidate</span><span class="o">,</span> <span class="kt">int</span> <span class="n">count</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">String</span> <span class="n">number</span><span class="o">;</span>
+        <span class="nc">String</span> <span class="n">verb</span><span class="o">;</span>
+        <span class="nc">String</span>  <span class="n">pluralModifier</span><span class="o">;</span>
+        
+        <span class="k">if</span> <span class="o">(</span><span class="n">count</span> <span class="o">==</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">number</span>  <span class="o">=</span> <span class="s">"no"</span><span class="o">;</span>
+            <span class="n">verb</span>    <span class="o">=</span> <span class="s">"are"</span><span class="o">;</span>
+            <span class="n">pluralModifier</span> <span class="o">=</span> <span class="s">"s"</span><span class="o">;</span>
+        <span class="o">}</span> <span class="k">else</span> <span class="k">if</span> <span class="o">(</span><span class="n">count</span>  <span class="o">==</span> <span class="mi">1</span><span class="o">)</span>  <span class="o">{</span>
+            <span class="n">number</span> <span class="o">=</span> <span class="s">"1"</span><span class="o">;</span>
+            <span class="n">verb</span> <span class="o">=</span> <span class="s">"is"</span><span class="o">;</span>
+            <span class="n">pluralModifier</span>  <span class="o">=</span> <span class="s">""</span><span class="o">;</span>
+        <span class="o">}</span> <span class="k">else</span>  <span class="o">{</span>
+            <span class="n">number</span> <span class="o">=</span> <span class="nc">Interger</span><span class="o">.</span><span class="na">toString</span><span class="o">(</span><span class="n">count</span><span class="o">);</span>
+            <span class="n">verb</span> <span class="o">=</span>  <span class="s">"are"</span><span class="o">;</span>
+            <span class="n">pluralModifier</span> <span class="o">=</span> <span class="s">"s"</span><span class="o">;</span>
+        <span class="o">}</span>
+        
+        <span class="nc">String</span> <span class="n">guessMessage</span> <span class="o">=</span> <span class="nc">String</span><span class="o">.</span><span class="na">format</span><span class="o">(</span>
+            <span class="s">"There %s %s %s%s"</span><span class="o">,</span> <span class="n">verb</span><span class="o">,</span> <span class="n">number</span><span class="o">,</span> <span class="n">candidate</span><span class="o">,</span> <span class="n">pluralModifier</span> 
+        <span class="o">);</span>
+        
+        <span class="n">print</span><span class="o">(</span><span class="n">guessMessage</span><span class="o">);</span>
+    <span class="o">}</span>
 </code></pre></div></div>
 
 <p>위에 있는 소스가 내가 회사에서 적어놓을 만한 소스이다.. <br />
@@ -274,50 +285,48 @@
  재사용성 없이 만든 부분을 반성하고자 쓰는것이다.</p>
 
 <p>책에서 권장한, 맥락이 분명한 변수</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>public class GuessStatisticsMessage {
-    private String number;
-    private String verb;
-    private String pluralModifier;
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="kd">public</span> <span class="kd">class</span> <span class="nc">GuessStatisticsMessage</span> <span class="o">{</span>
+        <span class="kd">private</span> <span class="nc">String</span> <span class="n">number</span><span class="o">;</span>
+        <span class="kd">private</span> <span class="nc">String</span> <span class="n">verb</span><span class="o">;</span>
+        <span class="kd">private</span> <span class="nc">String</span> <span class="n">pluralModifier</span><span class="o">;</span>
+        
+        <span class="kd">public</span> <span class="nc">String</span> <span class="nf">make</span><span class="o">(</span><span class="kt">char</span> <span class="n">candidate</span><span class="o">,</span> <span class="kt">int</span> <span class="n">count</span><span class="o">)</span>  <span class="o">{</span>
+            <span class="n">createPluralDependentMessageParts</span><span class="o">(</span><span class="n">count</span><span class="o">);</span>
+            <span class="k">return</span> <span class="nc">String</span><span class="o">.</span><span class="na">format</span><span class="o">(</span>
+                <span class="s">"There %s  %s %s%s"</span><span class="o">,</span> <span class="n">verb</span><span class="o">,</span> <span class="n">number</span><span class="o">,</span> <span class="n">candidate</span><span class="o">,</span>  <span class="n">pluralModifier</span>
+            <span class="o">);</span>
+        <span class="o">}</span>
     
-    public String make(char candidate, int count)  {
-        createPluralDependentMessageParts(count);
-        return String.format(
-            "There %s  %s %s%s", verb, number, candidate,  pluralModifier
-        );
-    }
-
-    
-    private void  createPluralDependentMessageParts(int count) {
-        if (count == 0) {
-            thereAreNoLetters();
-        } else if (count == 1) {
-            thereIsOneLetter();
-        } else {
-            thereAreManyLetters(count);
-        }
-    }
-    
-    private void thereAreManyLetters(int count) {
-        number = Integer.toString(count);
-        verb = "are";
-        pluralModifier = "s";
-    }
-    
-    private void thereIsOneLetter() {
-        number = "1";
-        verb = "is";
-        pluralModifier = "";
-    }
-    
-    private void thereArenoLetters() {
-        number = "no";
-        verb = "are";
-        pluralModifier = "s";
-    }
-}
+        
+        <span class="kd">private</span> <span class="kt">void</span>  <span class="nf">createPluralDependentMessageParts</span><span class="o">(</span><span class="kt">int</span> <span class="n">count</span><span class="o">)</span> <span class="o">{</span>
+            <span class="k">if</span> <span class="o">(</span><span class="n">count</span> <span class="o">==</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
+                <span class="n">thereAreNoLetters</span><span class="o">();</span>
+            <span class="o">}</span> <span class="k">else</span> <span class="k">if</span> <span class="o">(</span><span class="n">count</span> <span class="o">==</span> <span class="mi">1</span><span class="o">)</span> <span class="o">{</span>
+                <span class="n">thereIsOneLetter</span><span class="o">();</span>
+            <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+                <span class="n">thereAreManyLetters</span><span class="o">(</span><span class="n">count</span><span class="o">);</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+        
+        <span class="kd">private</span> <span class="kt">void</span> <span class="nf">thereAreManyLetters</span><span class="o">(</span><span class="kt">int</span> <span class="n">count</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">number</span> <span class="o">=</span> <span class="nc">Integer</span><span class="o">.</span><span class="na">toString</span><span class="o">(</span><span class="n">count</span><span class="o">);</span>
+            <span class="n">verb</span> <span class="o">=</span> <span class="s">"are"</span><span class="o">;</span>
+            <span class="n">pluralModifier</span> <span class="o">=</span> <span class="s">"s"</span><span class="o">;</span>
+        <span class="o">}</span>
+        
+        <span class="kd">private</span> <span class="kt">void</span> <span class="nf">thereIsOneLetter</span><span class="o">()</span> <span class="o">{</span>
+            <span class="n">number</span> <span class="o">=</span> <span class="s">"1"</span><span class="o">;</span>
+            <span class="n">verb</span> <span class="o">=</span> <span class="s">"is"</span><span class="o">;</span>
+            <span class="n">pluralModifier</span> <span class="o">=</span> <span class="s">""</span><span class="o">;</span>
+        <span class="o">}</span>
+        
+        <span class="kd">private</span> <span class="kt">void</span> <span class="nf">thereArenoLetters</span><span class="o">()</span> <span class="o">{</span>
+            <span class="n">number</span> <span class="o">=</span> <span class="s">"no"</span><span class="o">;</span>
+            <span class="n">verb</span> <span class="o">=</span> <span class="s">"are"</span><span class="o">;</span>
+            <span class="n">pluralModifier</span> <span class="o">=</span> <span class="s">"s"</span><span class="o">;</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
 </code></pre></div></div>
-
 <p>사실 모든 소스는 재 사용성을 고려해서 모든걸 만들어야 되는걸 알지만
 실제로 잘 지켜지지 않고 실천하지 못하는 부분을 반성해야 할 것같다.</p>
 
@@ -355,6 +364,15 @@
     
       <li>
         <h3>
+          <a href="/algorithm/2020/04/25/setting.html">
+            jupyter 컨테이너 알고리즘 공부
+            <small>25 Apr 2020</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
           <a href="/docker/2020/02/09/docker-volume.html">
             Docker volume
             <small>09 Feb 2020</small>
@@ -366,15 +384,6 @@
         <h3>
           <a href="/docker/2020/02/09/docker-link.html">
             Docker link
-            <small>09 Feb 2020</small>
-          </a>
-        </h3>
-      </li>
-    
-      <li>
-        <h3>
-          <a href="/docker/2020/02/09/docker-inspect.html">
-            Docker inspect
             <small>09 Feb 2020</small>
           </a>
         </h3>

@@ -12,7 +12,7 @@ categories: CleanCode
 
 책에서 권장하지 않는 예제 소스가 있었는데 매우, 내가 회사에서 짜놓은 소스와 비슷해서 반성의 의미로 적어놓으려고 한다.
 
-
+```java
     private void printGuessStatistics(char candidate, int count) {
         String number;
         String verb;
@@ -38,6 +38,7 @@ categories: CleanCode
         
         print(guessMessage);
     }
+```
 
 
 위에 있는 소스가 내가 회사에서 적어놓을 만한 소스이다.. <br/>
@@ -45,7 +46,7 @@ categories: CleanCode
  재사용성 없이 만든 부분을 반성하고자 쓰는것이다.
 
 책에서 권장한, 맥락이 분명한 변수
-
+```java
     public class GuessStatisticsMessage {
         private String number;
         private String verb;
@@ -87,7 +88,7 @@ categories: CleanCode
             pluralModifier = "s";
         }
     }
-
+```
 사실 모든 소스는 재 사용성을 고려해서 모든걸 만들어야 되는걸 알지만
 실제로 잘 지켜지지 않고 실천하지 못하는 부분을 반성해야 할 것같다.
 
