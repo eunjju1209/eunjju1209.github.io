@@ -3,6 +3,7 @@ layout: post
 title: Docker link
 categories: Docker
 excerpt_separator:  <!--more-->
+comment:false
 ---
 
 - docker link 란?

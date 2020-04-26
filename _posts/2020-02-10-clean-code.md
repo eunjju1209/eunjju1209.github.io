@@ -2,6 +2,7 @@
 layout: post
 title: 의미있는 맥락을 추가하라
 categories: CleanCode
+comment:false
 ---
 
 이 소제목의 내용을 보고 반성을 할 수 있게 만든 내용이였다. <br/>

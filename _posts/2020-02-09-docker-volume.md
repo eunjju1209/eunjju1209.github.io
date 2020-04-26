@@ -3,6 +3,7 @@ layout: post
 title: Docker volume
 categories: Docker
 excerpt_separator:  <!--more-->
+comment:false
 ---
 
 - docker volume 이란?
