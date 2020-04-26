@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9cacb39c-a7f0-4dee-a828-9bb47a4df706" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/_posts/2020-02-10-clean-code.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2020-02-10-clean-code.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2020-04-25-setting.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2020-04-25-setting.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/2017/06/01/hello-hydeout.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/2017/06/01/hello-hydeout.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/404.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/category/Clean.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/category/Clean.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/category/Docker.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/category/Docker.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/algorithm/2020/04/25/setting.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/algorithm/2020/04/25/setting.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/category/Algorithm.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/category/Algorithm.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/cleancode/2020/02/10/clean-code.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/cleancode/2020/02/10/clean-code.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/docker/2020/02/09/docker-compose.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/docker/2020/02/09/docker-compose.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/docker/2020/02/09/docker-inspect.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/docker/2020/02/09/docker-inspect.html" afterDir="false" />
@@ -15,9 +13,6 @@
       <change beforePath="$PROJECT_DIR$/_site/docker/2020/02/09/docker-volume.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/docker/2020/02/09/docker-volume.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/feed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/feed.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/page2/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/page2/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/search.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/tags.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/tags.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -29,52 +24,20 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="vertical" split-proportion="0.5">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/_posts/2020-02-09-docker-volume.md">
-              <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-                <state split_layout="SPLIT">
-                  <first_editor relative-caret-position="255">
-                    <caret line="17" selection-start-line="17" selection-end-line="17" />
-                  </first_editor>
-                  <second_editor />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/_posts/2020-04-25-setting.md">
-              <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-                <state split_layout="SPLIT">
-                  <first_editor relative-caret-position="90">
-                    <caret line="6" column="26" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
-                  </first_editor>
-                  <second_editor />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/_posts/2020-04-25-setting.md">
-              <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-                <state split_layout="SPLIT">
-                  <first_editor relative-caret-position="135">
-                    <caret line="9" selection-start-line="9" selection-end-line="9" />
-                  </first_editor>
-                  <second_editor />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/_posts/2020-04-25-setting.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="630">
+                <caret line="54" column="45" selection-start-line="54" selection-start-column="45" selection-end-line="54" selection-end-column="45" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -111,9 +74,11 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="width" value="80" />
-    <option name="height" value="900" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="721" />
+    <option name="y" value="23" />
+    <option name="width" value="719" />
+    <option name="height" value="877" />
   </component>
   <component name="ProjectView">
     <navigator currentView="Scope" currentSubView="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope" proportions="" version="1">
@@ -196,18 +161,18 @@
       <workItem from="1581228673290" duration="4764000" />
       <workItem from="1581242279215" duration="4000" />
       <workItem from="1581346025208" duration="1604000" />
-      <workItem from="1587796354746" duration="1603000" />
+      <workItem from="1587796354746" duration="6672000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8389000" />
+    <option name="totallyTimeSpent" value="13458000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <frame x="0" y="23" width="1440" height="877" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13742071" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.27896994" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -411,16 +376,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2020-02-09-docker-volume.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="255">
-            <caret line="17" selection-start-line="17" selection-end-line="17" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_posts/2020-02-10-clean-code.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
@@ -431,11 +386,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2020-02-09-docker-volume.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="255">
+            <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/_posts/2020-04-25-setting.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="135">
-            <caret line="9" selection-start-line="9" selection-end-line="9" />
+          <first_editor relative-caret-position="630">
+            <caret line="54" column="45" selection-start-line="54" selection-start-column="45" selection-end-line="54" selection-end-column="45" />
           </first_editor>
           <second_editor />
         </state>

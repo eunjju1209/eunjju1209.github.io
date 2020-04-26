@@ -1,5 +1,59 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-04-25T17:46:55+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Hydeout</title><subtitle>The &lt;a href=&quot;http://hyde.getpoole.com&quot; target=&quot;_blank&quot;&gt;Hyde&lt;/a&gt; theme for &lt;a href=&quot;http://jekyllrb.com&quot; target=&quot;_blank&quot;&gt;Jekyll&lt;/a&gt;, refreshed.</subtitle><author><name>Andrew Fong</name></author><entry><title type="html">jupyter 컨테이너 알고리즘 공부</title><link href="http://localhost:4000/algorithm/2020/04/25/setting.html" rel="alternate" type="text/html" title="jupyter 컨테이너 알고리즘 공부" /><published>2020-04-25T00:00:00+09:00</published><updated>2020-04-25T00:00:00+09:00</updated><id>http://localhost:4000/algorithm/2020/04/25/setting</id><content type="html" xml:base="http://localhost:4000/algorithm/2020/04/25/setting.html">&lt;p&gt;알고리즘을 공부 하려고 인터넷 강의를 샀었는데 주피터란 프로그램을 설치 하라고 해서 docker을 이용해서 사용하려고 합니다.&lt;br /&gt;
-혹시나 까먹을 것같아서 기록용으로 작성합니다.&lt;/p&gt;</content><author><name>Andrew Fong</name></author><summary type="html">알고리즘을 공부 하려고 인터넷 강의를 샀었는데 주피터란 프로그램을 설치 하라고 해서 docker을 이용해서 사용하려고 합니다. 혹시나 까먹을 것같아서 기록용으로 작성합니다.</summary></entry><entry><title type="html">의미있는 맥락을 추가하라</title><link href="http://localhost:4000/cleancode/2020/02/10/clean-code.html" rel="alternate" type="text/html" title="의미있는 맥락을 추가하라" /><published>2020-02-10T00:00:00+09:00</published><updated>2020-02-10T00:00:00+09:00</updated><id>http://localhost:4000/cleancode/2020/02/10/clean-code</id><content type="html" xml:base="http://localhost:4000/cleancode/2020/02/10/clean-code.html">&lt;p&gt;이 소제목의 내용을 보고 반성을 할 수 있게 만든 내용이였다. &lt;br /&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-04-26T21:15:26+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Hydeout</title><subtitle>The &lt;a href=&quot;http://hyde.getpoole.com&quot; target=&quot;_blank&quot;&gt;Hyde&lt;/a&gt; theme for &lt;a href=&quot;http://jekyllrb.com&quot; target=&quot;_blank&quot;&gt;Jekyll&lt;/a&gt;, refreshed.</subtitle><author><name>Andrew Fong</name></author><entry><title type="html">jupyter 컨테이너 생성 및 구동</title><link href="http://localhost:4000/algorithm/2020/04/25/setting.html" rel="alternate" type="text/html" title="jupyter 컨테이너 생성 및 구동" /><published>2020-04-25T00:00:00+09:00</published><updated>2020-04-25T00:00:00+09:00</updated><id>http://localhost:4000/algorithm/2020/04/25/setting</id><content type="html" xml:base="http://localhost:4000/algorithm/2020/04/25/setting.html">&lt;p&gt;알고리즘을 공부 하려고 인터넷 강의를 샀었는데 주피터란 프로그램을 설치 하라고 해서 docker을 이용해서 사용하려고 합니다.&lt;br /&gt;
+혹시나 까먹을 것같아서 기록용으로 작성합니다.&lt;/p&gt;
+
+&lt;p&gt;원래는 docker hub 에 올라와 져 있는 이미지를 이용해서 컨테이너를 띄우려고 했는데&lt;br /&gt;
+도커파일을 이용해서 컨테이너를 작업한 적 이 없어서 직접 Dockerfile 만들고 컨테이너를 띄우려고 합니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;a cursor=&quot;pointer&quot; href=&quot;https://tobelinuxer.tistory.com/26&quot; target=&quot;_blank&quot;&gt;https://tobelinuxer.tistory.com/26&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt; 참고해서 만들었습니다.&lt;/p&gt;
+
+&lt;p&gt;Dockerfile&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-Dockerfile&quot;&gt;FROM ubuntu:latest
+
+MAINTAINER eunju &quot;eunjju1209@gmail.com&quot;
+
+# RUN apt-get update &amp;amp;&amp;amp; apt-get -y update
+RUN apt-get update -y
+
+# RUN apt-get install -y build-essential python3.6 python3-pip
+RUN apt-get install -y python-pip python-dev build-essential
+
+RUN pip install jupyter
+
+RUN pip install matplotlib
+
+RUN jupyter notebook --generate-config --allow-root
+
+RUN echo  &quot;c.NotebookApp.password = u'sha1:6a3f528eec40:6e896b6e4828f525a6e20e5411cd1c8075d68619'&quot; &amp;gt;&amp;gt; /root/.jupyter/jupyter_notebook_config.py
+
+EXPOSE 8888
+
+ENTRYPOINT jupyter notebook --allow-root --ip=0.0.0.0 --port=8888 --no-browser
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;pip
+    &lt;ul&gt;
+      &lt;li&gt;파이썬으로 작성된 패키지 소프트웨어를 관리하는 패키지 관리 시스템입니다. &lt;br /&gt;
+  그래서, python-pip 을 설치해줘야 합니다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-ubuntu&quot;&gt;    docker run -it --name jupyter --rm -p 8888:8888 -v `pwd`:/home/root/test jupyter
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;–rm =&amp;gt; 컨테이너 일회성으로 띄어주는것, 컨테이너 종료 하면 바로 컨테이너 삭제된다. &lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;위치 루트를 /home/root/test 에 넣어줘서 거기가 컨테이너 안에서의 루트이다. &lt;br /&gt;
+그리고 /home/root/test 에 들어가면 내가 작업한 Dockerfile 이 있다.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-ubuntu&quot;&gt;    docker run -it --name jupyter -p 8888:8888 -v `pwd`:/home/root/test jupyter
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;나는 알고리즘을 공부할때마다, 주피터 띄어줄꺼니까 위에 rm 명령어를 빼고 이미지를 run 시켜줄 것 이다.&lt;/p&gt;</content><author><name>Andrew Fong</name></author><summary type="html">알고리즘을 공부 하려고 인터넷 강의를 샀었는데 주피터란 프로그램을 설치 하라고 해서 docker을 이용해서 사용하려고 합니다. 혹시나 까먹을 것같아서 기록용으로 작성합니다.</summary></entry><entry><title type="html">의미있는 맥락을 추가하라</title><link href="http://localhost:4000/cleancode/2020/02/10/clean-code.html" rel="alternate" type="text/html" title="의미있는 맥락을 추가하라" /><published>2020-02-10T00:00:00+09:00</published><updated>2020-02-10T00:00:00+09:00</updated><id>http://localhost:4000/cleancode/2020/02/10/clean-code</id><content type="html" xml:base="http://localhost:4000/cleancode/2020/02/10/clean-code.html">&lt;p&gt;이 소제목의 내용을 보고 반성을 할 수 있게 만든 내용이였다. &lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;하나의 &lt;code class=&quot;highlighter-rouge&quot;&gt;function&lt;/code&gt; 안에서 여러가지 액션이 일어나야 하는 경우가 있는데,
 하나의 함수 안에서 여러개의 역할을 하는걸 한번에 다 넣는 경우가 있는데, 
