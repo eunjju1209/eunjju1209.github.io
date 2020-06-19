@@ -1,9 +1,8 @@
 ---
 layout: post
 title: Docker link
+comments: false
 categories: Docker
-excerpt_separator:  <!--more-->
-comment:false
 ---
 
 - docker link 란?

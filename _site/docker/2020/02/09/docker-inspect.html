@@ -11,7 +11,7 @@
 
   <title>
     
-      Clean Code &middot; Hydeout
+      Docker inspect &middot; Hydeout
     
   </title>
 
@@ -35,7 +35,7 @@
 </head>
 
 
-  <body class="category">
+  <body class="post">
 
     <div id="sidebar">
   <header>
@@ -124,7 +124,7 @@
 
   
     
-      <a class="category-link  active"
+      <a class="category-link "
           href="/category/Clean">Clean Code</a>
     
   
@@ -221,27 +221,96 @@
 
     <main class="container">
       <header>
-  <h1 class="page-title">Clean Code</h1>
+  <h1 class="post-title">Docker inspect</h1>
 </header>
 <div class="content">
-  
-  <p>클린 코드 책을 읽고 느낀점이나 부족한점을 적는 공간</p>
+  <div class="post-meta">
+  <span class="post-date">09 Feb 2020</span>
+  <span class="post-categories">
+    
+      &bull;
 
+      
+      
+      
 
-
-<ul class="posts-list">
-  
-  
-    <li>
-      <h3>
-        <a href="/cleancode/2020/02/10/clean-code.html">
-          의미있는 맥락을 추가하라
-          <small>10 Feb 2020</small>
+      
+        <a href="/category/Docker">
+          Docker
         </a>
-      </h3>
-    </li>
-  
+      
+    
+  </span>
+</div>
+
+
+  <div class="post-body">
+    <ul>
+  <li>docker inspect 란?</li>
 </ul>
+
+<p>docker run 실행후, 매개변수느 command full 볼려면 inspect 치고 컨테이너 이름 치면 상세로 확인 할 수 있다.</p>
+
+<blockquote>
+  <p>docker inspect stall(컨테이너)</p>
+</blockquote>
+
+<p>컨테이너 관련 되 서 상세 내역을 볼 수 있다.</p>
+
+<p><img src="https://user-images.githubusercontent.com/40929370/74098239-2f8a8080-4b59-11ea-824b-408a30f45686.png" alt="image" /></p>
+
+<p>또는 저기서 필요한 데이터만 따로 추출 하고 싶은 경우에는 
+-f 필터 걸어서 궁금한 부분만 오브젝트 형식으로 검색 하면 찾아볼 수 있다.</p>
+
+<p>docker linke 공부하면서, 나의 redis 컨테이너 내부 ip가 궁금해서,</p>
+
+<p>docker inspect -f “” redis
+쳐서 내부 ip 를 검색해서 알 수 있었다.
+<img src="https://user-images.githubusercontent.com/40929370/74098253-59dc3e00-4b59-11ea-8cb1-b144010cd1d7.png" alt="image" /></p>
+
+    
+
+
+
+<div class="post-tags">
+  
+</div>
+  </div>
+
+  
+  <section class="related">
+  <h2>Related Posts</h2>
+  <ul class="posts-list">
+    
+      <li>
+        <h3>
+          <a href="/algorithm/2020/04/25/setting.html">
+            jupyter 컨테이너 생성 및 구동
+            <small>25 Apr 2020</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/cleancode/2020/02/10/clean-code.html">
+            의미있는 맥락을 추가하라
+            <small>10 Feb 2020</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/docker/2020/02/09/docker-volume.html">
+            Docker volume
+            <small>09 Feb 2020</small>
+          </a>
+        </h3>
+      </li>
+    
+  </ul>
+</section>
 
 </div>
 

@@ -1,9 +1,8 @@
 ---
 layout: post
 title: Docker inspect
+comments: false
 categories: Docker
-excerpt_separator:  <!--more-->
-comment:false
 ---
 
 - docker inspect 란?

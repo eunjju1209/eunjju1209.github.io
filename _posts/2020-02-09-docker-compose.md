@@ -1,9 +1,8 @@
 ---
 layout: post
 title: Docker-Compose
+comments: false
 categories: Docker
-excerpt_separator:  <!--more-->
-comment:false
 ---
 
 회사에서 최근에 작업하는 프로젝트가 있는데 <br/>

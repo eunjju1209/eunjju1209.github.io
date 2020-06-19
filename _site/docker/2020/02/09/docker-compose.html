@@ -11,7 +11,7 @@
 
   <title>
     
-      Clean Code &middot; Hydeout
+      Docker-Compose &middot; Hydeout
     
   </title>
 
@@ -35,7 +35,7 @@
 </head>
 
 
-  <body class="category">
+  <body class="post">
 
     <div id="sidebar">
   <header>
@@ -124,7 +124,7 @@
 
   
     
-      <a class="category-link  active"
+      <a class="category-link "
           href="/category/Clean">Clean Code</a>
     
   
@@ -221,27 +221,90 @@
 
     <main class="container">
       <header>
-  <h1 class="page-title">Clean Code</h1>
+  <h1 class="post-title">Docker-Compose</h1>
 </header>
 <div class="content">
-  
-  <p>클린 코드 책을 읽고 느낀점이나 부족한점을 적는 공간</p>
+  <div class="post-meta">
+  <span class="post-date">09 Feb 2020</span>
+  <span class="post-categories">
+    
+      &bull;
 
+      
+      
+      
 
-
-<ul class="posts-list">
-  
-  
-    <li>
-      <h3>
-        <a href="/cleancode/2020/02/10/clean-code.html">
-          의미있는 맥락을 추가하라
-          <small>10 Feb 2020</small>
+      
+        <a href="/category/Docker">
+          Docker
         </a>
-      </h3>
-    </li>
+      
+    
+  </span>
+</div>
+
+
+  <div class="post-body">
+    <p>회사에서 최근에 작업하는 프로젝트가 있는데 <br />
+이 프로젝트를 띄우려면 컨테이너가 3개가 띄어줘야지 내 로컬에서 실행 시킬 수 있었다.</p>
+
+<p><br /> 
+근데 몇일 전 회사에서 git pull 받았더니 <code class="highlighter-rouge">docker-compose.yaml</code> 파일이 생겨있고, 
+docker-compose 가 무엇인지 확인해봤더니, 
+    <code class="highlighter-rouge">services</code> 밑에 있는 컨테이너 들을 한꺼번에 올리고 내리고 할 수 있습니다.</p>
+<blockquote>
+  <p>docker-compose up 하면 
+ docker-compose.yaml 에 있는 컨테이너들을 한번에 올릴 수 있고, 한번에 내릴 수 있습니다.</p>
+</blockquote>
+
+<p>docker-compose up 을 하면 여러개</p>
+
+<p>docker-compose up -d » 백그라운드로 실행 시킬 수 있습니다.</p>
+
+
+    
+
+
+
+<div class="post-tags">
   
-</ul>
+</div>
+  </div>
+
+  
+  <section class="related">
+  <h2>Related Posts</h2>
+  <ul class="posts-list">
+    
+      <li>
+        <h3>
+          <a href="/algorithm/2020/04/25/setting.html">
+            jupyter 컨테이너 생성 및 구동
+            <small>25 Apr 2020</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/cleancode/2020/02/10/clean-code.html">
+            의미있는 맥락을 추가하라
+            <small>10 Feb 2020</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/docker/2020/02/09/docker-volume.html">
+            Docker volume
+            <small>09 Feb 2020</small>
+          </a>
+        </h3>
+      </li>
+    
+  </ul>
+</section>
 
 </div>
 
