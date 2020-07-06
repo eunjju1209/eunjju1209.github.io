@@ -3,22 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="9cacb39c-a7f0-4dee-a828-9bb47a4df706" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/2017/06/01/hello-hydeout.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/2017/06/01/hello-hydeout.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/404.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/algorithm/2020/04/25/setting.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/algorithm/2020/04/25/setting.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/category/Algorithm.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/category/Algorithm.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/category/Clean.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/category/Clean.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/category/Docker.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/category/Docker.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/cleancode/2020/02/10/clean-code.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/cleancode/2020/02/10/clean-code.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/docker/2020/02/09/docker-compose.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/docker/2020/02/09/docker-compose.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/docker/2020/02/09/docker-inspect.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/docker/2020/02/09/docker-inspect.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/docker/2020/02/09/docker-link.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/docker/2020/02/09/docker-link.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/docker/2020/02/09/docker-volume.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/docker/2020/02/09/docker-volume.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2020-06-20-gcp-registry.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2020-06-20-gcp-registry.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/feed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/feed.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/page2/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/page2/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/search.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/tags.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/tags.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/gcp/2020/06/20/gcp-registry.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/gcp/2020/06/20/gcp-registry.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +72,8 @@
       <workItem from="1581346025208" duration="1604000" />
       <workItem from="1587796354746" duration="7032000" />
       <workItem from="1592567959422" duration="6702000" />
-      <workItem from="1593944963558" duration="2056000" />
+      <workItem from="1593944963558" duration="2805000" />
+      <workItem from="1594017436990" duration="570000" />
     </task>
     <servers />
   </component>

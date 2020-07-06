@@ -66,4 +66,15 @@ Google Container Registry  호스트 명은 이미지  저장위치에 따라 �
  * eu.gcr.io - 유럽
  * asia.gcr.io - 아시아
 
+```text
+docker build -t hostname/project_id/dockerImage
+
+docker push hostname/project_id/dockerImage
+
+```
+
+![image](https://user-images.githubusercontent.com/40929370/86599971-58188880-bfda-11ea-9420-d08206997910.png)
+올라가져 있는걸 확인 할 수 있다.. !
+
+
 
