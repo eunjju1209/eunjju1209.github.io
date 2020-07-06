@@ -1,4 +1,62 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-06-19T23:13:40+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Hydeout</title><subtitle>The &lt;a href=&quot;http://hyde.getpoole.com&quot; target=&quot;_blank&quot;&gt;Hyde&lt;/a&gt; theme for &lt;a href=&quot;http://jekyllrb.com&quot; target=&quot;_blank&quot;&gt;Jekyll&lt;/a&gt;, refreshed.</subtitle><author><name>Andrew Fong</name></author><entry><title type="html">jupyter 컨테이너 생성 및 구동</title><link href="http://localhost:4000/algorithm/2020/04/25/setting.html" rel="alternate" type="text/html" title="jupyter 컨테이너 생성 및 구동" /><published>2020-04-25T00:00:00+09:00</published><updated>2020-04-25T00:00:00+09:00</updated><id>http://localhost:4000/algorithm/2020/04/25/setting</id><content type="html" xml:base="http://localhost:4000/algorithm/2020/04/25/setting.html">&lt;p&gt;알고리즘을 공부 하려고 인터넷 강의를 샀었는데 주피터란 프로그램을 설치 하라고 해서 docker을 이용해서 사용하려고 합니다.&lt;br /&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-07-06T15:06:17+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Hydeout</title><subtitle>The &lt;a href=&quot;http://hyde.getpoole.com&quot; target=&quot;_blank&quot;&gt;Hyde&lt;/a&gt; theme for &lt;a href=&quot;http://jekyllrb.com&quot; target=&quot;_blank&quot;&gt;Jekyll&lt;/a&gt;, refreshed.</subtitle><author><name>Andrew Fong</name></author><entry><title type="html">GCP 레지스트리 등록</title><link href="http://localhost:4000/gcp/2020/06/20/gcp-registry.html" rel="alternate" type="text/html" title="GCP 레지스트리 등록" /><published>2020-06-20T00:00:00+09:00</published><updated>2020-06-20T00:00:00+09:00</updated><id>http://localhost:4000/gcp/2020/06/20/gcp-registry</id><content type="html" xml:base="http://localhost:4000/gcp/2020/06/20/gcp-registry.html">&lt;p&gt;GCP 에서 docker image 를 pull&amp;amp;push 관리 하기 위해서 기록
+    - gcp에 docker 이미지 올려놓는 이 ??&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/40929370/85203347-1932d380-b348-11ea-8d5a-efc0db2e52f5.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;google Container Registry API&lt;/b&gt; 사용 설정을 눌러 준다.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Google Cloud SDK 설치&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;GCP로부터 이미지를 pull &amp;amp;  push 할 때, gcloud 명령어가 필요하기 때문에 Cloud SDK 설치해야 한다.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;​	gcloud init 쳐서 해주고 그 후,  gcloud auth login 해줘서 인증 해줘야 한다.&lt;/p&gt;
+
+&lt;p&gt;그리고 나서 google Cloud Platform &amp;gt; 목록 &amp;gt; IAM 및  관리자 &amp;gt; 서비스  계정&lt;/p&gt;
+
+&lt;p&gt;내가 만들어야 할 서비스 프로젝트 계정 만들어주고 계정 권한은 프로젝트 &amp;gt; 소유자로 만들어준다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/40929370/85216408-3d7dc700-b3bf-11ea-95a9-58ec4810c5c0.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;그 후, 다음으로 넘어가서 키 만들고 json 형식으로 만들고 완료 눌러서 마무리 합니다.&lt;/p&gt;
+
+&lt;p&gt;(만들어진 키는 보관해야합니다.)&lt;/p&gt;
+
+&lt;p&gt;키를 만들면서 다운로드된 json 파일을 리눅스의 /usr/lib64/google-cloud-sdk/bin 으로 옮깁니다.&lt;/p&gt;
+
+&lt;p&gt;이제 아래 명령어를 통해 서비스 계정 인증을 위해 아래 명령어를 입력해줍니다. (만약 gcloud 커맨드를 찾지 못한다면 /usr/lib64/google-cloud-sdk/bin 으로 이동하셔서 ./gcloud 로 사용 해주세요)&lt;/p&gt;
+
+&lt;div class=&quot;language-dockerfile highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;gcloud auth activate-service-account --key-file=/usr/lib64/google-cloud-sdk/bin/[옮긴 json파일명]
+gcloud auth configure-docker
+
+&lt;span class=&quot;c&quot;&gt;# gcloud 커맨드를 인식하지 못할 경우&lt;/span&gt;
+cd /usr/lib64/google-cloud-sdk/bin/
+./gcloud auth activate-service-account --key-file=/usr/lib64/google-cloud-sdk/bin/[옮긴 json파일명]
+./gcloud auth configure-docker
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;json 파일도 인증이 완료 되었다면 리눅스에서 삭제 해줍니다. (gcloud CLI가 키를 저장하여 리눅스에서 삭제해도 계속 유지된다고 합니다)&lt;/p&gt;
+
+&lt;h3 id=&quot;도커-이미지-업로드--다운로드&quot;&gt;도커 이미지 업로드 / 다운로드&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;도커 이미지를 업로드 하기 전 이미지의 태그를 설정해줘야 합니다.
+    &lt;div class=&quot;language-dockerfile highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# docker tag [로컬 이미지명][Google Container Registry 호스트명]/[프로젝트ID]/[이미지명]&lt;/span&gt;
+ex) docker tag jellystore asia.gcr.io/jellystore/jellyStore
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Google Container Registry  호스트 명은 이미지  저장위치에 따라 아래중 하나를 사용하면된다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;us.gcr.io  - 미국&lt;/li&gt;
+  &lt;li&gt;eu.gcr.io - 유럽&lt;/li&gt;
+  &lt;li&gt;asia.gcr.io - 아시아&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Andrew Fong</name></author><summary type="html">GCP 에서 docker image 를 pull&amp;amp;push 관리 하기 위해서 기록 - gcp에 docker 이미지 올려놓는 이 ??</summary></entry><entry><title type="html">jupyter 컨테이너 생성 및 구동</title><link href="http://localhost:4000/algorithm/2020/04/25/setting.html" rel="alternate" type="text/html" title="jupyter 컨테이너 생성 및 구동" /><published>2020-04-25T00:00:00+09:00</published><updated>2020-04-25T00:00:00+09:00</updated><id>http://localhost:4000/algorithm/2020/04/25/setting</id><content type="html" xml:base="http://localhost:4000/algorithm/2020/04/25/setting.html">&lt;p&gt;알고리즘을 공부 하려고 인터넷 강의를 샀었는데 주피터란 프로그램을 설치 하라고 해서 docker을 이용해서 사용하려고 합니다.&lt;br /&gt;
 혹시나 까먹을 것같아서 기록용으로 작성합니다.&lt;/p&gt;
 
 &lt;p&gt;원래는 docker hub 에 올라와 져 있는 이미지를 이용해서 컨테이너를 띄우려고 했는데&lt;br /&gt;
@@ -171,24 +229,7 @@ docker-compose 가 무엇인지 확인해봤더니,
 
 &lt;p&gt;docker inspect -f “” redis
 쳐서 내부 ip 를 검색해서 알 수 있었다.
-&lt;img src=&quot;https://user-images.githubusercontent.com/40929370/74098253-59dc3e00-4b59-11ea-8cb1-b144010cd1d7.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;</content><author><name>Andrew Fong</name></author><summary type="html">docker inspect 란?</summary></entry><entry><title type="html">Docker link</title><link href="http://localhost:4000/docker/2020/02/09/docker-link.html" rel="alternate" type="text/html" title="Docker link" /><published>2020-02-09T00:00:00+09:00</published><updated>2020-02-09T00:00:00+09:00</updated><id>http://localhost:4000/docker/2020/02/09/docker-link</id><content type="html" xml:base="http://localhost:4000/docker/2020/02/09/docker-link.html">&lt;ul&gt;
-  &lt;li&gt;docker link 란?&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;docker container 연결 시키는 방법&lt;/p&gt;
-
-&lt;p&gt;https://docs.docker.com/engine/examples/postgresql_service/&lt;/p&gt;
-
-&lt;p&gt;—link&lt;/p&gt;
-
-&lt;p&gt;내가 현재, snack bar 컨테이너를 띄우고있었는데 
-db를 AWS 에서 제공하는게 아니라 컨테이너 디비를 열어서 사용하고 싶다.&lt;/p&gt;
-
-&lt;p&gt;왜냐하면 docker volume 쓰고, git 에다가 올려놓으면 서버를 사지않아도 내 로컬에서 작업한걸 다른분이 사용할 수 있기ㄸㅐ문에.. 
-혹시 맞지않으면 수정하려고 한다.&lt;/p&gt;
-
-&lt;p&gt;하이튼 snackbar 컨테이너오ㅏ psql 컨테이너를 연결을 어떻게 시켜서 내 로컬에서 테스트 할 수 있는 방법이 있는지 찾아보았는데
-docker link 라는것이 있어서 알아보았다.&lt;/p&gt;</content><author><name>Andrew Fong</name></author><summary type="html">docker link 란?</summary></entry><entry><title type="html">Docker volume</title><link href="http://localhost:4000/docker/2020/02/09/docker-volume.html" rel="alternate" type="text/html" title="Docker volume" /><published>2020-02-09T00:00:00+09:00</published><updated>2020-02-09T00:00:00+09:00</updated><id>http://localhost:4000/docker/2020/02/09/docker-volume</id><content type="html" xml:base="http://localhost:4000/docker/2020/02/09/docker-volume.html">&lt;ul&gt;
+&lt;img src=&quot;https://user-images.githubusercontent.com/40929370/74098253-59dc3e00-4b59-11ea-8cb1-b144010cd1d7.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;</content><author><name>Andrew Fong</name></author><summary type="html">docker inspect 란?</summary></entry><entry><title type="html">Docker volume</title><link href="http://localhost:4000/docker/2020/02/09/docker-volume.html" rel="alternate" type="text/html" title="Docker volume" /><published>2020-02-09T00:00:00+09:00</published><updated>2020-02-09T00:00:00+09:00</updated><id>http://localhost:4000/docker/2020/02/09/docker-volume</id><content type="html" xml:base="http://localhost:4000/docker/2020/02/09/docker-volume.html">&lt;ul&gt;
   &lt;li&gt;docker volume 이란?&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -224,7 +265,24 @@ docker  create volume —name test&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/40929370/74097980-fbfa2700-4b55-11ea-9677-7f6cd5030032.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/40929370/74097985-06b4bc00-4b56-11ea-9e35-0a7adb2fdf6f.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;</content><author><name>Andrew Fong</name></author><summary type="html">docker volume 이란?</summary></entry><entry><title type="html">Hello Hydeout</title><link href="http://localhost:4000/2017/06/01/hello-hydeout.html" rel="alternate" type="text/html" title="Hello Hydeout" /><published>2017-06-01T00:00:00+09:00</published><updated>2017-06-01T00:00:00+09:00</updated><id>http://localhost:4000/2017/06/01/hello-hydeout</id><content type="html" xml:base="http://localhost:4000/2017/06/01/hello-hydeout.html">&lt;p&gt;Hydeout updates the original &lt;a href=&quot;https://github.com/poole/hyde&quot;&gt;Hyde&lt;/a&gt;
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/40929370/74097985-06b4bc00-4b56-11ea-9e35-0a7adb2fdf6f.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;</content><author><name>Andrew Fong</name></author><summary type="html">docker volume 이란?</summary></entry><entry><title type="html">Docker link</title><link href="http://localhost:4000/docker/2020/02/09/docker-link.html" rel="alternate" type="text/html" title="Docker link" /><published>2020-02-09T00:00:00+09:00</published><updated>2020-02-09T00:00:00+09:00</updated><id>http://localhost:4000/docker/2020/02/09/docker-link</id><content type="html" xml:base="http://localhost:4000/docker/2020/02/09/docker-link.html">&lt;ul&gt;
+  &lt;li&gt;docker link 란?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;docker container 연결 시키는 방법&lt;/p&gt;
+
+&lt;p&gt;https://docs.docker.com/engine/examples/postgresql_service/&lt;/p&gt;
+
+&lt;p&gt;—link&lt;/p&gt;
+
+&lt;p&gt;내가 현재, snack bar 컨테이너를 띄우고있었는데 
+db를 AWS 에서 제공하는게 아니라 컨테이너 디비를 열어서 사용하고 싶다.&lt;/p&gt;
+
+&lt;p&gt;왜냐하면 docker volume 쓰고, git 에다가 올려놓으면 서버를 사지않아도 내 로컬에서 작업한걸 다른분이 사용할 수 있기ㄸㅐ문에.. 
+혹시 맞지않으면 수정하려고 한다.&lt;/p&gt;
+
+&lt;p&gt;하이튼 snackbar 컨테이너오ㅏ psql 컨테이너를 연결을 어떻게 시켜서 내 로컬에서 테스트 할 수 있는 방법이 있는지 찾아보았는데
+docker link 라는것이 있어서 알아보았다.&lt;/p&gt;</content><author><name>Andrew Fong</name></author><summary type="html">docker link 란?</summary></entry><entry><title type="html">Hello Hydeout</title><link href="http://localhost:4000/2017/06/01/hello-hydeout.html" rel="alternate" type="text/html" title="Hello Hydeout" /><published>2017-06-01T00:00:00+09:00</published><updated>2017-06-01T00:00:00+09:00</updated><id>http://localhost:4000/2017/06/01/hello-hydeout</id><content type="html" xml:base="http://localhost:4000/2017/06/01/hello-hydeout.html">&lt;p&gt;Hydeout updates the original &lt;a href=&quot;https://github.com/poole/hyde&quot;&gt;Hyde&lt;/a&gt;
 theme for &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt; 3.x and adds new functionality.&lt;/p&gt;
 
 &lt;h3 id=&quot;keep-it-simple&quot;&gt;Keep It Simple&lt;/h3&gt;

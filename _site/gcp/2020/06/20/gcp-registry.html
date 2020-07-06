@@ -11,7 +11,7 @@
 
   <title>
     
-      Docker link &middot; Hydeout
+      GCP 레지스트리 등록 &middot; Hydeout
     
   </title>
 
@@ -221,11 +221,11 @@
 
     <main class="container">
       <header>
-  <h1 class="post-title">Docker link</h1>
+  <h1 class="post-title">GCP 레지스트리 등록</h1>
 </header>
 <div class="content">
   <div class="post-meta">
-  <span class="post-date">09 Feb 2020</span>
+  <span class="post-date">20 Jun 2020</span>
   <span class="post-categories">
     
       &bull;
@@ -235,8 +235,8 @@
       
 
       
-        <a href="/category/Docker">
-          Docker
+        <a href="/category/GCP">
+          GCP
         </a>
       
     
@@ -245,24 +245,66 @@
 
 
   <div class="post-body">
-    <ul>
-  <li>docker link 란?</li>
+    <p>GCP 에서 docker image 를 pull&amp;push 관리 하기 위해서 기록
+    - gcp에 docker 이미지 올려놓는 이 ??</p>
+
+<p><img src="https://user-images.githubusercontent.com/40929370/85203347-1932d380-b348-11ea-8d5a-efc0db2e52f5.png" alt="image" /></p>
+
+<p><b>google Container Registry API</b> 사용 설정을 눌러 준다.</p>
+
+<ol>
+  <li>
+    <p><strong>Google Cloud SDK 설치</strong></p>
+
+    <p>GCP로부터 이미지를 pull &amp;  push 할 때, gcloud 명령어가 필요하기 때문에 Cloud SDK 설치해야 한다.</p>
+  </li>
+</ol>
+
+<p>​	gcloud init 쳐서 해주고 그 후,  gcloud auth login 해줘서 인증 해줘야 한다.</p>
+
+<p>그리고 나서 google Cloud Platform &gt; 목록 &gt; IAM 및  관리자 &gt; 서비스  계정</p>
+
+<p>내가 만들어야 할 서비스 프로젝트 계정 만들어주고 계정 권한은 프로젝트 &gt; 소유자로 만들어준다.</p>
+
+<p><img src="https://user-images.githubusercontent.com/40929370/85216408-3d7dc700-b3bf-11ea-95a9-58ec4810c5c0.png" alt="image" /></p>
+
+<p>그 후, 다음으로 넘어가서 키 만들고 json 형식으로 만들고 완료 눌러서 마무리 합니다.</p>
+
+<p>(만들어진 키는 보관해야합니다.)</p>
+
+<p>키를 만들면서 다운로드된 json 파일을 리눅스의 /usr/lib64/google-cloud-sdk/bin 으로 옮깁니다.</p>
+
+<p>이제 아래 명령어를 통해 서비스 계정 인증을 위해 아래 명령어를 입력해줍니다. (만약 gcloud 커맨드를 찾지 못한다면 /usr/lib64/google-cloud-sdk/bin 으로 이동하셔서 ./gcloud 로 사용 해주세요)</p>
+
+<div class="language-dockerfile highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud auth activate-service-account --key-file=/usr/lib64/google-cloud-sdk/bin/[옮긴 json파일명]
+gcloud auth configure-docker
+
+<span class="c"># gcloud 커맨드를 인식하지 못할 경우</span>
+cd /usr/lib64/google-cloud-sdk/bin/
+./gcloud auth activate-service-account --key-file=/usr/lib64/google-cloud-sdk/bin/[옮긴 json파일명]
+./gcloud auth configure-docker
+</code></pre></div></div>
+
+<p>json 파일도 인증이 완료 되었다면 리눅스에서 삭제 해줍니다. (gcloud CLI가 키를 저장하여 리눅스에서 삭제해도 계속 유지된다고 합니다)</p>
+
+<h3 id="도커-이미지-업로드--다운로드">도커 이미지 업로드 / 다운로드</h3>
+
+<ul>
+  <li>도커 이미지를 업로드 하기 전 이미지의 태그를 설정해줘야 합니다.
+    <div class="language-dockerfile highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># docker tag [로컬 이미지명][Google Container Registry 호스트명]/[프로젝트ID]/[이미지명]</span>
+ex) docker tag jellystore asia.gcr.io/jellystore/jellyStore
+</code></pre></div>    </div>
+  </li>
 </ul>
 
-<p>docker container 연결 시키는 방법</p>
+<p>Google Container Registry  호스트 명은 이미지  저장위치에 따라 아래중 하나를 사용하면된다.</p>
 
-<p>https://docs.docker.com/engine/examples/postgresql_service/</p>
+<ul>
+  <li>us.gcr.io  - 미국</li>
+  <li>eu.gcr.io - 유럽</li>
+  <li>asia.gcr.io - 아시아</li>
+</ul>
 
-<p>—link</p>
-
-<p>내가 현재, snack bar 컨테이너를 띄우고있었는데 
-db를 AWS 에서 제공하는게 아니라 컨테이너 디비를 열어서 사용하고 싶다.</p>
-
-<p>왜냐하면 docker volume 쓰고, git 에다가 올려놓으면 서버를 사지않아도 내 로컬에서 작업한걸 다른분이 사용할 수 있기ㄸㅐ문에.. 
-혹시 맞지않으면 수정하려고 한다.</p>
-
-<p>하이튼 snackbar 컨테이너오ㅏ psql 컨테이너를 연결을 어떻게 시켜서 내 로컬에서 테스트 할 수 있는 방법이 있는지 찾아보았는데
-docker link 라는것이 있어서 알아보았다.</p>
 
     
 
@@ -280,15 +322,6 @@ docker link 라는것이 있어서 알아보았다.</p>
     
       <li>
         <h3>
-          <a href="/gcp/2020/06/20/gcp-registry.html">
-            GCP 레지스트리 등록
-            <small>20 Jun 2020</small>
-          </a>
-        </h3>
-      </li>
-    
-      <li>
-        <h3>
           <a href="/algorithm/2020/04/25/setting.html">
             jupyter 컨테이너 생성 및 구동
             <small>25 Apr 2020</small>
@@ -301,6 +334,15 @@ docker link 라는것이 있어서 알아보았다.</p>
           <a href="/cleancode/2020/02/10/clean-code.html">
             의미있는 맥락을 추가하라
             <small>10 Feb 2020</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/docker/2020/02/09/docker-volume.html">
+            Docker volume
+            <small>09 Feb 2020</small>
           </a>
         </h3>
       </li>
