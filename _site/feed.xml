@@ -1,4 +1,48 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-07-06T22:45:42+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Hydeout</title><subtitle>The &lt;a href=&quot;http://hyde.getpoole.com&quot; target=&quot;_blank&quot;&gt;Hyde&lt;/a&gt; theme for &lt;a href=&quot;http://jekyllrb.com&quot; target=&quot;_blank&quot;&gt;Jekyll&lt;/a&gt;, refreshed.</subtitle><author><name>Andrew Fong</name></author><entry><title type="html">GCP 레지스트리 등록</title><link href="http://localhost:4000/gcp/2020/06/20/gcp-registry.html" rel="alternate" type="text/html" title="GCP 레지스트리 등록" /><published>2020-06-20T00:00:00+09:00</published><updated>2020-06-20T00:00:00+09:00</updated><id>http://localhost:4000/gcp/2020/06/20/gcp-registry</id><content type="html" xml:base="http://localhost:4000/gcp/2020/06/20/gcp-registry.html">&lt;p&gt;GCP 에서 docker image 를 pull&amp;amp;push 관리 하기 위해서 기록
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-07-22T00:43:07+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Hydeout</title><subtitle>The &lt;a href=&quot;http://hyde.getpoole.com&quot; target=&quot;_blank&quot;&gt;Hyde&lt;/a&gt; theme for &lt;a href=&quot;http://jekyllrb.com&quot; target=&quot;_blank&quot;&gt;Jekyll&lt;/a&gt;, refreshed.</subtitle><author><name>Andrew Fong</name></author><entry><title type="html">GCP 웹서버 구축</title><link href="http://localhost:4000/gcp/2020/07/20/gcp-webserver.html" rel="alternate" type="text/html" title="GCP 웹서버 구축" /><published>2020-07-20T00:00:00+09:00</published><updated>2020-07-20T00:00:00+09:00</updated><id>http://localhost:4000/gcp/2020/07/20/gcp-webserver</id><content type="html" xml:base="http://localhost:4000/gcp/2020/07/20/gcp-webserver.html">&lt;p&gt;내가 올려놓은 소스들을 실제로 웹서버 에서 테스트 해보기 위해서 gcp 에서 웹 서버를 만드는 방법을 찾아보았다.
+프로젝트 생성을 했다는 전제조건으로 포스팅을 해보려고 한다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img width=&quot;406&quot; alt=&quot;image&quot; src=&quot;https://user-images.githubusercontent.com/40929370/87937174-31c11580-cacf-11ea-8204-4802fcd87c9f.png&quot; /&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;vm 인스턴스를 만들어 줘야한다. Compute Engine &amp;gt; VM 인스턴스&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/40929370/88022201-d2fcaa00-cb69-11ea-8662-d862a615d3ac.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;인스턴스가 만들어지면 외부 IP 주소를 할당 받게되며, 이는  임시 IP 이지만 고정 IP로 할당받을 수있다.&lt;br /&gt;&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;외부 IP 주소로 할당 방법&lt;br /&gt;
+목록 &amp;gt; VPC 네트워크 &amp;gt; 외부 IP 주소 설정 하고, 유형을 고정으로 변경해준다.&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;그리고 나서, vm 인스턴스 목록에서 ssh 클라우드로 접속해준다.&lt;/p&gt;
+
+&lt;p&gt;인스턴스가 생성이 잘되었다면, ssh 접속이 가능하다.
+&lt;img src=&quot;https://user-images.githubusercontent.com/40929370/88068844-b2554400-cbab-11ea-83e6-3b9eeed71c37.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;서버 연결&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;2-1. 기본 설정하기&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# linux root 사용자로 변경 (ssh 연결 완료되면 제일 먼저 root로 변경해준다.)&amp;lt;/span&amp;gt;
+sudo su 
+
+# 패키지 목록 갱신
+apt-get update
+
+# 현재 운영체제에 설치되어 있는 프로그램 최신버전 패치
+apt-get upgrade
+
+# 시스템 시간 설정
+dpkg-reconfigure tzdata
+
+# nginx 설치
+apt-get install nginx-y
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Andrew Fong</name></author><summary type="html">내가 올려놓은 소스들을 실제로 웹서버 에서 테스트 해보기 위해서 gcp 에서 웹 서버를 만드는 방법을 찾아보았다. 프로젝트 생성을 했다는 전제조건으로 포스팅을 해보려고 한다.</summary></entry><entry><title type="html">GCP 레지스트리 등록</title><link href="http://localhost:4000/gcp/2020/06/20/gcp-registry.html" rel="alternate" type="text/html" title="GCP 레지스트리 등록" /><published>2020-06-20T00:00:00+09:00</published><updated>2020-06-20T00:00:00+09:00</updated><id>http://localhost:4000/gcp/2020/06/20/gcp-registry</id><content type="html" xml:base="http://localhost:4000/gcp/2020/06/20/gcp-registry.html">&lt;p&gt;GCP 에서 docker image 를 pull&amp;amp;push 관리 하기 위해서 기록
     - gcp에 docker 이미지 올려놓는 이 ??&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/40929370/85203347-1932d380-b348-11ea-8d5a-efc0db2e52f5.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
@@ -238,7 +282,24 @@ docker-compose 가 무엇인지 확인해봤더니,
 
 &lt;p&gt;docker inspect -f “” redis
 쳐서 내부 ip 를 검색해서 알 수 있었다.
-&lt;img src=&quot;https://user-images.githubusercontent.com/40929370/74098253-59dc3e00-4b59-11ea-8cb1-b144010cd1d7.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;</content><author><name>Andrew Fong</name></author><summary type="html">docker inspect 란?</summary></entry><entry><title type="html">Docker volume</title><link href="http://localhost:4000/docker/2020/02/09/docker-volume.html" rel="alternate" type="text/html" title="Docker volume" /><published>2020-02-09T00:00:00+09:00</published><updated>2020-02-09T00:00:00+09:00</updated><id>http://localhost:4000/docker/2020/02/09/docker-volume</id><content type="html" xml:base="http://localhost:4000/docker/2020/02/09/docker-volume.html">&lt;ul&gt;
+&lt;img src=&quot;https://user-images.githubusercontent.com/40929370/74098253-59dc3e00-4b59-11ea-8cb1-b144010cd1d7.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;</content><author><name>Andrew Fong</name></author><summary type="html">docker inspect 란?</summary></entry><entry><title type="html">Docker link</title><link href="http://localhost:4000/docker/2020/02/09/docker-link.html" rel="alternate" type="text/html" title="Docker link" /><published>2020-02-09T00:00:00+09:00</published><updated>2020-02-09T00:00:00+09:00</updated><id>http://localhost:4000/docker/2020/02/09/docker-link</id><content type="html" xml:base="http://localhost:4000/docker/2020/02/09/docker-link.html">&lt;ul&gt;
+  &lt;li&gt;docker link 란?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;docker container 연결 시키는 방법&lt;/p&gt;
+
+&lt;p&gt;https://docs.docker.com/engine/examples/postgresql_service/&lt;/p&gt;
+
+&lt;p&gt;—link&lt;/p&gt;
+
+&lt;p&gt;내가 현재, snack bar 컨테이너를 띄우고있었는데 
+db를 AWS 에서 제공하는게 아니라 컨테이너 디비를 열어서 사용하고 싶다.&lt;/p&gt;
+
+&lt;p&gt;왜냐하면 docker volume 쓰고, git 에다가 올려놓으면 서버를 사지않아도 내 로컬에서 작업한걸 다른분이 사용할 수 있기ㄸㅐ문에.. 
+혹시 맞지않으면 수정하려고 한다.&lt;/p&gt;
+
+&lt;p&gt;하이튼 snackbar 컨테이너오ㅏ psql 컨테이너를 연결을 어떻게 시켜서 내 로컬에서 테스트 할 수 있는 방법이 있는지 찾아보았는데
+docker link 라는것이 있어서 알아보았다.&lt;/p&gt;</content><author><name>Andrew Fong</name></author><summary type="html">docker link 란?</summary></entry><entry><title type="html">Docker volume</title><link href="http://localhost:4000/docker/2020/02/09/docker-volume.html" rel="alternate" type="text/html" title="Docker volume" /><published>2020-02-09T00:00:00+09:00</published><updated>2020-02-09T00:00:00+09:00</updated><id>http://localhost:4000/docker/2020/02/09/docker-volume</id><content type="html" xml:base="http://localhost:4000/docker/2020/02/09/docker-volume.html">&lt;ul&gt;
   &lt;li&gt;docker volume 이란?&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -274,24 +335,7 @@ docker  create volume —name test&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/40929370/74097980-fbfa2700-4b55-11ea-9677-7f6cd5030032.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/40929370/74097985-06b4bc00-4b56-11ea-9e35-0a7adb2fdf6f.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;</content><author><name>Andrew Fong</name></author><summary type="html">docker volume 이란?</summary></entry><entry><title type="html">Docker link</title><link href="http://localhost:4000/docker/2020/02/09/docker-link.html" rel="alternate" type="text/html" title="Docker link" /><published>2020-02-09T00:00:00+09:00</published><updated>2020-02-09T00:00:00+09:00</updated><id>http://localhost:4000/docker/2020/02/09/docker-link</id><content type="html" xml:base="http://localhost:4000/docker/2020/02/09/docker-link.html">&lt;ul&gt;
-  &lt;li&gt;docker link 란?&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;docker container 연결 시키는 방법&lt;/p&gt;
-
-&lt;p&gt;https://docs.docker.com/engine/examples/postgresql_service/&lt;/p&gt;
-
-&lt;p&gt;—link&lt;/p&gt;
-
-&lt;p&gt;내가 현재, snack bar 컨테이너를 띄우고있었는데 
-db를 AWS 에서 제공하는게 아니라 컨테이너 디비를 열어서 사용하고 싶다.&lt;/p&gt;
-
-&lt;p&gt;왜냐하면 docker volume 쓰고, git 에다가 올려놓으면 서버를 사지않아도 내 로컬에서 작업한걸 다른분이 사용할 수 있기ㄸㅐ문에.. 
-혹시 맞지않으면 수정하려고 한다.&lt;/p&gt;
-
-&lt;p&gt;하이튼 snackbar 컨테이너오ㅏ psql 컨테이너를 연결을 어떻게 시켜서 내 로컬에서 테스트 할 수 있는 방법이 있는지 찾아보았는데
-docker link 라는것이 있어서 알아보았다.&lt;/p&gt;</content><author><name>Andrew Fong</name></author><summary type="html">docker link 란?</summary></entry><entry><title type="html">Hello Hydeout</title><link href="http://localhost:4000/2017/06/01/hello-hydeout.html" rel="alternate" type="text/html" title="Hello Hydeout" /><published>2017-06-01T00:00:00+09:00</published><updated>2017-06-01T00:00:00+09:00</updated><id>http://localhost:4000/2017/06/01/hello-hydeout</id><content type="html" xml:base="http://localhost:4000/2017/06/01/hello-hydeout.html">&lt;p&gt;Hydeout updates the original &lt;a href=&quot;https://github.com/poole/hyde&quot;&gt;Hyde&lt;/a&gt;
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/40929370/74097985-06b4bc00-4b56-11ea-9e35-0a7adb2fdf6f.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;</content><author><name>Andrew Fong</name></author><summary type="html">docker volume 이란?</summary></entry><entry><title type="html">Hello Hydeout</title><link href="http://localhost:4000/2017/06/01/hello-hydeout.html" rel="alternate" type="text/html" title="Hello Hydeout" /><published>2017-06-01T00:00:00+09:00</published><updated>2017-06-01T00:00:00+09:00</updated><id>http://localhost:4000/2017/06/01/hello-hydeout</id><content type="html" xml:base="http://localhost:4000/2017/06/01/hello-hydeout.html">&lt;p&gt;Hydeout updates the original &lt;a href=&quot;https://github.com/poole/hyde&quot;&gt;Hyde&lt;/a&gt;
 theme for &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt; 3.x and adds new functionality.&lt;/p&gt;
 
 &lt;h3 id=&quot;keep-it-simple&quot;&gt;Keep It Simple&lt;/h3&gt;

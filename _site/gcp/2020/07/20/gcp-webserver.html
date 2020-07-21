@@ -11,7 +11,7 @@
 
   <title>
     
-      GCP &middot; Hydeout
+      GCP 웹서버 구축 &middot; Hydeout
     
   </title>
 
@@ -35,7 +35,7 @@
 </head>
 
 
-  <body class="category">
+  <body class="post">
 
     <div id="sidebar">
   <header>
@@ -135,7 +135,7 @@
 
   
     
-      <a class="category-link  active"
+      <a class="category-link "
           href="/category/GCP">GCP</a>
     
   
@@ -221,36 +221,120 @@
 
     <main class="container">
       <header>
-  <h1 class="page-title">GCP</h1>
+  <h1 class="post-title">GCP 웹서버 구축</h1>
 </header>
 <div class="content">
-  
-  <p>gcp 공부 기록</p>
+  <div class="post-meta">
+  <span class="post-date">20 Jul 2020</span>
+  <span class="post-categories">
+    
+      &bull;
 
+      
+      
+      
 
-
-<ul class="posts-list">
-  
-  
-    <li>
-      <h3>
-        <a href="/gcp/2020/07/20/gcp-webserver.html">
-          GCP 웹서버 구축
-          <small>20 Jul 2020</small>
+      
+        <a href="/category/GCP">
+          GCP
         </a>
-      </h3>
-    </li>
+      
+    
+  </span>
+</div>
+
+
+  <div class="post-body">
+    <p>내가 올려놓은 소스들을 실제로 웹서버 에서 테스트 해보기 위해서 gcp 에서 웹 서버를 만드는 방법을 찾아보았다.
+프로젝트 생성을 했다는 전제조건으로 포스팅을 해보려고 한다.</p>
+
+<p><img width="406" alt="image" src="https://user-images.githubusercontent.com/40929370/87937174-31c11580-cacf-11ea-8204-4802fcd87c9f.png" /></p>
+
+<ol>
+  <li>vm 인스턴스를 만들어 줘야한다. Compute Engine &gt; VM 인스턴스</li>
+</ol>
+
+<p><img src="https://user-images.githubusercontent.com/40929370/88022201-d2fcaa00-cb69-11ea-8662-d862a615d3ac.png" alt="image" /></p>
+
+<blockquote>
+  <p>인스턴스가 만들어지면 외부 IP 주소를 할당 받게되며, 이는  임시 IP 이지만 고정 IP로 할당받을 수있다.<br /></p>
+  <ul>
+    <li>외부 IP 주소로 할당 방법<br />
+목록 &gt; VPC 네트워크 &gt; 외부 IP 주소 설정 하고, 유형을 고정으로 변경해준다.</li>
+  </ul>
+</blockquote>
+
+<p>그리고 나서, vm 인스턴스 목록에서 ssh 클라우드로 접속해준다.</p>
+
+<p>인스턴스가 생성이 잘되었다면, ssh 접속이 가능하다.
+<img src="https://user-images.githubusercontent.com/40929370/88068844-b2554400-cbab-11ea-83e6-3b9eeed71c37.png" alt="image" /></p>
+
+<ol>
+  <li>서버 연결</li>
+</ol>
+
+<p>2-1. 기본 설정하기</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># linux root 사용자로 변경 (ssh 연결 완료되면 제일 먼저 root로 변경해준다.)&lt;/span&gt;
+sudo su 
+
+# 패키지 목록 갱신
+apt-get update
+
+# 현재 운영체제에 설치되어 있는 프로그램 최신버전 패치
+apt-get upgrade
+
+# 시스템 시간 설정
+dpkg-reconfigure tzdata
+
+# nginx 설치
+apt-get install nginx-y
+
+</code></pre></div></div>
+
+
+    
+
+
+
+<div class="post-tags">
   
-    <li>
-      <h3>
-        <a href="/gcp/2020/06/20/gcp-registry.html">
-          GCP 레지스트리 등록
-          <small>20 Jun 2020</small>
-        </a>
-      </h3>
-    </li>
+</div>
+  </div>
+
   
-</ul>
+  <section class="related">
+  <h2>Related Posts</h2>
+  <ul class="posts-list">
+    
+      <li>
+        <h3>
+          <a href="/gcp/2020/06/20/gcp-registry.html">
+            GCP 레지스트리 등록
+            <small>20 Jun 2020</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/algorithm/2020/04/25/setting.html">
+            jupyter 컨테이너 생성 및 구동
+            <small>25 Apr 2020</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/cleancode/2020/02/10/clean-code.html">
+            의미있는 맥락을 추가하라
+            <small>10 Feb 2020</small>
+          </a>
+        </h3>
+      </li>
+    
+  </ul>
+</section>
 
 </div>
 

@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9cacb39c-a7f0-4dee-a828-9bb47a4df706" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2020-06-20-gcp-registry.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2020-06-20-gcp-registry.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/feed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/feed.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/gcp/2020/06/20/gcp-registry.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/gcp/2020/06/20/gcp-registry.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +71,8 @@
       <workItem from="1587796354746" duration="7032000" />
       <workItem from="1592567959422" duration="6702000" />
       <workItem from="1593944963558" duration="2805000" />
-      <workItem from="1594017436990" duration="570000" />
+      <workItem from="1594017436990" duration="827000" />
+      <workItem from="1594390886299" duration="1322000" />
     </task>
     <servers />
   </component>
