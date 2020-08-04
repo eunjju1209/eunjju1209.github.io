@@ -11,7 +11,7 @@
 
   <title>
     
-      Docker-Compose &middot; Hydeout
+      정렬 &middot; Hydeout
     
   </title>
 
@@ -221,11 +221,11 @@
 
     <main class="container">
       <header>
-  <h1 class="post-title">Docker-Compose</h1>
+  <h1 class="post-title">정렬</h1>
 </header>
 <div class="content">
   <div class="post-meta">
-  <span class="post-date">09 Feb 2020</span>
+  <span class="post-date">04 Aug 2020</span>
   <span class="post-categories">
     
       &bull;
@@ -235,8 +235,8 @@
       
 
       
-        <a href="/category/Docker">
-          Docker
+        <a href="/category/Algorithm">
+          Algorithm
         </a>
       
     
@@ -245,22 +245,62 @@
 
 
   <div class="post-body">
-    <p>회사에서 최근에 작업하는 프로젝트가 있는데 <br />
-이 프로젝트를 띄우려면 컨테이너가 3개가 띄어줘야지 내 로컬에서 실행 시킬 수 있었다.</p>
+    <p>바이너리 탐색 &gt; 이진트리를 보고 유무 탐색</p>
 
-<p><br /> 
-근데 몇일 전 회사에서 git pull 받았더니 <code class="highlighter-rouge">docker-compose.yaml</code> 파일이 생겨있고, 
-docker-compose 가 무엇인지 확인해봤더니, 
-    <code class="highlighter-rouge">services</code> 밑에 있는 컨테이너 들을 한꺼번에 올리고 내리고 할 수 있습니다.</p>
-<blockquote>
-  <p>docker-compose up 하면 
- docker-compose.yaml 에 있는 컨테이너들을 한번에 올릴 수 있고, 한번에 내릴 수 있습니다.</p>
-</blockquote>
+<p>** 탐색 ( 순차 &amp; 해쉬 &amp; 이진)<br />
+** 이진탐색에 따라 공부함,</p>
 
-<p>docker-compose up 을 하면 여러개</p>
+<p><b> - 이진탐색 (Binary Search)</b></p>
 
-<p>docker-compose up -d » 백그라운드로 실행 시킬 수 있습니다.</p>
+<p>Q. 다음 1~30 병뚜껑에는 각각 1 ~ 100 사이의 번호가 표시되어 있다.<br />
+이중에 70이 있을지 없을지 확인하는 방법을 찾아보세요.</p>
 
+<p>조건 : <br />
+1) 가장 적게 병을 따야 한다.<br />
+2) 각 병뚜껑에 씌여진 번호는 낮은 번호 순으로 기입되어 있다.</p>
+
+<p>** 정렬이 되어있다는 전제 조건,,</p>
+
+<p>순차 -&gt; 하나씩 앞에서 부터 따는 ..</p>
+
+<p>하지만 정렬이 되어있다는 전제 조건이라면 가운데의 병을 찾아서 값 비교 한다.</p>
+
+<p>15의 병을 땄을 때는 60 이라고 생각하면 16 ~ 30 에 70이 있을 확률이 높음</p>
+
+<p>22 의 병을 뚜껑을 땄을때는 75이다. 그럼 왼쪽의 병을 기준으로 찾는다.<br />
+라고 하면서 조금씩 줄여가본다 —&gt; 이러한 방식은 이진탐색 방법</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>** 그러므로 이진탐색이 순차탐색보다 빠르다.
+</code></pre></div></div>
+
+<p>이진 탐색코드</p>
+
+<p>분할 정복 알고리즘과 이진 탐색</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- 분할 정복 알고리즘 (Divide and Conquer) —&gt; 재귀용법 에서 많이 쓰인다,
+	- Divide : 문제를 하나 또는 둘 이상으로 나눈다.
+	- Conquer: 나눠진 문제가 충분히 작고, 해결이  가능하다면 해결하고, 그렇지 않다면 다시 나눈다.
+- 이진 탐색 
+	- Divide: 리스트를 두 개의 서브 리스트로 나눈다.
+	- Conquer 
+		- 검색할 숫자 (search) &gt; 중간값 이면, 뒷 부분의 서브 리스트에서 검색할 숫자를 찾는다.
+		- 검색할 숫자 (search) &lt; 중간값 이면, 앞 부분의 서브 리스트에서 검색할 숫자를 찾는다.
+</code></pre></div></div>
+
+<p><b>- 순차 탐색 (Sequential Search)</b></p>
+
+<ul>
+  <li>순차 탐색 (Sequential Search)
+    <ul>
+      <li>탐색은 여러 데이터 중에서  원하는 데이터를 찾아내는 것을의미</li>
+      <li>데이터가 담겨있는 리스트를 앞에서부터 하나씩 비교해서  원하는 데이터를 찾는 방법</li>
+    </ul>
+  </li>
+  <li>최악의 경우리스트  길이가 n일때, n번비교해야함
+    <ul>
+      <li>O(n)</li>
+    </ul>
+  </li>
+</ul>
 
     
 
@@ -278,15 +318,6 @@ docker-compose 가 무엇인지 확인해봤더니,
     
       <li>
         <h3>
-          <a href="/algorithm/2020/08/04/algorithm-alignment.html">
-            정렬
-            <small>04 Aug 2020</small>
-          </a>
-        </h3>
-      </li>
-    
-      <li>
-        <h3>
           <a href="/gcp/2020/07/20/gcp-webserver.html">
             GCP 웹서버 구축
             <small>20 Jul 2020</small>
@@ -299,6 +330,15 @@ docker-compose 가 무엇인지 확인해봤더니,
           <a href="/gcp/2020/06/20/gcp-registry.html">
             GCP 레지스트리 등록
             <small>20 Jun 2020</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/algorithm/2020/04/25/setting.html">
+            jupyter 컨테이너 생성 및 구동
+            <small>25 Apr 2020</small>
           </a>
         </h3>
       </li>
