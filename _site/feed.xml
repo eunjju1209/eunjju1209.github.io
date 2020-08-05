@@ -1,4 +1,68 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-08-04T21:40:51+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Hydeout</title><subtitle>The &lt;a href=&quot;http://hyde.getpoole.com&quot; target=&quot;_blank&quot;&gt;Hyde&lt;/a&gt; theme for &lt;a href=&quot;http://jekyllrb.com&quot; target=&quot;_blank&quot;&gt;Jekyll&lt;/a&gt;, refreshed.</subtitle><author><name>Andrew Fong</name></author><entry><title type="html">정렬</title><link href="http://localhost:4000/algorithm/2020/08/04/algorithm-alignment.html" rel="alternate" type="text/html" title="정렬" /><published>2020-08-04T00:00:00+09:00</published><updated>2020-08-04T00:00:00+09:00</updated><id>http://localhost:4000/algorithm/2020/08/04/algorithm-alignment</id><content type="html" xml:base="http://localhost:4000/algorithm/2020/08/04/algorithm-alignment.html">&lt;p&gt;바이너리 탐색 &amp;gt; 이진트리를 보고 유무 탐색&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-08-05T14:42:12+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Hydeout</title><subtitle>The &lt;a href=&quot;http://hyde.getpoole.com&quot; target=&quot;_blank&quot;&gt;Hyde&lt;/a&gt; theme for &lt;a href=&quot;http://jekyllrb.com&quot; target=&quot;_blank&quot;&gt;Jekyll&lt;/a&gt;, refreshed.</subtitle><author><name>Andrew Fong</name></author><entry><title type="html">그래프 (DFS&amp;amp;BFS)</title><link href="http://localhost:4000/algorithm/2020/08/05/algorithm-graph.html" rel="alternate" type="text/html" title="그래프 (DFS&amp;BFS)" /><published>2020-08-05T00:00:00+09:00</published><updated>2020-08-05T00:00:00+09:00</updated><id>http://localhost:4000/algorithm/2020/08/05/algorithm-graph</id><content type="html" xml:base="http://localhost:4000/algorithm/2020/08/05/algorithm-graph.html">&lt;p&gt;너비 우선 탐색 (Breadth-First Search)&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;탐색 알고리즘
+ -&amp;gt; 그래프에서 탐색한다는뜻
+     = 특정 노드를 탐색하겠다는 뜻&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;노드 탐색
+        &lt;ul&gt;
+          &lt;li&gt;너비 우선 탐색&lt;/li&gt;
+          &lt;li&gt;깊이 우선 탐색&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;너비 우선 탐색 (BFS) 
+	- 정점들과 같은 레벨에 있는 노드들 먼저 탐색하는 방식
+깊이 우선 탐색 (DFS)
+	- 정점의 자식들을 먼저 탐색하는 방식&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;사이클이 없는 방식에서 탐색하는 방식이다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/40929370/89375657-112cc880-d729-11ea-9774-994ae004f002.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;빨간 화살표는 탐색을 하기 위해서 노드 이동하는 부분을 그림으로 그려놓음&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;BFS 방식 : A - B - C - D - G - H- I - E - F - J&lt;/li&gt;
+  &lt;li&gt;DFS 방식: A - B  - D - E  - F - C - G -H - I - J&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;** BFS 알고리즘 코드로 작성&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;자료 구조 큐를 활용함&lt;br /&gt;
+ need_visit &amp;amp; visited 큐&lt;br /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;깊이 우선 탐색 (Depth-First Search)&lt;br /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;자기와 연결된 노드의 밑에 맨 밑에까지 탐색하고&lt;br /&gt;
+그게 리프 노드이면, 그 상위의 노드로 가서 다른 리프노드를 먼저 끝까지 탐색 하는것&lt;br /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;DFS 알고리즘 구현&lt;br /&gt;
+  need_visit 스택, visited 큐 활용한다&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;시간복잡도&lt;br /&gt;
+	* 일반적인 DFS 시간 복잡도&lt;br /&gt;
+		노드 수 : V &lt;br /&gt;
+		간선 수 : E &lt;br /&gt;
+		- 위 코드에서 while need_visit V+E 번만큼 수행함&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;* 시간 복잡도: O(V+E)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Andrew Fong</name></author><summary type="html">너비 우선 탐색 (Breadth-First Search)</summary></entry><entry><title type="html">정렬</title><link href="http://localhost:4000/algorithm/2020/08/04/algorithm-alignment.html" rel="alternate" type="text/html" title="정렬" /><published>2020-08-04T00:00:00+09:00</published><updated>2020-08-04T00:00:00+09:00</updated><id>http://localhost:4000/algorithm/2020/08/04/algorithm-alignment</id><content type="html" xml:base="http://localhost:4000/algorithm/2020/08/04/algorithm-alignment.html">&lt;p&gt;바이너리 탐색 &amp;gt; 이진트리를 보고 유무 탐색&lt;/p&gt;
 
 &lt;p&gt;** 탐색 ( 순차 &amp;amp; 해쉬 &amp;amp; 이진)&lt;br /&gt;
 ** 이진탐색에 따라 공부함,&lt;/p&gt;
@@ -302,21 +366,24 @@ ENTRYPOINT jupyter notebook --allow-root --ip=0.0.0.0 --port=8888 --no-browser
     &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;사실 모든 소스는 재 사용성을 고려해서 모든걸 만들어야 되는걸 알지만
-실제로 잘 지켜지지 않고 실천하지 못하는 부분을 반성해야 할 것같다.&lt;/p&gt;</content><author><name>Andrew Fong</name></author><summary type="html">이 소제목의 내용을 보고 반성을 할 수 있게 만든 내용이였다.</summary></entry><entry><title type="html">Docker-Compose</title><link href="http://localhost:4000/docker/2020/02/09/docker-compose.html" rel="alternate" type="text/html" title="Docker-Compose" /><published>2020-02-09T00:00:00+09:00</published><updated>2020-02-09T00:00:00+09:00</updated><id>http://localhost:4000/docker/2020/02/09/docker-compose</id><content type="html" xml:base="http://localhost:4000/docker/2020/02/09/docker-compose.html">&lt;p&gt;회사에서 최근에 작업하는 프로젝트가 있는데 &lt;br /&gt;
-이 프로젝트를 띄우려면 컨테이너가 3개가 띄어줘야지 내 로컬에서 실행 시킬 수 있었다.&lt;/p&gt;
+실제로 잘 지켜지지 않고 실천하지 못하는 부분을 반성해야 할 것같다.&lt;/p&gt;</content><author><name>Andrew Fong</name></author><summary type="html">이 소제목의 내용을 보고 반성을 할 수 있게 만든 내용이였다.</summary></entry><entry><title type="html">Docker link</title><link href="http://localhost:4000/docker/2020/02/09/docker-link.html" rel="alternate" type="text/html" title="Docker link" /><published>2020-02-09T00:00:00+09:00</published><updated>2020-02-09T00:00:00+09:00</updated><id>http://localhost:4000/docker/2020/02/09/docker-link</id><content type="html" xml:base="http://localhost:4000/docker/2020/02/09/docker-link.html">&lt;ul&gt;
+  &lt;li&gt;docker link 란?&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;&lt;br /&gt; 
-근데 몇일 전 회사에서 git pull 받았더니 &lt;code class=&quot;highlighter-rouge&quot;&gt;docker-compose.yaml&lt;/code&gt; 파일이 생겨있고, 
-docker-compose 가 무엇인지 확인해봤더니, 
-    &lt;code class=&quot;highlighter-rouge&quot;&gt;services&lt;/code&gt; 밑에 있는 컨테이너 들을 한꺼번에 올리고 내리고 할 수 있습니다.&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;docker-compose up 하면 
- docker-compose.yaml 에 있는 컨테이너들을 한번에 올릴 수 있고, 한번에 내릴 수 있습니다.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;docker container 연결 시키는 방법&lt;/p&gt;
 
-&lt;p&gt;docker-compose up 을 하면 여러개&lt;/p&gt;
+&lt;p&gt;https://docs.docker.com/engine/examples/postgresql_service/&lt;/p&gt;
 
-&lt;p&gt;docker-compose up -d » 백그라운드로 실행 시킬 수 있습니다.&lt;/p&gt;</content><author><name>Andrew Fong</name></author><summary type="html">회사에서 최근에 작업하는 프로젝트가 있는데 이 프로젝트를 띄우려면 컨테이너가 3개가 띄어줘야지 내 로컬에서 실행 시킬 수 있었다.</summary></entry><entry><title type="html">Docker inspect</title><link href="http://localhost:4000/docker/2020/02/09/docker-inspect.html" rel="alternate" type="text/html" title="Docker inspect" /><published>2020-02-09T00:00:00+09:00</published><updated>2020-02-09T00:00:00+09:00</updated><id>http://localhost:4000/docker/2020/02/09/docker-inspect</id><content type="html" xml:base="http://localhost:4000/docker/2020/02/09/docker-inspect.html">&lt;ul&gt;
+&lt;p&gt;—link&lt;/p&gt;
+
+&lt;p&gt;내가 현재, snack bar 컨테이너를 띄우고있었는데 
+db를 AWS 에서 제공하는게 아니라 컨테이너 디비를 열어서 사용하고 싶다.&lt;/p&gt;
+
+&lt;p&gt;왜냐하면 docker volume 쓰고, git 에다가 올려놓으면 서버를 사지않아도 내 로컬에서 작업한걸 다른분이 사용할 수 있기ㄸㅐ문에.. 
+혹시 맞지않으면 수정하려고 한다.&lt;/p&gt;
+
+&lt;p&gt;하이튼 snackbar 컨테이너오ㅏ psql 컨테이너를 연결을 어떻게 시켜서 내 로컬에서 테스트 할 수 있는 방법이 있는지 찾아보았는데
+docker link 라는것이 있어서 알아보았다.&lt;/p&gt;</content><author><name>Andrew Fong</name></author><summary type="html">docker link 란?</summary></entry><entry><title type="html">Docker inspect</title><link href="http://localhost:4000/docker/2020/02/09/docker-inspect.html" rel="alternate" type="text/html" title="Docker inspect" /><published>2020-02-09T00:00:00+09:00</published><updated>2020-02-09T00:00:00+09:00</updated><id>http://localhost:4000/docker/2020/02/09/docker-inspect</id><content type="html" xml:base="http://localhost:4000/docker/2020/02/09/docker-inspect.html">&lt;ul&gt;
   &lt;li&gt;docker inspect 란?&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -337,24 +404,21 @@ docker-compose 가 무엇인지 확인해봤더니,
 
 &lt;p&gt;docker inspect -f “” redis
 쳐서 내부 ip 를 검색해서 알 수 있었다.
-&lt;img src=&quot;https://user-images.githubusercontent.com/40929370/74098253-59dc3e00-4b59-11ea-8cb1-b144010cd1d7.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;</content><author><name>Andrew Fong</name></author><summary type="html">docker inspect 란?</summary></entry><entry><title type="html">Docker link</title><link href="http://localhost:4000/docker/2020/02/09/docker-link.html" rel="alternate" type="text/html" title="Docker link" /><published>2020-02-09T00:00:00+09:00</published><updated>2020-02-09T00:00:00+09:00</updated><id>http://localhost:4000/docker/2020/02/09/docker-link</id><content type="html" xml:base="http://localhost:4000/docker/2020/02/09/docker-link.html">&lt;ul&gt;
-  &lt;li&gt;docker link 란?&lt;/li&gt;
-&lt;/ul&gt;
+&lt;img src=&quot;https://user-images.githubusercontent.com/40929370/74098253-59dc3e00-4b59-11ea-8cb1-b144010cd1d7.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;</content><author><name>Andrew Fong</name></author><summary type="html">docker inspect 란?</summary></entry><entry><title type="html">Docker-Compose</title><link href="http://localhost:4000/docker/2020/02/09/docker-compose.html" rel="alternate" type="text/html" title="Docker-Compose" /><published>2020-02-09T00:00:00+09:00</published><updated>2020-02-09T00:00:00+09:00</updated><id>http://localhost:4000/docker/2020/02/09/docker-compose</id><content type="html" xml:base="http://localhost:4000/docker/2020/02/09/docker-compose.html">&lt;p&gt;회사에서 최근에 작업하는 프로젝트가 있는데 &lt;br /&gt;
+이 프로젝트를 띄우려면 컨테이너가 3개가 띄어줘야지 내 로컬에서 실행 시킬 수 있었다.&lt;/p&gt;
 
-&lt;p&gt;docker container 연결 시키는 방법&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt; 
+근데 몇일 전 회사에서 git pull 받았더니 &lt;code class=&quot;highlighter-rouge&quot;&gt;docker-compose.yaml&lt;/code&gt; 파일이 생겨있고, 
+docker-compose 가 무엇인지 확인해봤더니, 
+    &lt;code class=&quot;highlighter-rouge&quot;&gt;services&lt;/code&gt; 밑에 있는 컨테이너 들을 한꺼번에 올리고 내리고 할 수 있습니다.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;docker-compose up 하면 
+ docker-compose.yaml 에 있는 컨테이너들을 한번에 올릴 수 있고, 한번에 내릴 수 있습니다.&lt;/p&gt;
+&lt;/blockquote&gt;
 
-&lt;p&gt;https://docs.docker.com/engine/examples/postgresql_service/&lt;/p&gt;
+&lt;p&gt;docker-compose up 을 하면 여러개&lt;/p&gt;
 
-&lt;p&gt;—link&lt;/p&gt;
-
-&lt;p&gt;내가 현재, snack bar 컨테이너를 띄우고있었는데 
-db를 AWS 에서 제공하는게 아니라 컨테이너 디비를 열어서 사용하고 싶다.&lt;/p&gt;
-
-&lt;p&gt;왜냐하면 docker volume 쓰고, git 에다가 올려놓으면 서버를 사지않아도 내 로컬에서 작업한걸 다른분이 사용할 수 있기ㄸㅐ문에.. 
-혹시 맞지않으면 수정하려고 한다.&lt;/p&gt;
-
-&lt;p&gt;하이튼 snackbar 컨테이너오ㅏ psql 컨테이너를 연결을 어떻게 시켜서 내 로컬에서 테스트 할 수 있는 방법이 있는지 찾아보았는데
-docker link 라는것이 있어서 알아보았다.&lt;/p&gt;</content><author><name>Andrew Fong</name></author><summary type="html">docker link 란?</summary></entry><entry><title type="html">Docker volume</title><link href="http://localhost:4000/docker/2020/02/09/docker-volume.html" rel="alternate" type="text/html" title="Docker volume" /><published>2020-02-09T00:00:00+09:00</published><updated>2020-02-09T00:00:00+09:00</updated><id>http://localhost:4000/docker/2020/02/09/docker-volume</id><content type="html" xml:base="http://localhost:4000/docker/2020/02/09/docker-volume.html">&lt;ul&gt;
+&lt;p&gt;docker-compose up -d » 백그라운드로 실행 시킬 수 있습니다.&lt;/p&gt;</content><author><name>Andrew Fong</name></author><summary type="html">회사에서 최근에 작업하는 프로젝트가 있는데 이 프로젝트를 띄우려면 컨테이너가 3개가 띄어줘야지 내 로컬에서 실행 시킬 수 있었다.</summary></entry><entry><title type="html">Docker volume</title><link href="http://localhost:4000/docker/2020/02/09/docker-volume.html" rel="alternate" type="text/html" title="Docker volume" /><published>2020-02-09T00:00:00+09:00</published><updated>2020-02-09T00:00:00+09:00</updated><id>http://localhost:4000/docker/2020/02/09/docker-volume</id><content type="html" xml:base="http://localhost:4000/docker/2020/02/09/docker-volume.html">&lt;ul&gt;
   &lt;li&gt;docker volume 이란?&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -390,85 +454,4 @@ docker  create volume —name test&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/40929370/74097980-fbfa2700-4b55-11ea-9677-7f6cd5030032.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/40929370/74097985-06b4bc00-4b56-11ea-9e35-0a7adb2fdf6f.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;</content><author><name>Andrew Fong</name></author><summary type="html">docker volume 이란?</summary></entry><entry><title type="html">Hello Hydeout</title><link href="http://localhost:4000/2017/06/01/hello-hydeout.html" rel="alternate" type="text/html" title="Hello Hydeout" /><published>2017-06-01T00:00:00+09:00</published><updated>2017-06-01T00:00:00+09:00</updated><id>http://localhost:4000/2017/06/01/hello-hydeout</id><content type="html" xml:base="http://localhost:4000/2017/06/01/hello-hydeout.html">&lt;p&gt;Hydeout updates the original &lt;a href=&quot;https://github.com/poole/hyde&quot;&gt;Hyde&lt;/a&gt;
-theme for &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt; 3.x and adds new functionality.&lt;/p&gt;
-
-&lt;h3 id=&quot;keep-it-simple&quot;&gt;Keep It Simple&lt;/h3&gt;
-
-&lt;p&gt;In keeping with the original Hyde theme, Hydeout aims to keep the overall
-design lightweight and plugin-free. JavaScript is currently limited only
-to Disqus and Google Analytics (and is only loaded if you provide configuration
-variables).&lt;/p&gt;
-
-&lt;p&gt;Hydeout makes heavy use of Flexbox in its CSS. If Flexbox is not available,
-the CSS degrades into a single column layout.&lt;/p&gt;
-
-&lt;h3 id=&quot;customization&quot;&gt;Customization&lt;/h3&gt;
-
-&lt;p&gt;Hydeout replaces Hyde’s class-based theming with the use
-of the following SASS variables:&lt;/p&gt;
-
-&lt;div class=&quot;language-scss highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$sidebar-bg-color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;#202020&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;default&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;$sidebar-fg-color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;white&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;default&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;$sidebar-sticky&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;true&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;default&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;$layout-reverse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;false&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;default&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;$link-color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;#268bd2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;default&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;To override these variables, create your own &lt;code class=&quot;highlighter-rouge&quot;&gt;assets/css/main.scss&lt;/code&gt; file.
-Define your own variables, then import in Hydeout’s SCSS, like so:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;---
-# Jekyll needs front matter for SCSS files
----
-
-$sidebar-bg-color: #ac4142;
-$link-color: #ac4142;
-$sidebar-sticky: false;
-@import &quot;hydeout&quot;;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;See the &lt;a href=&quot;https://github.com/fongandrew/hydeout/blob/master/_sass/hydeout/_variables.scss&quot;&gt;_variables&lt;/a&gt; file for other variables
-you can override.&lt;/p&gt;
-
-&lt;p&gt;You can also insert custom head tags (e.g. to load your own stylesheets) by
-defining your own &lt;code class=&quot;highlighter-rouge&quot;&gt;_includes/custom-head.html&lt;/code&gt; or insert tags at the end
-of the body (e.g. for custom JS) by defining your own
-&lt;code class=&quot;highlighter-rouge&quot;&gt;_includes/custom-foot.html&lt;/code&gt;.&lt;/p&gt;
-
-&lt;h3 id=&quot;new-features&quot;&gt;New Features&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Hydeout also adds a new tags page (accessible in the sidebar) and a new
-“category” layout for dedicated category pages.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Category pages are automatically added to the sidebar. All other pages
-must have &lt;code class=&quot;highlighter-rouge&quot;&gt;sidebar_link: true&lt;/code&gt; in their front matter to show up in
-the sidebar.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;A simple redirect-to-Google search is available. If you want to use
-Google Custom Search or Algolia or something with more involved,
-override the &lt;code class=&quot;highlighter-rouge&quot;&gt;search.html&lt;/code&gt;.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Disqus integration is ready out of the box. Just add the following to
-your config file:&lt;/p&gt;
-
-    &lt;div class=&quot;language-yaml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;na&quot;&gt;disqus&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-  &lt;span class=&quot;na&quot;&gt;shortname&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;my-disqus-shortname&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-
-    &lt;p&gt;If you don’t want Disqus or want to use something else, override
-&lt;code class=&quot;highlighter-rouge&quot;&gt;comments.html&lt;/code&gt;.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;For Google Analytics support, define a &lt;code class=&quot;highlighter-rouge&quot;&gt;google_analytics&lt;/code&gt; variable with
-your property ID in your config file.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;There’s also a bunch of minor tweaks and adjustments throughout the
-theme. Hope this works for you!&lt;/p&gt;</content><author><name>Andrew Fong</name></author><summary type="html">Hydeout updates the original Hyde theme for Jekyll 3.x and adds new functionality. Keep It Simple In keeping with the original Hyde theme, Hydeout aims to keep the overall design lightweight and plugin-free. JavaScript is currently limited only to Disqus and Google Analytics (and is only loaded if you provide configuration variables). Hydeout makes heavy use of Flexbox in its CSS. If Flexbox is not available, the CSS degrades into a single column layout. Customization Hydeout replaces Hyde’s class-based theming with the use of the following SASS variables: $sidebar-bg-color: #202020 !default; $sidebar-fg-color: white !default; $sidebar-sticky: true !default; $layout-reverse: false !default; $link-color: #268bd2 !default; To override these variables, create your own assets/css/main.scss file. Define your own variables, then import in Hydeout’s SCSS, like so: --- # Jekyll needs front matter for SCSS files --- $sidebar-bg-color: #ac4142; $link-color: #ac4142; $sidebar-sticky: false; @import &quot;hydeout&quot;; See the _variables file for other variables you can override. You can also insert custom head tags (e.g. to load your own stylesheets) by defining your own _includes/custom-head.html or insert tags at the end of the body (e.g. for custom JS) by defining your own _includes/custom-foot.html. New Features Hydeout also adds a new tags page (accessible in the sidebar) and a new “category” layout for dedicated category pages. Category pages are automatically added to the sidebar. All other pages must have sidebar_link: true in their front matter to show up in the sidebar. A simple redirect-to-Google search is available. If you want to use Google Custom Search or Algolia or something with more involved, override the search.html. Disqus integration is ready out of the box. Just add the following to your config file: disqus: shortname: my-disqus-shortname If you don’t want Disqus or want to use something else, override comments.html. For Google Analytics support, define a google_analytics variable with your property ID in your config file. There’s also a bunch of minor tweaks and adjustments throughout the theme. Hope this works for you!</summary></entry></feed>
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/40929370/74097985-06b4bc00-4b56-11ea-9e35-0a7adb2fdf6f.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;</content><author><name>Andrew Fong</name></author><summary type="html">docker volume 이란?</summary></entry></feed>
