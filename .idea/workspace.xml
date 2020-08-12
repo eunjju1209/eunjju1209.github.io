@@ -1,9 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="9cacb39c-a7f0-4dee-a828-9bb47a4df706" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/2017/06/01/hello-hydeout.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/2017/06/01/hello-hydeout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/algorithm/2020/04/25/setting.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/algorithm/2020/04/25/setting.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/algorithm/2020/08/04/algorithm-alignment.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/algorithm/2020/08/04/algorithm-alignment.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/algorithm/2020/08/05/algorithm-graph.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/algorithm/2020/08/05/algorithm-graph.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/category/Algorithm.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/category/Algorithm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/cleancode/2020/02/10/clean-code.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/cleancode/2020/02/10/clean-code.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/docker/2020/02/09/docker-compose.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/docker/2020/02/09/docker-compose.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/docker/2020/02/09/docker-inspect.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/docker/2020/02/09/docker-inspect.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/docker/2020/02/09/docker-link.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/docker/2020/02/09/docker-link.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/docker/2020/02/09/docker-volume.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/docker/2020/02/09/docker-volume.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/feed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/feed.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/gcp/2020/06/20/gcp-registry.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/gcp/2020/06/20/gcp-registry.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/gcp/2020/07/20/gcp-webserver.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/gcp/2020/07/20/gcp-webserver.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/page2/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/page2/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/page3/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/page3/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,11 +59,6 @@
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/_posts" />
-      <recent name="$PROJECT_DIR$/_site/docker/2020/02/09" />
-      <recent name="$PROJECT_DIR$/_site/docker" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/_posts" />
       <recent name="$PROJECT_DIR$/category" />
@@ -53,7 +66,13 @@
       <recent name="$PROJECT_DIR$/_site/category" />
       <recent name="$PROJECT_DIR$" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/_posts" />
+      <recent name="$PROJECT_DIR$/_site/docker/2020/02/09" />
+      <recent name="$PROJECT_DIR$/_site/docker" />
+    </key>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -73,11 +92,13 @@
       <workItem from="1593944963558" duration="2805000" />
       <workItem from="1594017436990" duration="827000" />
       <workItem from="1594390886299" duration="1322000" />
+      <workItem from="1597225476922" duration="14000" />
+      <workItem from="1597225506059" duration="2099000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
     <state x="184" y="123" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1592580295333">
@@ -92,10 +113,11 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="421" y="216" width="598" height="490" key="find.popup/0.23.1440.877/-1920.23.1920.1057@0.23.1440.877" timestamp="1592576010894" />
-    <state x="385" y="213" width="670" height="676" key="search.everywhere.popup" timestamp="1593958265193">
+    <state x="385" y="213" width="670" height="676" key="search.everywhere.popup" timestamp="1597225954357">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="385" y="213" width="670" height="676" key="search.everywhere.popup/0.23.1440.877/-1920.-157.1920.1057@0.23.1440.877" timestamp="1593958265193" />
+    <state x="385" y="213" width="670" height="676" key="search.everywhere.popup/0.23.1440.877/-1920.-79.1920.1057@0.23.1440.877" timestamp="1597225954357" />
     <state x="385" y="213" width="670" height="676" key="search.everywhere.popup/0.23.1440.877/-1920.23.1920.1057@0.23.1440.877" timestamp="1592570525447" />
   </component>
 </project>
