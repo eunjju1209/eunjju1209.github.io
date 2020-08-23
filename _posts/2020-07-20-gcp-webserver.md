@@ -24,9 +24,9 @@ categories: GCP
 ![image](https://user-images.githubusercontent.com/40929370/88068844-b2554400-cbab-11ea-83e6-3b9eeed71c37.png)
 
 
-2. 서버 연결
+ 2. 서버 연결
 
-2-1. 기본 설정하기
+ 2-1. 기본 설정하기
 ```
 # linux root 사용자로 변경 (ssh 연결 완료되면 제일 먼저 root로 변경해준다.)</span>
 sudo su 
@@ -45,3 +45,43 @@ apt-get install nginx-y
 
 ```
 
+nginx 설치 후  
+ 3. 방화벽 설정해 줘야한다.
+
+![image](https://user-images.githubusercontent.com/40929370/90978381-7e918380-e588-11ea-8514-f203de24de2e.png)
+
+ 4. 고정 외부 IP 만들고 vm 인스턴스에 매칭한다. 
+    ( VPC 네트워크 > 외부 IP 주소 > 고정주소 예약 )
+    
+    4-1 원격에서 SSH로 서버 접속하는 방법
+        - ssh-keygen 으로 공개키를 만든다.<br/>
+        ```console
+          ssh-keygen -t rsa -C 'test@test.com'
+        ```
+        ![image](https://user-images.githubusercontent.com/40929370/90978708-c0bbc480-e58a-11ea-9728-91d69c589b1e.png)
+       
+        - GCP 메뉴 > Compute Engine > 메타 데이터에 공개키를 등록해야한다.
+            Compute Engine > 메타 데이터 > SSH 공개키 등록 ( 메타 데이터 클릭 후, 수정 버튼 눌러서 추가할 수 있다. )
+       
+        - ssh로 접속하기
+
+5. httpd(아파치) 설치 하기
+    
+```console
+# 설치 하기 전에 저장소의 패키지 목록업데이트 및 업그레이드를 해준다
+$ sudo apt update && sudo apt upgrade
+
+# apache2 설치
+$ sudo apt-get install apache2
+
+# 설치된 Apache 버전 확인
+$ apache2 -v
+
+# Apache 구동
+$ sudo service apache2 restart  // 재시작
+$ sudo service apache2 stop     // 멈춤
+$ sudo service apache2 start    // 시작
+```
+
+http://35.216.37.188/   <br/> 
+gcp 이용해서 서버 구동완료하였다.

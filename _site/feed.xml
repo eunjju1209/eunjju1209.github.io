@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-08-12T22:39:09+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Hydeout</title><subtitle>The &lt;a href=&quot;http://hyde.getpoole.com&quot; target=&quot;_blank&quot;&gt;Hyde&lt;/a&gt; theme for &lt;a href=&quot;http://jekyllrb.com&quot; target=&quot;_blank&quot;&gt;Jekyll&lt;/a&gt;, refreshed.</subtitle><author><name>Andrew Fong</name></author><entry><title type="html">프로그래머스 - 여행계획(javascript)</title><link href="http://localhost:4000/algorithm/2020/08/12/algorithm-programmers-trip.html" rel="alternate" type="text/html" title="프로그래머스 - 여행계획(javascript)" /><published>2020-08-12T00:00:00+09:00</published><updated>2020-08-12T00:00:00+09:00</updated><id>http://localhost:4000/algorithm/2020/08/12/algorithm-programmers-trip-</id><content type="html" xml:base="http://localhost:4000/algorithm/2020/08/12/algorithm-programmers-trip.html">&lt;p&gt;PHP 개발을 주로 하고 있고 전 회사에서 잠깐 typescript로 개발 경험이 있어서 알고리즘을 풀 때 
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-08-23T22:20:37+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Hydeout</title><subtitle>The &lt;a href=&quot;http://hyde.getpoole.com&quot; target=&quot;_blank&quot;&gt;Hyde&lt;/a&gt; theme for &lt;a href=&quot;http://jekyllrb.com&quot; target=&quot;_blank&quot;&gt;Jekyll&lt;/a&gt;, refreshed.</subtitle><author><name>Andrew Fong</name></author><entry><title type="html">프로그래머스 - 여행계획(javascript)</title><link href="http://localhost:4000/algorithm/2020/08/12/algorithm-programmers-trip.html" rel="alternate" type="text/html" title="프로그래머스 - 여행계획(javascript)" /><published>2020-08-12T00:00:00+09:00</published><updated>2020-08-12T00:00:00+09:00</updated><id>http://localhost:4000/algorithm/2020/08/12/algorithm-programmers-trip-</id><content type="html" xml:base="http://localhost:4000/algorithm/2020/08/12/algorithm-programmers-trip.html">&lt;p&gt;PHP 개발을 주로 하고 있고 전 회사에서 잠깐 typescript로 개발 경험이 있어서 알고리즘을 풀 때 
 자바스크립트로 선택해서 풀고있습니다.&lt;/p&gt;
 
 &lt;p&gt;여기에 올리는 이유는 알고리즘을 잘 못 풀어서 통과를 못했기때문에 누군가가 테스트 케이스를 댓글로 알려줬으면 해서 올립니다.&lt;br /&gt;&lt;/p&gt;
@@ -212,7 +212,55 @@ dpkg-reconfigure tzdata
 # nginx 설치
 apt-get install nginx-y
 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Andrew Fong</name></author><summary type="html">내가 올려놓은 소스들을 실제로 웹서버 에서 테스트 해보기 위해서 gcp 에서 웹 서버를 만드는 방법을 찾아보았다. 프로젝트 생성을 했다는 전제조건으로 포스팅을 해보려고 한다.</summary></entry><entry><title type="html">GCP 레지스트리 등록</title><link href="http://localhost:4000/gcp/2020/06/20/gcp-registry.html" rel="alternate" type="text/html" title="GCP 레지스트리 등록" /><published>2020-06-20T00:00:00+09:00</published><updated>2020-06-20T00:00:00+09:00</updated><id>http://localhost:4000/gcp/2020/06/20/gcp-registry</id><content type="html" xml:base="http://localhost:4000/gcp/2020/06/20/gcp-registry.html">&lt;p&gt;GCP 에서 docker image 를 pull&amp;amp;push 관리 하기 위해서 기록
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;nginx 설치 후&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;방화벽 설정해 줘야한다.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/40929370/90978381-7e918380-e588-11ea-8514-f203de24de2e.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;고정 외부 IP 만들고 vm 인스턴스에 매칭한다. 
+( VPC 네트워크 &amp;gt; 외부 IP 주소 &amp;gt; 고정주소 예약 )&lt;/p&gt;
+
+    &lt;p&gt;4-1 원격에서 SSH로 서버 접속하는 방법
+    - ssh-keygen 으로 공개키를 만든다.&lt;br /&gt;
+    &lt;code class=&quot;highlighter-rouge&quot;&gt;console
+      ssh-keygen -t rsa -C 'test@test.com'
+   &lt;/code&gt;
+    &lt;img src=&quot;https://user-images.githubusercontent.com/40929370/90978708-c0bbc480-e58a-11ea-9728-91d69c589b1e.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- GCP 메뉴 &amp;gt; Compute Engine &amp;gt; 메타 데이터에 공개키를 등록해야한다.
+    Compute Engine &amp;gt; 메타 데이터 &amp;gt; SSH 공개키 등록 ( 메타 데이터 클릭 후, 수정 버튼 눌러서 추가할 수 있다. )
+   
+- ssh로 접속하기
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;httpd(아파치) 설치 하기&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;설치 하기 전에 저장소의 패키지 목록업데이트 및 업그레이드를 해준다
+&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt update &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt upgrade
+&lt;span class=&quot;go&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;gp&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;apache2 설치
+&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt-get &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;apache2
+&lt;span class=&quot;go&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;gp&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;설치된 Apache 버전 확인
+&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;apache2 &lt;span class=&quot;nt&quot;&gt;-v&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;gp&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;Apache 구동
+&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;service apache2 restart  // 재시작
+&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;service apache2 stop     // 멈춤
+&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;service apache2 start    // 시작
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;http://35.216.37.188/   &lt;br /&gt; 
+gcp 이용해서 서버 구동완료하였다.&lt;/p&gt;</content><author><name>Andrew Fong</name></author><summary type="html">내가 올려놓은 소스들을 실제로 웹서버 에서 테스트 해보기 위해서 gcp 에서 웹 서버를 만드는 방법을 찾아보았다. 프로젝트 생성을 했다는 전제조건으로 포스팅을 해보려고 한다.</summary></entry><entry><title type="html">GCP 레지스트리 등록</title><link href="http://localhost:4000/gcp/2020/06/20/gcp-registry.html" rel="alternate" type="text/html" title="GCP 레지스트리 등록" /><published>2020-06-20T00:00:00+09:00</published><updated>2020-06-20T00:00:00+09:00</updated><id>http://localhost:4000/gcp/2020/06/20/gcp-registry</id><content type="html" xml:base="http://localhost:4000/gcp/2020/06/20/gcp-registry.html">&lt;p&gt;GCP 에서 docker image 를 pull&amp;amp;push 관리 하기 위해서 기록
     - gcp에 docker 이미지 올려놓는 이 ??&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/40929370/85203347-1932d380-b348-11ea-8d5a-efc0db2e52f5.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;

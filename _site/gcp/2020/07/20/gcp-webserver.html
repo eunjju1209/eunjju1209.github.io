@@ -299,6 +299,53 @@ apt-get install nginx-y
 
 </code></pre></div></div>
 
+<p>nginx 설치 후</p>
+<ol>
+  <li>방화벽 설정해 줘야한다.</li>
+</ol>
+
+<p><img src="https://user-images.githubusercontent.com/40929370/90978381-7e918380-e588-11ea-8514-f203de24de2e.png" alt="image" /></p>
+
+<ol>
+  <li>
+    <p>고정 외부 IP 만들고 vm 인스턴스에 매칭한다. 
+( VPC 네트워크 &gt; 외부 IP 주소 &gt; 고정주소 예약 )</p>
+
+    <p>4-1 원격에서 SSH로 서버 접속하는 방법
+    - ssh-keygen 으로 공개키를 만든다.<br />
+    <code class="highlighter-rouge">console
+      ssh-keygen -t rsa -C 'test@test.com'
+   </code>
+    <img src="https://user-images.githubusercontent.com/40929370/90978708-c0bbc480-e58a-11ea-9728-91d69c589b1e.png" alt="image" /></p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- GCP 메뉴 &gt; Compute Engine &gt; 메타 데이터에 공개키를 등록해야한다.
+    Compute Engine &gt; 메타 데이터 &gt; SSH 공개키 등록 ( 메타 데이터 클릭 후, 수정 버튼 눌러서 추가할 수 있다. )
+   
+- ssh로 접속하기
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>httpd(아파치) 설치 하기</p>
+  </li>
+</ol>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">#</span><span class="w"> </span>설치 하기 전에 저장소의 패키지 목록업데이트 및 업그레이드를 해준다
+<span class="gp">$</span><span class="w"> </span><span class="nb">sudo </span>apt update <span class="o">&amp;&amp;</span> <span class="nb">sudo </span>apt upgrade
+<span class="go">
+</span><span class="gp">#</span><span class="w"> </span>apache2 설치
+<span class="gp">$</span><span class="w"> </span><span class="nb">sudo </span>apt-get <span class="nb">install </span>apache2
+<span class="go">
+</span><span class="gp">#</span><span class="w"> </span>설치된 Apache 버전 확인
+<span class="gp">$</span><span class="w"> </span>apache2 <span class="nt">-v</span>
+<span class="go">
+</span><span class="gp">#</span><span class="w"> </span>Apache 구동
+<span class="gp">$</span><span class="w"> </span><span class="nb">sudo </span>service apache2 restart  // 재시작
+<span class="gp">$</span><span class="w"> </span><span class="nb">sudo </span>service apache2 stop     // 멈춤
+<span class="gp">$</span><span class="w"> </span><span class="nb">sudo </span>service apache2 start    // 시작
+</code></pre></div></div>
+
+<p>http://35.216.37.188/   <br /> 
+gcp 이용해서 서버 구동완료하였다.</p>
 
     
 
