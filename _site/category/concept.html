@@ -11,7 +11,7 @@
 
   <title>
     
-      jupyter 컨테이너 생성 및 구동 &middot; Hydeout
+      concept &middot; Hydeout
     
   </title>
 
@@ -37,7 +37,7 @@
 </head>
 
 
-  <body class="post">
+  <body class="category">
 
     <div id="sidebar">
   <header>
@@ -152,7 +152,7 @@
 
   
     
-      <a class="category-link "
+      <a class="category-link  active"
           href="/category/concept">concept</a>
     
   
@@ -242,130 +242,27 @@
 
     <main class="container">
       <header>
-  <h1 class="post-title">jupyter 컨테이너 생성 및 구동</h1>
+  <h1 class="page-title">concept</h1>
 </header>
 <div class="content">
-  <div class="post-meta">
-  <span class="post-date">25 Apr 2020</span>
-  <span class="post-categories">
-    
-      &bull;
+  
+  <p>개념 정리해놓는곳입니다.</p>
 
-      
-      
-      
 
-      
-        <a href="/category/Algorithm">
-          Algorithm
+
+<ul class="posts-list">
+  
+  
+    <li>
+      <h3>
+        <a href="/concept/2020/08/29/concept-pipeline.html">
+          pipeline
+          <small>29 Aug 2020</small>
         </a>
-      
-    
-  </span>
-</div>
-
-
-  <div class="post-body">
-    <p>알고리즘을 공부 하려고 인터넷 강의를 샀었는데 주피터란 프로그램을 설치 하라고 해서 docker을 이용해서 사용하려고 합니다.<br />
-혹시나 까먹을 것같아서 기록용으로 작성합니다.</p>
-
-<p>원래는 docker hub 에 올라와 져 있는 이미지를 이용해서 컨테이너를 띄우려고 했는데<br />
-도커파일을 이용해서 컨테이너를 작업한 적 이 없어서 직접 Dockerfile 만들고 컨테이너를 띄우려고 합니다.</p>
-
-<p><a cursor="pointer" href="https://tobelinuxer.tistory.com/26" target="_blank">https://tobelinuxer.tistory.com/26</a></p>
-
-<p><br /> 참고해서 만들었습니다.</p>
-
-<p>Dockerfile</p>
-
-<pre><code class="language-Dockerfile">FROM ubuntu:latest
-
-MAINTAINER eunju "eunjju1209@gmail.com"
-
-# RUN apt-get update &amp;&amp; apt-get -y update
-RUN apt-get update -y
-
-# RUN apt-get install -y build-essential python3.6 python3-pip
-RUN apt-get install -y python-pip python-dev build-essential
-
-RUN pip install jupyter
-
-RUN pip install matplotlib
-
-RUN jupyter notebook --generate-config --allow-root
-
-RUN echo  "c.NotebookApp.password = u'sha1:6a3f528eec40:6e896b6e4828f525a6e20e5411cd1c8075d68619'" &gt;&gt; /root/.jupyter/jupyter_notebook_config.py
-
-EXPOSE 8888
-
-ENTRYPOINT jupyter notebook --allow-root --ip=0.0.0.0 --port=8888 --no-browser
-</code></pre>
-
-<ul>
-  <li>pip
-    <ul>
-      <li>파이썬으로 작성된 패키지 소프트웨어를 관리하는 패키지 관리 시스템입니다. <br />
-  그래서, python-pip 을 설치해줘야 합니다.</li>
-    </ul>
-  </li>
+      </h3>
+    </li>
+  
 </ul>
-
-<pre><code class="language-ubuntu">    docker run -it --name jupyter --rm -p 8888:8888 -v `pwd`:/home/root/test jupyter
-</code></pre>
-
-<p>–rm =&gt; 컨테이너 일회성으로 띄어주는것, 컨테이너 종료 하면 바로 컨테이너 삭제된다. <br /></p>
-
-<p>위치 루트를 /home/root/test 에 넣어줘서 거기가 컨테이너 안에서의 루트이다. <br />
-그리고 /home/root/test 에 들어가면 내가 작업한 Dockerfile 이 있다.</p>
-
-<pre><code class="language-ubuntu">    docker run -it --name jupyter -p 8888:8888 -v `pwd`:/home/root/test jupyter
-</code></pre>
-
-<p>나는 알고리즘을 공부할때마다, 주피터 띄어줄꺼니까 위에 rm 명령어를 빼고 이미지를 run 시켜줄 것 이다.</p>
-
-    
-
-
-
-<div class="post-tags">
-  
-</div>
-  </div>
-
-  
-  <section class="related">
-  <h2>Related Posts</h2>
-  <ul class="posts-list">
-    
-      <li>
-        <h3>
-          <a href="/gcp/2020/08/29/gcp-cicd.html">
-            GCP CI/CD (1)
-            <small>29 Aug 2020</small>
-          </a>
-        </h3>
-      </li>
-    
-      <li>
-        <h3>
-          <a href="/concept/2020/08/29/concept-pipeline.html">
-            pipeline
-            <small>29 Aug 2020</small>
-          </a>
-        </h3>
-      </li>
-    
-      <li>
-        <h3>
-          <a href="/algorithm/2020/08/12/algorithm-programmers-trip.html">
-            프로그래머스 - 여행계획(javascript)
-            <small>12 Aug 2020</small>
-          </a>
-        </h3>
-      </li>
-    
-  </ul>
-</section>
 
 </div>
 
