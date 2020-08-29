@@ -350,16 +350,43 @@ theme. Hope this works for you!</p>
   <section class="comments">
     <h2>Comments</h2>
     
-  <p>
-    You are seeing this because your Disqus shortname is not properly set. To
-    configure Disqus, you should edit your <code>_config.yml</code> to include
-    either a <code>disqus.shortname</code> variable.
-  </p>
+  <div id="disqus_thread">
+    <button class="disqus-load" onClick="loadDisqusComments()">
+      Load Comments
+    </button>
+  </div>
+  <script>
 
-  <p>
-    If you do not wish to use Disqus, override the
-    <code>comments.html</code> partial for this theme.
-  </p>
+  /**
+  *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW
+  *  TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+  *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT:s
+  *  https://disqus.com/admin/universalcode/#configuration-variables
+  */
+  var disqus_config = function () {
+    this.page.url = "http://localhost:4000/2017/06/01/hello-hydeout.html";
+    this.page.identifier = "" ||
+                           "http://localhost:4000/2017/06/01/hello-hydeout.html";
+  }
+  function loadDisqusComments() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = '//eunjju.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  }
+  (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = '//eunjju.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+
+  </script>
+  <noscript>
+    Please enable JavaScript to view the
+    <a href="https://disqus.com/?ref_noscript">comments powered by Disqus</a>.
+  </noscript>
+
 
 
   </section>
