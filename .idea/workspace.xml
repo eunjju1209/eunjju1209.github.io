@@ -7,23 +7,8 @@
     <list default="true" id="9cacb39c-a7f0-4dee-a828-9bb47a4df706" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_posts/2020-08-29-concept-pipeline.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2020-08-29-concept-pipeline.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/2017/06/01/hello-hydeout.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/2017/06/01/hello-hydeout.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/algorithm/2020/04/25/setting.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/algorithm/2020/04/25/setting.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/algorithm/2020/08/04/algorithm-alignment.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/algorithm/2020/08/04/algorithm-alignment.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/algorithm/2020/08/05/algorithm-graph.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/algorithm/2020/08/05/algorithm-graph.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/algorithm/2020/08/12/algorithm-programmers-trip.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/algorithm/2020/08/12/algorithm-programmers-trip.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/category/concept.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/category/concept.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/cleancode/2020/02/10/clean-code.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/cleancode/2020/02/10/clean-code.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/concept/2020/08/29/concept-pipeline.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/concept/2020/08/29/concept-pipeline.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/docker/2020/02/09/docker-compose.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/docker/2020/02/09/docker-compose.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/docker/2020/02/09/docker-inspect.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/docker/2020/02/09/docker-inspect.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/docker/2020/02/09/docker-link.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/docker/2020/02/09/docker-link.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/docker/2020/02/09/docker-volume.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/docker/2020/02/09/docker-volume.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/feed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/feed.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/gcp/2020/06/20/gcp-registry.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/gcp/2020/06/20/gcp-registry.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/gcp/2020/07/20/gcp-webserver.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/gcp/2020/07/20/gcp-webserver.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/gcp/2020/08/29/gcp-cicd.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/gcp/2020/08/29/gcp-cicd.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
