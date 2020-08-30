@@ -1,6 +1,35 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-08-30T02:30:42+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Hydeout</title><subtitle>The &lt;a href=&quot;http://hyde.getpoole.com&quot; target=&quot;_blank&quot;&gt;Hyde&lt;/a&gt; theme for &lt;a href=&quot;http://jekyllrb.com&quot; target=&quot;_blank&quot;&gt;Jekyll&lt;/a&gt;, refreshed.</subtitle><author><name>Andrew Fong</name></author><entry><title type="html">pipeline</title><link href="http://localhost:4000/concept/2020/08/29/concept-pipeline.html" rel="alternate" type="text/html" title="pipeline" /><published>2020-08-29T00:00:00+09:00</published><updated>2020-08-29T00:00:00+09:00</updated><id>http://localhost:4000/concept/2020/08/29/concept-pipeline</id><content type="html" xml:base="http://localhost:4000/concept/2020/08/29/concept-pipeline.html">&lt;p&gt;여러 문서를 보다보면 &lt;code class=&quot;highlighter-rouge&quot;&gt;파이프라인&lt;/code&gt; 이라는 단어를 많이 볼 수 있을것이다.&lt;br /&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-08-30T20:47:54+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Hydeout</title><subtitle>The &lt;a href=&quot;http://hyde.getpoole.com&quot; target=&quot;_blank&quot;&gt;Hyde&lt;/a&gt; theme for &lt;a href=&quot;http://jekyllrb.com&quot; target=&quot;_blank&quot;&gt;Jekyll&lt;/a&gt;, refreshed.</subtitle><author><name>Andrew Fong</name></author><entry><title type="html">pipeline (CI/CD)</title><link href="http://localhost:4000/concept/2020/08/29/concept-pipeline.html" rel="alternate" type="text/html" title="pipeline (CI/CD)" /><published>2020-08-29T00:00:00+09:00</published><updated>2020-08-29T00:00:00+09:00</updated><id>http://localhost:4000/concept/2020/08/29/concept-pipeline</id><content type="html" xml:base="http://localhost:4000/concept/2020/08/29/concept-pipeline.html">&lt;p&gt;여러 문서를 보다보면 &lt;code class=&quot;highlighter-rouge&quot;&gt;파이프라인&lt;/code&gt; 이라는 단어를 많이 볼 수 있을것이다.&lt;br /&gt;
 정확하게는 모르고 대충 큰뜻만 알고있다가 gcp ci/cd 포스팅을 하게되면서 의미를 정확하게 짚고 넘어가려고 &lt;br /&gt;
-파이프라인에 대해 포스팅을 해보려고 한다. &lt;br /&gt;&lt;/p&gt;</content><author><name>Andrew Fong</name></author><summary type="html">여러 문서를 보다보면 파이프라인 이라는 단어를 많이 볼 수 있을것이다. 정확하게는 모르고 대충 큰뜻만 알고있다가 gcp ci/cd 포스팅을 하게되면서 의미를 정확하게 짚고 넘어가려고 파이프라인에 대해 포스팅을 해보려고 한다.</summary></entry><entry><title type="html">GCP CI/CD (1)</title><link href="http://localhost:4000/gcp/2020/08/29/gcp-cicd.html" rel="alternate" type="text/html" title="GCP CI/CD (1)" /><published>2020-08-29T00:00:00+09:00</published><updated>2020-08-29T00:00:00+09:00</updated><id>http://localhost:4000/gcp/2020/08/29/gcp-cicd</id><content type="html" xml:base="http://localhost:4000/gcp/2020/08/29/gcp-cicd.html">&lt;ul&gt;
+파이프라인에 대해 포스팅을 해보려고 한다. &lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;일단 내가 위키백과에서 찾은 파이프라인에 대한 정보이다. &lt;br /&gt;
+&lt;a cursor=&quot;pointer&quot; target=&quot;_blank&quot; href=&quot;https://ko.wikipedia.org/wiki/%ED%8C%8C%EC%9D%B4%ED%94%84%EB%9D%BC%EC%9D%B8_(%EC%BB%B4%ED%93%A8%ED%8C%85)&quot;&gt;
+    https://ko.wikipedia.org/wiki/%ED%8C%8C%EC%9D%B4%ED%94%84%EB%9D%BC%EC%9D%B8_(%EC%BB%B4%ED%93%A8%ED%8C%85)
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;근데 내가 원하는 CI/CD의 파이프라인이 위키에 내용과 좀 다른것 같아서 여러 사이트 돌아다니면서 다시 검색을 했다.&lt;br /&gt;
+그러다가 내가 궁금했던 부분을 잘 정리 해놓은 사이트가 나와서 공유하려고 한다.&lt;/p&gt;
+
+&lt;p&gt;지금 포스팅 하는 부분은 내가 궁금한 부분만 적어놓았고,&lt;br /&gt; 밑에 참조 블로그로들어가면 &lt;code class=&quot;highlighter-rouge&quot;&gt;파이프라인 &amp;amp; CI/CD &amp;amp; CI/CD 배포 방식&lt;/code&gt; 에대해 적혀져 있으니 자세한것은 참조 블로그에서 확인하는게 좋을것 같다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;파이프라인(pipeline)은 개발자나 DevOps 전문가가 효율적이면서도 확실하게 그들의 코드를 &lt;br /&gt;
+컴파일(Compile), 빌드(Build) 그리고 그들의 프로덕션 컴퓨팅 플랫폼에 배포(Deploy) 하게&lt;br /&gt;
+해주는 자동화된 프로세스들의 묶음(set)이다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;* 파이프라인 에서 가장 일반적인 컴포넌트들이 있다.
+    - 빌드 자동화(buildautomation) / 지속적 통합(continuous integration)
+    - 테스트 자동화(test automation)
+    - 배포 자동화(deployment automation)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;참조
+&lt;a href=&quot;https://linux.systemv.pe.kr/%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4-%EC%97%94%EC%A7%80%EB%8B%88%EC%96%B4%EB%A7%81%EC%97%90%EC%84%9C-%ED%8C%8C%EC%9D%B4%ED%94%84%EB%9D%BC%EC%9D%B8pipeline%EC%9D%80-%EB%AC%B4%EC%97%87&quot;&gt;
+https://linux.systemv.pe.kr/%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4-%EC%97%94%EC%A7%80%EB%8B%88%EC%96%B4%EB%A7%81%EC%97%90%EC%84%9C-%ED%8C%8C%EC%9D%B4%ED%94%84%EB%9D%BC%EC%9D%B8pipeline%EC%9D%80-%EB%AC%B4%EC%97%87/
+&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Andrew Fong</name></author><summary type="html">여러 문서를 보다보면 파이프라인 이라는 단어를 많이 볼 수 있을것이다. 정확하게는 모르고 대충 큰뜻만 알고있다가 gcp ci/cd 포스팅을 하게되면서 의미를 정확하게 짚고 넘어가려고 파이프라인에 대해 포스팅을 해보려고 한다.</summary></entry><entry><title type="html">GCP CI/CD (1)</title><link href="http://localhost:4000/gcp/2020/08/29/gcp-cicd.html" rel="alternate" type="text/html" title="GCP CI/CD (1)" /><published>2020-08-29T00:00:00+09:00</published><updated>2020-08-29T00:00:00+09:00</updated><id>http://localhost:4000/gcp/2020/08/29/gcp-cicd</id><content type="html" xml:base="http://localhost:4000/gcp/2020/08/29/gcp-cicd.html">&lt;ul&gt;
   &lt;li&gt;개발자는 별도의 &lt;code class=&quot;highlighter-rouge&quot;&gt;.yaml&lt;/code&gt; 파일로 일련의 파이프라인을 표현한다.
     &lt;ul&gt;
       &lt;li&gt;여기에는 도커 이미지 빌드, 푸시, 테스트, 배포 등등 하고 싶은 일을 넣으면 된다.&lt;/li&gt;
