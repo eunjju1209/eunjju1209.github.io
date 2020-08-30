@@ -266,14 +266,72 @@
 
 
   <div class="post-body">
-    <ul>
-  <li>개발자는 별도의 <code class="highlighter-rouge">.yaml</code> 파일로 일련의 파이프라인을 표현한다.
-    <ul>
-      <li>여기에는 도커 이미지 빌드, 푸시, 테스트, 배포 등등 하고 싶은 일을 넣으면 된다.</li>
-      <li>이 <code class="highlighter-rouge">.yaml</code> 파일은 깃허브에 소스코드와 함께 위치해야한다.</li>
-    </ul>
-  </li>
+    <!-- - 개발자는 별도의 `.yaml` 파일로 일련의 파이프라인을 표현한다.
+    - 여기에는 도커 이미지 빌드, 푸시, 테스트, 배포 등등 하고 싶은 일을 넣으면 된다.
+    - 이 `.yaml` 파일은 깃허브에 소스코드와 함께 위치해야한다.
+- 트리거는 GCP Cloud Build 페이지에서 트리거를 생성한다.
+    - 트리거에서 어떤 브랜치에 어떤 요청이 왔을 때 어떤 `.yaml`을 실행할 지 정할 수 있다.
+    - 브랜치에 따라 특정 트리거를 다르게 발동 시킬 수 있다. -->
+
+<ol>
+  <li>CI/CD 하고 싶은 프로젝트에 Dockerfile 을 작성해준다. <br />
+나는 typescript로 되어져 있는 토이프로젝트 Dockerfile 작성해 줄 것이다.</li>
+</ol>
+
+<div class="language-dockerfile highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># step 1</span>
+<span class="c">## base image for step 1: Node 10</span>
+<span class="k">FROM</span><span class="s"> node:10 AS builder</span>
+
+<span class="c"># /app 을 application root 로 사용합니다.</span>
+<span class="c">## 프로젝트의 모든 파일을 WORKDIR(/app)로 복사한다.</span>
+<span class="k">WORKDIR</span><span class="s"> /app</span>
+
+<span class="c"># copy . . 의미는 전체 프로젝트를 복사한다는 뜻이다.</span>
+<span class="k">COPY</span><span class="s"> . .</span>
+
+<span class="c"># 의존성 설치 및 프로젝트 빌드</span>
+<span class="c"># 새로운 레이어 명령어 실행 및 새로운 이미지 생성..</span>
+<span class="c"># 보통 패키지 설치 등 사용된다.</span>
+<span class="k">RUN </span>npm <span class="nb">install</span>
+<span class="k">RUN </span>npm run build
+
+<span class="c"># port 3000</span>
+<span class="k">EXPOSE</span><span class="s"> 3000</span>
+
+<span class="c"># default 명령어? 파라미터 설정</span>
+<span class="c"># docker run 실행시 커맨드 주지 않으면 default 명령이 실행된다.</span>
+<span class="c"># cmd 주용도는 컨테이너 실행할 때 사용할 default 설정하는것이다.</span>
+<span class="c"># CMD node dist/src/main</span>
+<span class="c"># Run the app</span>
+<span class="k">CMD</span><span class="s"> [ "npm", "start" ]</span>
+</code></pre></div></div>
+
+<ol>
+  <li>빌드 단계
+GCP 참고 문서
+ <a href="https://cloud.google.com/cloud-build/docs/build-config?hl=ko#yaml" target="_blank" cursor="pointer">* 빌드 구성 개요</a></li>
+</ol>
+
+<ul>
+  <li>빌드 단계는 Cloud Build가 수행 해야하는 작업을 가르킨다.<br />
+빌드 단계에서 Cloud Build는 <code class="highlighter-rouge">docker run</code>의 인스턴스로 Docker 컨테이너를 실행한다.</li>
 </ul>
+
+<p>나는 docker container 로 gcp 이미지에 올릴 예정이므로 google &gt; 빌드 &gt; <a cursor="pointer" target="_blank" href="https://cloud.google.com/cloud-build/docs/building/build-containers?hl=ko">컨테이너 이미지 빌드</a>
+여기를 참고하였다.</p>
+
+<p>빌드를 하기 위해서는 <code class="highlighter-rouge">cloudbuild.yaml</code> 파일을 작성해야한다.</p>
+
+<p>작성하고나면 <code class="highlighter-rouge">gcloud builds submit --config cloudbuild.yaml .</code> 명령어를 쳐준다.<br /></p>
+
+<p>내가 <code class="highlighter-rouge">cloudbuild.yaml</code> 기준으로 작성한 것들이 cloud 페이지에 올라가진다.</p>
+
+<p>확인 하는 방법은 Google Cloud Console &gt; Cloud Build 페이지에서 확인이가능하다.</p>
+
+<p><img src="https://user-images.githubusercontent.com/40929370/91668059-51267600-eb44-11ea-9188-6363b961c172.png" alt="image" /></p>
+
+<p>위 그림 처럼 확인할 수 있다.</p>
+
 
     
 

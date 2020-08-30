@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-08-30T20:52:30+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Hydeout</title><subtitle>The &lt;a href=&quot;http://hyde.getpoole.com&quot; target=&quot;_blank&quot;&gt;Hyde&lt;/a&gt; theme for &lt;a href=&quot;http://jekyllrb.com&quot; target=&quot;_blank&quot;&gt;Jekyll&lt;/a&gt;, refreshed.</subtitle><author><name>Andrew Fong</name></author><entry><title type="html">pipeline (CI/CD)</title><link href="http://localhost:4000/concept/2020/08/29/concept-pipeline.html" rel="alternate" type="text/html" title="pipeline (CI/CD)" /><published>2020-08-29T00:00:00+09:00</published><updated>2020-08-29T00:00:00+09:00</updated><id>http://localhost:4000/concept/2020/08/29/concept-pipeline</id><content type="html" xml:base="http://localhost:4000/concept/2020/08/29/concept-pipeline.html">&lt;p&gt;여러 문서를 보다보면 &lt;code class=&quot;highlighter-rouge&quot;&gt;파이프라인&lt;/code&gt; 이라는 단어를 많이 볼 수 있을것이다.&lt;br /&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-08-31T04:44:38+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Hydeout</title><subtitle>The &lt;a href=&quot;http://hyde.getpoole.com&quot; target=&quot;_blank&quot;&gt;Hyde&lt;/a&gt; theme for &lt;a href=&quot;http://jekyllrb.com&quot; target=&quot;_blank&quot;&gt;Jekyll&lt;/a&gt;, refreshed.</subtitle><author><name>Andrew Fong</name></author><entry><title type="html">pipeline (CI/CD)</title><link href="http://localhost:4000/concept/2020/08/29/concept-pipeline.html" rel="alternate" type="text/html" title="pipeline (CI/CD)" /><published>2020-08-29T00:00:00+09:00</published><updated>2020-08-29T00:00:00+09:00</updated><id>http://localhost:4000/concept/2020/08/29/concept-pipeline</id><content type="html" xml:base="http://localhost:4000/concept/2020/08/29/concept-pipeline.html">&lt;p&gt;여러 문서를 보다보면 &lt;code class=&quot;highlighter-rouge&quot;&gt;파이프라인&lt;/code&gt; 이라는 단어를 많이 볼 수 있을것이다.&lt;br /&gt;
 정확하게는 모르고 대충 큰뜻만 알고있다가 gcp ci/cd 포스팅을 하게되면서 의미를 정확하게 짚고 넘어가려고 &lt;br /&gt;
 파이프라인에 대해 포스팅을 해보려고 한다. &lt;br /&gt;&lt;/p&gt;
 
@@ -30,14 +30,71 @@
 &lt;a href=&quot;https://linux.systemv.pe.kr/%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4-%EC%97%94%EC%A7%80%EB%8B%88%EC%96%B4%EB%A7%81%EC%97%90%EC%84%9C-%ED%8C%8C%EC%9D%B4%ED%94%84%EB%9D%BC%EC%9D%B8pipeline%EC%9D%80-%EB%AC%B4%EC%97%87&quot;&gt;
 https://linux.systemv.pe.kr/%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4-%EC%97%94%EC%A7%80%EB%8B%88%EC%96%B4%EB%A7%81%EC%97%90%EC%84%9C-%ED%8C%8C%EC%9D%B4%ED%94%84%EB%9D%BC%EC%9D%B8pipeline%EC%9D%80-%EB%AC%B4%EC%97%87/
 &lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Andrew Fong</name></author><summary type="html">여러 문서를 보다보면 파이프라인 이라는 단어를 많이 볼 수 있을것이다. 정확하게는 모르고 대충 큰뜻만 알고있다가 gcp ci/cd 포스팅을 하게되면서 의미를 정확하게 짚고 넘어가려고 파이프라인에 대해 포스팅을 해보려고 한다.</summary></entry><entry><title type="html">GCP CI/CD (1)</title><link href="http://localhost:4000/gcp/2020/08/29/gcp-cicd.html" rel="alternate" type="text/html" title="GCP CI/CD (1)" /><published>2020-08-29T00:00:00+09:00</published><updated>2020-08-29T00:00:00+09:00</updated><id>http://localhost:4000/gcp/2020/08/29/gcp-cicd</id><content type="html" xml:base="http://localhost:4000/gcp/2020/08/29/gcp-cicd.html">&lt;ul&gt;
-  &lt;li&gt;개발자는 별도의 &lt;code class=&quot;highlighter-rouge&quot;&gt;.yaml&lt;/code&gt; 파일로 일련의 파이프라인을 표현한다.
-    &lt;ul&gt;
-      &lt;li&gt;여기에는 도커 이미지 빌드, 푸시, 테스트, 배포 등등 하고 싶은 일을 넣으면 된다.&lt;/li&gt;
-      &lt;li&gt;이 &lt;code class=&quot;highlighter-rouge&quot;&gt;.yaml&lt;/code&gt; 파일은 깃허브에 소스코드와 함께 위치해야한다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Andrew Fong</name></author><summary type="html">개발자는 별도의 .yaml 파일로 일련의 파이프라인을 표현한다. 여기에는 도커 이미지 빌드, 푸시, 테스트, 배포 등등 하고 싶은 일을 넣으면 된다. 이 .yaml 파일은 깃허브에 소스코드와 함께 위치해야한다.</summary></entry><entry><title type="html">프로그래머스 - 여행계획(javascript)</title><link href="http://localhost:4000/algorithm/2020/08/12/algorithm-programmers-trip.html" rel="alternate" type="text/html" title="프로그래머스 - 여행계획(javascript)" /><published>2020-08-12T00:00:00+09:00</published><updated>2020-08-12T00:00:00+09:00</updated><id>http://localhost:4000/algorithm/2020/08/12/algorithm-programmers-trip-</id><content type="html" xml:base="http://localhost:4000/algorithm/2020/08/12/algorithm-programmers-trip.html">&lt;p&gt;PHP 개발을 주로 하고 있고 전 회사에서 잠깐 typescript로 개발 경험이 있어서 알고리즘을 풀 때 
+&lt;/ul&gt;</content><author><name>Andrew Fong</name></author><summary type="html">여러 문서를 보다보면 파이프라인 이라는 단어를 많이 볼 수 있을것이다. 정확하게는 모르고 대충 큰뜻만 알고있다가 gcp ci/cd 포스팅을 하게되면서 의미를 정확하게 짚고 넘어가려고 파이프라인에 대해 포스팅을 해보려고 한다.</summary></entry><entry><title type="html">GCP CI/CD (1)</title><link href="http://localhost:4000/gcp/2020/08/29/gcp-cicd.html" rel="alternate" type="text/html" title="GCP CI/CD (1)" /><published>2020-08-29T00:00:00+09:00</published><updated>2020-08-29T00:00:00+09:00</updated><id>http://localhost:4000/gcp/2020/08/29/gcp-cicd</id><content type="html" xml:base="http://localhost:4000/gcp/2020/08/29/gcp-cicd.html">&lt;!-- - 개발자는 별도의 `.yaml` 파일로 일련의 파이프라인을 표현한다.
+    - 여기에는 도커 이미지 빌드, 푸시, 테스트, 배포 등등 하고 싶은 일을 넣으면 된다.
+    - 이 `.yaml` 파일은 깃허브에 소스코드와 함께 위치해야한다.
+- 트리거는 GCP Cloud Build 페이지에서 트리거를 생성한다.
+    - 트리거에서 어떤 브랜치에 어떤 요청이 왔을 때 어떤 `.yaml`을 실행할 지 정할 수 있다.
+    - 브랜치에 따라 특정 트리거를 다르게 발동 시킬 수 있다. --&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;CI/CD 하고 싶은 프로젝트에 Dockerfile 을 작성해준다. &lt;br /&gt;
+나는 typescript로 되어져 있는 토이프로젝트 Dockerfile 작성해 줄 것이다.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-dockerfile highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# step 1&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;## base image for step 1: Node 10&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;FROM&lt;/span&gt;&lt;span class=&quot;s&quot;&gt; node:10 AS builder&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# /app 을 application root 로 사용합니다.&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;## 프로젝트의 모든 파일을 WORKDIR(/app)로 복사한다.&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;WORKDIR&lt;/span&gt;&lt;span class=&quot;s&quot;&gt; /app&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# copy . . 의미는 전체 프로젝트를 복사한다는 뜻이다.&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;COPY&lt;/span&gt;&lt;span class=&quot;s&quot;&gt; . .&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# 의존성 설치 및 프로젝트 빌드&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# 새로운 레이어 명령어 실행 및 새로운 이미지 생성..&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# 보통 패키지 설치 등 사용된다.&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;RUN &lt;/span&gt;npm &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;RUN &lt;/span&gt;npm run build
+
+&lt;span class=&quot;c&quot;&gt;# port 3000&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;EXPOSE&lt;/span&gt;&lt;span class=&quot;s&quot;&gt; 3000&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# default 명령어? 파라미터 설정&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# docker run 실행시 커맨드 주지 않으면 default 명령이 실행된다.&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# cmd 주용도는 컨테이너 실행할 때 사용할 default 설정하는것이다.&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# CMD node dist/src/main&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# Run the app&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;CMD&lt;/span&gt;&lt;span class=&quot;s&quot;&gt; [ &quot;npm&quot;, &quot;start&quot; ]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;빌드 단계
+GCP 참고 문서
+ &lt;a href=&quot;https://cloud.google.com/cloud-build/docs/build-config?hl=ko#yaml&quot; target=&quot;_blank&quot; cursor=&quot;pointer&quot;&gt;* 빌드 구성 개요&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;빌드 단계는 Cloud Build가 수행 해야하는 작업을 가르킨다.&lt;br /&gt;
+빌드 단계에서 Cloud Build는 &lt;code class=&quot;highlighter-rouge&quot;&gt;docker run&lt;/code&gt;의 인스턴스로 Docker 컨테이너를 실행한다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;나는 docker container 로 gcp 이미지에 올릴 예정이므로 google &amp;gt; 빌드 &amp;gt; &lt;a cursor=&quot;pointer&quot; target=&quot;_blank&quot; href=&quot;https://cloud.google.com/cloud-build/docs/building/build-containers?hl=ko&quot;&gt;컨테이너 이미지 빌드&lt;/a&gt;
+여기를 참고하였다.&lt;/p&gt;
+
+&lt;p&gt;빌드를 하기 위해서는 &lt;code class=&quot;highlighter-rouge&quot;&gt;cloudbuild.yaml&lt;/code&gt; 파일을 작성해야한다.&lt;/p&gt;
+
+&lt;p&gt;작성하고나면 &lt;code class=&quot;highlighter-rouge&quot;&gt;gcloud builds submit --config cloudbuild.yaml .&lt;/code&gt; 명령어를 쳐준다.&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;내가 &lt;code class=&quot;highlighter-rouge&quot;&gt;cloudbuild.yaml&lt;/code&gt; 기준으로 작성한 것들이 cloud 페이지에 올라가진다.&lt;/p&gt;
+
+&lt;p&gt;확인 하는 방법은 Google Cloud Console &amp;gt; Cloud Build 페이지에서 확인이가능하다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/40929370/91668059-51267600-eb44-11ea-9188-6363b961c172.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;위 그림 처럼 확인할 수 있다.&lt;/p&gt;</content><author><name>Andrew Fong</name></author><summary type="html"></summary></entry><entry><title type="html">프로그래머스 - 여행계획(javascript)</title><link href="http://localhost:4000/algorithm/2020/08/12/algorithm-programmers-trip.html" rel="alternate" type="text/html" title="프로그래머스 - 여행계획(javascript)" /><published>2020-08-12T00:00:00+09:00</published><updated>2020-08-12T00:00:00+09:00</updated><id>http://localhost:4000/algorithm/2020/08/12/algorithm-programmers-trip-</id><content type="html" xml:base="http://localhost:4000/algorithm/2020/08/12/algorithm-programmers-trip.html">&lt;p&gt;PHP 개발을 주로 하고 있고 전 회사에서 잠깐 typescript로 개발 경험이 있어서 알고리즘을 풀 때 
 자바스크립트로 선택해서 풀고있습니다.&lt;/p&gt;
 
 &lt;p&gt;여기에 올리는 이유는 알고리즘을 잘 못 풀어서 통과를 못했기때문에 누군가가 테스트 케이스를 댓글로 알려줬으면 해서 올립니다.&lt;br /&gt;&lt;/p&gt;
