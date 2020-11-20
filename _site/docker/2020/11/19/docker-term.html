@@ -11,7 +11,7 @@
 
   <title>
     
-      Docker-Compose &middot; Hydeout
+      dockerfile 생성 &middot; Hydeout
     
   </title>
 
@@ -242,11 +242,11 @@
 
     <main class="container">
       <header>
-  <h1 class="post-title">Docker-Compose</h1>
+  <h1 class="post-title">dockerfile 생성</h1>
 </header>
 <div class="content">
   <div class="post-meta">
-  <span class="post-date">09 Feb 2020</span>
+  <span class="post-date">19 Nov 2020</span>
   <span class="post-categories">
     
       &bull;
@@ -266,22 +266,32 @@
 
 
   <div class="post-body">
-    <p>회사에서 최근에 작업하는 프로젝트가 있는데 <br />
-이 프로젝트를 띄우려면 컨테이너가 3개가 띄어줘야지 내 로컬에서 실행 시킬 수 있었다.</p>
+    <p>php 7.3 버전 대에 있는 컨테이너가 필요해서, 내가 필요한 패키지들을 갖고 와서 컨테이너를 만들려고 한다.</p>
 
-<p><br /> 
-근데 몇일 전 회사에서 git pull 받았더니 <code class="highlighter-rouge">docker-compose.yaml</code> 파일이 생겨있고, 
-docker-compose 가 무엇인지 확인해봤더니, 
-    <code class="highlighter-rouge">services</code> 밑에 있는 컨테이너 들을 한꺼번에 올리고 내리고 할 수 있습니다.</p>
-<blockquote>
-  <p>docker-compose up 하면 
- docker-compose.yaml 에 있는 컨테이너들을 한번에 올릴 수 있고, 한번에 내릴 수 있습니다.</p>
-</blockquote>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>FROM alpine:3.12
+</code></pre></div></div>
 
-<p>docker-compose up 을 하면 여러개</p>
+<p>도커 파일들 중에 <code class="highlighter-rouge">alpine</code> 이라고 적혀져 있는 것들을 자주 볼 수 있다.</p>
 
-<p>docker-compose up -d » 백그라운드로 실행 시킬 수 있습니다.</p>
+<p>자주 보는데 정확히 무슨 역할을 하는 건지 잘 몰라서 찾아보았다.<br />
+그러고 나서 내가 필요한 패키지들을 선택해서 이미지를 만들고 난뒤에 컨테이너를 생성하고 나서 오류가 나서<br />
+어떻게 수정했는지 공유하기 위함 포스팅이다.</p>
 
+<p><img src="https://user-images.githubusercontent.com/40929370/99763418-285bbe80-2b3e-11eb-9778-32fea40b29b0.png" alt="image" /></p>
+
+<p>오류 내용 
+<code class="highlighter-rouge">[20-Nov-2020 05:38:24] ERROR: FPM initialization failed</code>
+<code class="highlighter-rouge">[20-Nov-2020 05:38:24] ERROR: failed to post process the configuration</code>
+<code class="highlighter-rouge">[20-Nov-2020 05:38:24] ALERT: [pool www] user has not been defined</code></p>
+
+<p>찾아보았는데 간략해서 설명하자면 
+<code class="highlighter-rouge">alpine</code> 이란<br />
+<b>cloud 환경을 고려한 가벼운 linux 이미지 </b> 라고 한다.</p>
+
+<p>** 참고</p>
+
+<p>git hub Tim de Pater<br /> 
+https://github.com/TrafeX/docker-php-nginx</p>
 
     
 
@@ -293,18 +303,53 @@ docker-compose 가 무엇인지 확인해봤더니,
   </div>
 
   
+  <section class="comments">
+    <h2>Comments</h2>
+    
+  <div id="disqus_thread">
+    <button class="disqus-load" onClick="loadDisqusComments()">
+      Load Comments
+    </button>
+  </div>
+  <script>
+
+  /**
+  *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW
+  *  TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+  *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT:s
+  *  https://disqus.com/admin/universalcode/#configuration-variables
+  */
+  var disqus_config = function () {
+    this.page.url = "http://localhost:4000/docker/2020/11/19/docker-term.html";
+    this.page.identifier = "" ||
+                           "http://localhost:4000/docker/2020/11/19/docker-term.html";
+  }
+  function loadDisqusComments() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = '//eunjju.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  }
+  (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = '//eunjju.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+
+  </script>
+  <noscript>
+    Please enable JavaScript to view the
+    <a href="https://disqus.com/?ref_noscript">comments powered by Disqus</a>.
+  </noscript>
+
+
+
+  </section>
+
   <section class="related">
   <h2>Related Posts</h2>
   <ul class="posts-list">
-    
-      <li>
-        <h3>
-          <a href="/docker/2020/11/19/docker-term.html">
-            dockerfile 생성
-            <small>19 Nov 2020</small>
-          </a>
-        </h3>
-      </li>
     
       <li>
         <h3>
@@ -320,6 +365,15 @@ docker-compose 가 무엇인지 확인해봤더니,
           <a href="/concept/2020/08/29/concept-pipeline.html">
             pipeline (CI/CD)
             <small>29 Aug 2020</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/algorithm/2020/08/12/algorithm-programmers-trip.html">
+            프로그래머스 - 여행계획(javascript)
+            <small>12 Aug 2020</small>
           </a>
         </h3>
       </li>
