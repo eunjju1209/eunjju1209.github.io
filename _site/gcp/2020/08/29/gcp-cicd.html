@@ -266,7 +266,8 @@
 
 
   <div class="post-body">
-    <ol>
+    <p>ec2-small</p>
+<ol>
   <li>CI/CD 하고 싶은 프로젝트에 Dockerfile 을 작성해준다. <br />
 나는 typescript로 되어져 있는 토이프로젝트 Dockerfile 작성해 줄 것이다.</li>
 </ol>
@@ -343,9 +344,62 @@ GCP 참고 문서
   </div>
 
   
+  <section class="comments">
+    <h2>Comments</h2>
+    
+  <div id="disqus_thread">
+    <button class="disqus-load" onClick="loadDisqusComments()">
+      Load Comments
+    </button>
+  </div>
+  <script>
+
+  /**
+  *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW
+  *  TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+  *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT:s
+  *  https://disqus.com/admin/universalcode/#configuration-variables
+  */
+  var disqus_config = function () {
+    this.page.url = "http://localhost:4000/gcp/2020/08/29/gcp-cicd.html";
+    this.page.identifier = "" ||
+                           "http://localhost:4000/gcp/2020/08/29/gcp-cicd.html";
+  }
+  function loadDisqusComments() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = '//eunjju.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  }
+  (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = '//eunjju.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+
+  </script>
+  <noscript>
+    Please enable JavaScript to view the
+    <a href="https://disqus.com/?ref_noscript">comments powered by Disqus</a>.
+  </noscript>
+
+
+
+  </section>
+
   <section class="related">
   <h2>Related Posts</h2>
   <ul class="posts-list">
+    
+      <li>
+        <h3>
+          <a href="/gcp/2020/08/31/gcp-cicd-gke.html">
+            GCP CI/CD (2)
+            <small>31 Aug 2020</small>
+          </a>
+        </h3>
+      </li>
     
       <li>
         <h3>
@@ -361,15 +415,6 @@ GCP 참고 문서
           <a href="/algorithm/2020/08/12/algorithm-programmers-trip.html">
             프로그래머스 - 여행계획(javascript)
             <small>12 Aug 2020</small>
-          </a>
-        </h3>
-      </li>
-    
-      <li>
-        <h3>
-          <a href="/algorithm/2020/08/05/algorithm-graph.html">
-            그래프 (DFS&BFS)
-            <small>05 Aug 2020</small>
           </a>
         </h3>
       </li>

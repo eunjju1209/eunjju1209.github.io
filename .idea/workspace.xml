@@ -5,7 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9cacb39c-a7f0-4dee-a828-9bb47a4df706" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_posts/2020-08-29-gcp-cicd.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2020-08-29-gcp-cicd.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/2017/06/01/hello-hydeout.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/2017/06/01/hello-hydeout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/algorithm/2020/04/25/setting.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/algorithm/2020/04/25/setting.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/algorithm/2020/08/04/algorithm-alignment.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/algorithm/2020/08/04/algorithm-alignment.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/algorithm/2020/08/05/algorithm-graph.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/algorithm/2020/08/05/algorithm-graph.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/algorithm/2020/08/12/algorithm-programmers-trip.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/algorithm/2020/08/12/algorithm-programmers-trip.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/category/GCP.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/category/GCP.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/cleancode/2020/02/10/clean-code.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/cleancode/2020/02/10/clean-code.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/concept/2020/08/29/concept-pipeline.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/concept/2020/08/29/concept-pipeline.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/docker/2020/02/09/docker-compose.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/docker/2020/02/09/docker-compose.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/docker/2020/02/09/docker-inspect.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/docker/2020/02/09/docker-inspect.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/docker/2020/02/09/docker-link.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/docker/2020/02/09/docker-link.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/docker/2020/02/09/docker-volume.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/docker/2020/02/09/docker-volume.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/feed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/feed.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/gcp/2020/06/20/gcp-registry.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/gcp/2020/06/20/gcp-registry.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/gcp/2020/07/20/gcp-webserver.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/gcp/2020/07/20/gcp-webserver.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/gcp/2020/08/29/gcp-cicd.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/gcp/2020/08/29/gcp-cicd.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/page2/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/page2/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/page3/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/page3/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,9 +49,10 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/_posts" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -41,6 +62,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -82,6 +104,8 @@
       <workItem from="1598584790608" duration="231000" />
       <workItem from="1598706933535" duration="351000" />
       <workItem from="1598708168051" duration="1781000" />
+      <workItem from="1599126020603" duration="463000" />
+      <workItem from="1607191314021" duration="484000" />
     </task>
     <servers />
   </component>
