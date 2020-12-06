@@ -1,9 +1,38 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-09-03T22:14:45+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Hydeout</title><subtitle>The &lt;a href=&quot;http://hyde.getpoole.com&quot; target=&quot;_blank&quot;&gt;Hyde&lt;/a&gt; theme for &lt;a href=&quot;http://jekyllrb.com&quot; target=&quot;_blank&quot;&gt;Jekyll&lt;/a&gt;, refreshed.</subtitle><author><name>Andrew Fong</name></author><entry><title type="html">GCP CI/CD (2)</title><link href="http://localhost:4000/gcp/2020/08/31/gcp-cicd-gke.html" rel="alternate" type="text/html" title="GCP CI/CD (2)" /><published>2020-08-31T00:00:00+09:00</published><updated>2020-08-31T00:00:00+09:00</updated><id>http://localhost:4000/gcp/2020/08/31/gcp-cicd-gke</id><content type="html" xml:base="http://localhost:4000/gcp/2020/08/31/gcp-cicd-gke.html">&lt;p&gt;저번편에는 Dockerfile 만들고 빌드 하는거 까지 포스팅을 하였다.&lt;/p&gt;
 
 &lt;p&gt;이번 포스팅에서는 &lt;code class=&quot;highlighter-rouge&quot;&gt;GKE&lt;/code&gt;를 이용하여 배포 하는 포스팅을 작성할 예정이다.&lt;/p&gt;
 
 &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;GKE&lt;/code&gt;란? Cloud Build를 사용하여 Kubernetes에 애플리케이션을 배포를 도와준다.&lt;/p&gt;</content><author><name>Andrew Fong</name></author><summary type="html">저번편에는 Dockerfile 만들고 빌드 하는거 까지 포스팅을 하였다.</summary></entry><entry><title type="html">GCP CI/CD (1)</title><link href="http://localhost:4000/gcp/2020/08/29/gcp-cicd.html" rel="alternate" type="text/html" title="GCP CI/CD (1)" /><published>2020-08-29T00:00:00+09:00</published><updated>2020-08-29T00:00:00+09:00</updated><id>http://localhost:4000/gcp/2020/08/29/gcp-cicd</id><content type="html" xml:base="http://localhost:4000/gcp/2020/08/29/gcp-cicd.html">&lt;p&gt;ec2-small&lt;/p&gt;
 &lt;ol&gt;
+=======
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-11-20T14:58:12+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Hydeout</title><subtitle>The &lt;a href=&quot;http://hyde.getpoole.com&quot; target=&quot;_blank&quot;&gt;Hyde&lt;/a&gt; theme for &lt;a href=&quot;http://jekyllrb.com&quot; target=&quot;_blank&quot;&gt;Jekyll&lt;/a&gt;, refreshed.</subtitle><author><name>Andrew Fong</name></author><entry><title type="html">dockerfile 생성</title><link href="http://localhost:4000/docker/2020/11/19/docker-term.html" rel="alternate" type="text/html" title="dockerfile 생성" /><published>2020-11-19T00:00:00+09:00</published><updated>2020-11-19T00:00:00+09:00</updated><id>http://localhost:4000/docker/2020/11/19/docker-term</id><content type="html" xml:base="http://localhost:4000/docker/2020/11/19/docker-term.html">&lt;p&gt;php 7.3 버전 대에 있는 컨테이너가 필요해서, 내가 필요한 패키지들을 갖고 와서 컨테이너를 만들려고 한다.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;FROM alpine:3.12
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;도커 파일들 중에 &lt;code class=&quot;highlighter-rouge&quot;&gt;alpine&lt;/code&gt; 이라고 적혀져 있는 것들을 자주 볼 수 있다.&lt;/p&gt;
+
+&lt;p&gt;자주 보는데 정확히 무슨 역할을 하는 건지 잘 몰라서 찾아보았다.&lt;br /&gt;
+그러고 나서 내가 필요한 패키지들을 선택해서 이미지를 만들고 난뒤에 컨테이너를 생성하고 나서 오류가 나서&lt;br /&gt;
+어떻게 수정했는지 공유하기 위함 포스팅이다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/40929370/99763418-285bbe80-2b3e-11eb-9778-32fea40b29b0.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;오류 내용 
+&lt;code class=&quot;highlighter-rouge&quot;&gt;[20-Nov-2020 05:38:24] ERROR: FPM initialization failed&lt;/code&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;[20-Nov-2020 05:38:24] ERROR: failed to post process the configuration&lt;/code&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;[20-Nov-2020 05:38:24] ALERT: [pool www] user has not been defined&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;찾아보았는데 간략해서 설명하자면 
+&lt;code class=&quot;highlighter-rouge&quot;&gt;alpine&lt;/code&gt; 이란&lt;br /&gt;
+&lt;b&gt;cloud 환경을 고려한 가벼운 linux 이미지 &lt;/b&gt; 라고 한다.&lt;/p&gt;
+
+&lt;p&gt;** 참고&lt;/p&gt;
+
+&lt;p&gt;git hub Tim de Pater&lt;br /&gt; 
+https://github.com/TrafeX/docker-php-nginx&lt;/p&gt;</content><author><name>Andrew Fong</name></author><summary type="html">php 7.3 버전 대에 있는 컨테이너가 필요해서, 내가 필요한 패키지들을 갖고 와서 컨테이너를 만들려고 한다.</summary></entry><entry><title type="html">GCP CI/CD (1)</title><link href="http://localhost:4000/gcp/2020/08/29/gcp-cicd.html" rel="alternate" type="text/html" title="GCP CI/CD (1)" /><published>2020-08-29T00:00:00+09:00</published><updated>2020-08-29T00:00:00+09:00</updated><id>http://localhost:4000/gcp/2020/08/29/gcp-cicd</id><content type="html" xml:base="http://localhost:4000/gcp/2020/08/29/gcp-cicd.html">&lt;ol&gt;
+>>>>>>> 9a947a3e1fcf244e1cd8f9d29a23e3bbdd0c68e3
   &lt;li&gt;CI/CD 하고 싶은 프로젝트에 Dockerfile 을 작성해준다. &lt;br /&gt;
 나는 typescript로 되어져 있는 토이프로젝트 Dockerfile 작성해 줄 것이다.&lt;/li&gt;
 &lt;/ol&gt;
@@ -67,7 +96,11 @@ GCP 참고 문서
     - 이 `.yaml` 파일은 깃허브에 소스코드와 함께 위치해야한다.
 - 트리거는 GCP Cloud Build 페이지에서 트리거를 생성한다.
     - 트리거에서 어떤 브랜치에 어떤 요청이 왔을 때 어떤 `.yaml`을 실행할 지 정할 수 있다.
+<<<<<<< HEAD
     - 브랜치에 따라 특정 트리거를 다르게 발동 시킬 수 있다. --&gt;</content><author><name>Andrew Fong</name></author><summary type="html">ec2-small CI/CD 하고 싶은 프로젝트에 Dockerfile 을 작성해준다. 나는 typescript로 되어져 있는 토이프로젝트 Dockerfile 작성해 줄 것이다.</summary></entry><entry><title type="html">pipeline (CI/CD)</title><link href="http://localhost:4000/concept/2020/08/29/concept-pipeline.html" rel="alternate" type="text/html" title="pipeline (CI/CD)" /><published>2020-08-29T00:00:00+09:00</published><updated>2020-08-29T00:00:00+09:00</updated><id>http://localhost:4000/concept/2020/08/29/concept-pipeline</id><content type="html" xml:base="http://localhost:4000/concept/2020/08/29/concept-pipeline.html">&lt;p&gt;여러 문서를 보다보면 &lt;code class=&quot;highlighter-rouge&quot;&gt;파이프라인&lt;/code&gt; 이라는 단어를 많이 볼 수 있을것이다.&lt;br /&gt;
+=======
+    - 브랜치에 따라 특정 트리거를 다르게 발동 시킬 수 있다. --&gt;</content><author><name>Andrew Fong</name></author><summary type="html">CI/CD 하고 싶은 프로젝트에 Dockerfile 을 작성해준다. 나는 typescript로 되어져 있는 토이프로젝트 Dockerfile 작성해 줄 것이다.</summary></entry><entry><title type="html">pipeline (CI/CD)</title><link href="http://localhost:4000/concept/2020/08/29/concept-pipeline.html" rel="alternate" type="text/html" title="pipeline (CI/CD)" /><published>2020-08-29T00:00:00+09:00</published><updated>2020-08-29T00:00:00+09:00</updated><id>http://localhost:4000/concept/2020/08/29/concept-pipeline</id><content type="html" xml:base="http://localhost:4000/concept/2020/08/29/concept-pipeline.html">&lt;p&gt;여러 문서를 보다보면 &lt;code class=&quot;highlighter-rouge&quot;&gt;파이프라인&lt;/code&gt; 이라는 단어를 많이 볼 수 있을것이다.&lt;br /&gt;
+>>>>>>> 9a947a3e1fcf244e1cd8f9d29a23e3bbdd0c68e3
 정확하게는 모르고 대충 큰뜻만 알고있다가 gcp ci/cd 포스팅을 하게되면서 의미를 정확하게 짚고 넘어가려고 &lt;br /&gt;
 파이프라인에 대해 포스팅을 해보려고 한다. &lt;br /&gt;&lt;/p&gt;
 

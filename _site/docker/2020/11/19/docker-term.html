@@ -11,7 +11,7 @@
 
   <title>
     
-      그래프 (DFS&BFS) &middot; Hydeout
+      dockerfile 생성 &middot; Hydeout
     
   </title>
 
@@ -242,11 +242,11 @@
 
     <main class="container">
       <header>
-  <h1 class="post-title">그래프 (DFS&BFS)</h1>
+  <h1 class="post-title">dockerfile 생성</h1>
 </header>
 <div class="content">
   <div class="post-meta">
-  <span class="post-date">05 Aug 2020</span>
+  <span class="post-date">19 Nov 2020</span>
   <span class="post-categories">
     
       &bull;
@@ -256,8 +256,8 @@
       
 
       
-        <a href="/category/Algorithm">
-          Algorithm
+        <a href="/category/Docker">
+          Docker
         </a>
       
     
@@ -266,71 +266,32 @@
 
 
   <div class="post-body">
-    <p>너비 우선 탐색 (Breadth-First Search)</p>
+    <p>php 7.3 버전 대에 있는 컨테이너가 필요해서, 내가 필요한 패키지들을 갖고 와서 컨테이너를 만들려고 한다.</p>
 
-<ul>
-  <li>
-    <p>탐색 알고리즘
- -&gt; 그래프에서 탐색한다는뜻
-     = 특정 노드를 탐색하겠다는 뜻</p>
-
-    <ul>
-      <li>노드 탐색
-        <ul>
-          <li>너비 우선 탐색</li>
-          <li>깊이 우선 탐색</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-</ul>
-
-<p>너비 우선 탐색 (BFS) 
-	- 정점들과 같은 레벨에 있는 노드들 먼저 탐색하는 방식
-깊이 우선 탐색 (DFS)
-	- 정점의 자식들을 먼저 탐색하는 방식</p>
-
-<ul>
-  <li>사이클이 없는 방식에서 탐색하는 방식이다.</li>
-</ul>
-
-<p><img src="https://user-images.githubusercontent.com/40929370/89375657-112cc880-d729-11ea-9774-994ae004f002.png" alt="image" /></p>
-
-<p>빨간 화살표는 탐색을 하기 위해서 노드 이동하는 부분을 그림으로 그려놓음</p>
-
-<ul>
-  <li>BFS 방식 : A - B - C - D - G - H- I - E - F - J</li>
-  <li>DFS 방식: A - B  - D - E  - F - C - G -H - I - J</li>
-</ul>
-
-<p>** BFS 알고리즘 코드로 작성</p>
-
-<ul>
-  <li>
-    <p>자료 구조 큐를 활용함<br />
- need_visit &amp; visited 큐<br /></p>
-  </li>
-  <li>
-    <p>깊이 우선 탐색 (Depth-First Search)<br /></p>
-  </li>
-</ul>
-
-<p>자기와 연결된 노드의 밑에 맨 밑에까지 탐색하고<br />
-그게 리프 노드이면, 그 상위의 노드로 가서 다른 리프노드를 먼저 끝까지 탐색 하는것<br /></p>
-
-<ul>
-  <li>DFS 알고리즘 구현<br />
-  need_visit 스택, visited 큐 활용한다<br /></li>
-</ul>
-
-<p>시간복잡도<br />
-	* 일반적인 DFS 시간 복잡도<br />
-		노드 수 : V <br />
-		간선 수 : E <br />
-		- 위 코드에서 while need_visit V+E 번만큼 수행함</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>* 시간 복잡도: O(V+E)
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>FROM alpine:3.12
 </code></pre></div></div>
+
+<p>도커 파일들 중에 <code class="highlighter-rouge">alpine</code> 이라고 적혀져 있는 것들을 자주 볼 수 있다.</p>
+
+<p>자주 보는데 정확히 무슨 역할을 하는 건지 잘 몰라서 찾아보았다.<br />
+그러고 나서 내가 필요한 패키지들을 선택해서 이미지를 만들고 난뒤에 컨테이너를 생성하고 나서 오류가 나서<br />
+어떻게 수정했는지 공유하기 위함 포스팅이다.</p>
+
+<p><img src="https://user-images.githubusercontent.com/40929370/99763418-285bbe80-2b3e-11eb-9778-32fea40b29b0.png" alt="image" /></p>
+
+<p>오류 내용 
+<code class="highlighter-rouge">[20-Nov-2020 05:38:24] ERROR: FPM initialization failed</code>
+<code class="highlighter-rouge">[20-Nov-2020 05:38:24] ERROR: failed to post process the configuration</code>
+<code class="highlighter-rouge">[20-Nov-2020 05:38:24] ALERT: [pool www] user has not been defined</code></p>
+
+<p>찾아보았는데 간략해서 설명하자면 
+<code class="highlighter-rouge">alpine</code> 이란<br />
+<b>cloud 환경을 고려한 가벼운 linux 이미지 </b> 라고 한다.</p>
+
+<p>** 참고</p>
+
+<p>git hub Tim de Pater<br /> 
+https://github.com/TrafeX/docker-php-nginx</p>
 
     
 
@@ -342,24 +303,53 @@
   </div>
 
   
+  <section class="comments">
+    <h2>Comments</h2>
+    
+  <div id="disqus_thread">
+    <button class="disqus-load" onClick="loadDisqusComments()">
+      Load Comments
+    </button>
+  </div>
+  <script>
+
+  /**
+  *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW
+  *  TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+  *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT:s
+  *  https://disqus.com/admin/universalcode/#configuration-variables
+  */
+  var disqus_config = function () {
+    this.page.url = "http://localhost:4000/docker/2020/11/19/docker-term.html";
+    this.page.identifier = "" ||
+                           "http://localhost:4000/docker/2020/11/19/docker-term.html";
+  }
+  function loadDisqusComments() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = '//eunjju.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  }
+  (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = '//eunjju.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+
+  </script>
+  <noscript>
+    Please enable JavaScript to view the
+    <a href="https://disqus.com/?ref_noscript">comments powered by Disqus</a>.
+  </noscript>
+
+
+
+  </section>
+
   <section class="related">
   <h2>Related Posts</h2>
   <ul class="posts-list">
-    
-      <li>
-        <h3>
-<<<<<<< HEAD
-          <a href="/gcp/2020/08/31/gcp-cicd-gke.html">
-            GCP CI/CD (2)
-            <small>31 Aug 2020</small>
-=======
-          <a href="/docker/2020/11/19/docker-term.html">
-            dockerfile 생성
-            <small>19 Nov 2020</small>
->>>>>>> 9a947a3e1fcf244e1cd8f9d29a23e3bbdd0c68e3
-          </a>
-        </h3>
-      </li>
     
       <li>
         <h3>
@@ -375,6 +365,15 @@
           <a href="/concept/2020/08/29/concept-pipeline.html">
             pipeline (CI/CD)
             <small>29 Aug 2020</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/algorithm/2020/08/12/algorithm-programmers-trip.html">
+            프로그래머스 - 여행계획(javascript)
+            <small>12 Aug 2020</small>
           </a>
         </h3>
       </li>
