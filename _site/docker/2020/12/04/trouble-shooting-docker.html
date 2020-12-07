@@ -11,7 +11,7 @@
 
   <title>
     
-      GCP CI/CD (2) &middot; Hydeout
+      트러블 슈팅 도커 - 도커 개념 &middot; Hydeout
     
   </title>
 
@@ -250,11 +250,11 @@
 
     <main class="container">
       <header>
-  <h1 class="post-title">GCP CI/CD (2)</h1>
+  <h1 class="post-title">트러블 슈팅 도커 - 도커 개념</h1>
 </header>
 <div class="content">
   <div class="post-meta">
-  <span class="post-date">31 Aug 2020</span>
+  <span class="post-date">04 Dec 2020</span>
   <span class="post-categories">
     
       &bull;
@@ -264,8 +264,8 @@
       
 
       
-        <a href="/category/GCP">
-          GCP
+        <a href="/category/Docker">
+          Docker
         </a>
       
     
@@ -274,11 +274,50 @@
 
 
   <div class="post-body">
-    <p>저번편에는 Dockerfile 만들고 빌드 하는거 까지 포스팅을 하였다.</p>
+    <p>내가 <code class="highlighter-rouge">트러블 슈팅 도커</code> 라는 책을 읽고 기억에 남는 부분을 기록하기 위한 포스팅이다.</p>
 
-<p>이번 포스팅에서는 <code class="highlighter-rouge">GKE</code>를 이용하여 배포 하는 포스팅을 작성할 예정이다.</p>
+<h3 id="도커-개념">도커 개념</h3>
 
-<p><code class="highlighter-rouge">GKE</code>란? Cloud Build를 사용하여 Kubernetes에 애플리케이션을 배포를 도와준다.</p>
+<ul>
+  <li>docker container (도커 컨테이너)<br />
+  <code class="highlighter-rouge">- 빌드 &amp; 테스트</code> <br />
+  <code class="highlighter-rouge">- 자동화</code><br />
+  <code class="highlighter-rouge">- 배치</code> <br /></li>
+</ul>
+
+<p>가장 핵심적인 작업 <code class="highlighter-rouge">이미지 빌드 -&gt; 애플리케이션 -&gt; 컨테이너</code></p>
+
+<ul>
+  <li>docker build =&gt; image (결과물)</li>
+  <li>docker images
+    <ul>
+      <li>설치 하는데 필요한 레이어, 배쉬 셸에서 직접 하나씩 생성</li>
+      <li>애플리케이션 담은 이미지</li>
+      <li>빌드하는 도커 파일 작성 (자동으로 생성)</li>
+    </ul>
+  </li>
+  <li>도커 핵심 개념 및 기능은 레이어드 이미지
+    <ul>
+      <li>이미지 계층화 &amp; 이미지 콘텐츠 관리 기능 <br />
+  (컨테이너)를 내가 그림판으로 그렸다.. (최대한 책에 나온것처럼 비슷하게 그리려 노력함)</li>
+    </ul>
+
+    <p><img src="https://user-images.githubusercontent.com/40929370/101312306-c5388e80-3896-11eb-84d5-b7f87cdc6711.png" alt="image" /></p>
+
+    <p>컨테이너를 이미지 레이어 방식으로 구성하면 매우 효율적이다.
+  이미지 =&gt; 담긴 내용 참조할 때 이미지를 궝하는 레이어 중에서 해당레이어만으로 지정하면 됌.</p>
+  </li>
+  <li>docker build
+    <ul>
+      <li>소스 리포지터리는 루트로 지정하지 않는다.</li>
+      <li>docker build 명령은 도커파일이 담긴 디렉터리와 그 아래 디렉터리 전체를 빌드 컨텍스트(build Context)로 사용한다</li>
+      <li>루트 (/)를 소스 리포지리로 지정하면 하드디스크에 담긴 전체 내용이 도커 데몬으로 전달 됀다.</li>
+      <li>대부분의 도커파일을 별도의 빈 디렉터리에 담아 두는것이 좋다.
+  ##### 명령을 명시하는 순서 &amp; 문법 중요하다.</li>
+    </ul>
+  </li>
+</ul>
+
 
     
 
@@ -307,9 +346,9 @@
   *  https://disqus.com/admin/universalcode/#configuration-variables
   */
   var disqus_config = function () {
-    this.page.url = "http://localhost:4000/gcp/2020/08/31/gcp-cicd-gke.html";
+    this.page.url = "http://localhost:4000/docker/2020/12/04/trouble-shooting-docker.html";
     this.page.identifier = "" ||
-                           "http://localhost:4000/gcp/2020/08/31/gcp-cicd-gke.html";
+                           "http://localhost:4000/docker/2020/12/04/trouble-shooting-docker.html";
   }
   function loadDisqusComments() { // DON'T EDIT BELOW THIS LINE
     var d = document, s = d.createElement('script');
@@ -349,18 +388,18 @@
     
       <li>
         <h3>
-          <a href="/docker/2020/12/04/trouble-shooting-docker.html">
-            트러블 슈팅 도커 - 도커 개념
-            <small>04 Dec 2020</small>
+          <a href="/docker/2020/11/19/docker-term.html">
+            dockerfile 생성
+            <small>19 Nov 2020</small>
           </a>
         </h3>
       </li>
     
       <li>
         <h3>
-          <a href="/docker/2020/11/19/docker-term.html">
-            dockerfile 생성
-            <small>19 Nov 2020</small>
+          <a href="/gcp/2020/08/31/gcp-cicd-gke.html">
+            GCP CI/CD (2)
+            <small>31 Aug 2020</small>
           </a>
         </h3>
       </li>

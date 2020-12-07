@@ -1,12 +1,57 @@
-<<<<<<< HEAD
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-09-03T22:14:45+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Hydeout</title><subtitle>The &lt;a href=&quot;http://hyde.getpoole.com&quot; target=&quot;_blank&quot;&gt;Hyde&lt;/a&gt; theme for &lt;a href=&quot;http://jekyllrb.com&quot; target=&quot;_blank&quot;&gt;Jekyll&lt;/a&gt;, refreshed.</subtitle><author><name>Andrew Fong</name></author><entry><title type="html">GCP CI/CD (2)</title><link href="http://localhost:4000/gcp/2020/08/31/gcp-cicd-gke.html" rel="alternate" type="text/html" title="GCP CI/CD (2)" /><published>2020-08-31T00:00:00+09:00</published><updated>2020-08-31T00:00:00+09:00</updated><id>http://localhost:4000/gcp/2020/08/31/gcp-cicd-gke</id><content type="html" xml:base="http://localhost:4000/gcp/2020/08/31/gcp-cicd-gke.html">&lt;p&gt;저번편에는 Dockerfile 만들고 빌드 하는거 까지 포스팅을 하였다.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-12-07T14:26:15+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Hydeout</title><subtitle>The &lt;a href=&quot;http://hyde.getpoole.com&quot; target=&quot;_blank&quot;&gt;Hyde&lt;/a&gt; theme for &lt;a href=&quot;http://jekyllrb.com&quot; target=&quot;_blank&quot;&gt;Jekyll&lt;/a&gt;, refreshed.</subtitle><author><name>Andrew Fong</name></author><entry><title type="html">트러블 슈팅 도커 - 도커 용어 정리</title><link href="http://localhost:4000/docker/2020/12/07/trouble-shooting-docker-term.html" rel="alternate" type="text/html" title="트러블 슈팅 도커 - 도커 용어 정리" /><published>2020-12-07T00:00:00+09:00</published><updated>2020-12-07T00:00:00+09:00</updated><id>http://localhost:4000/docker/2020/12/07/trouble-shooting-docker-term</id><content type="html" xml:base="http://localhost:4000/docker/2020/12/07/trouble-shooting-docker-term.html">&lt;h2 id=&quot;용어-정리&quot;&gt;용어 정리&lt;/h2&gt;
 
-&lt;p&gt;이번 포스팅에서는 &lt;code class=&quot;highlighter-rouge&quot;&gt;GKE&lt;/code&gt;를 이용하여 배포 하는 포스팅을 작성할 예정이다.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;FROM &lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;이미지를 가져올 (pull) 할 베이스
+    &lt;ul&gt;
+      &lt;li&gt;이미지에 대해 수행할 연산을 논리적으로 묶어서 레이어의 수를 최소화 하는 것이 좋다.&lt;/li&gt;
+      &lt;li&gt;예를 들어 애플리케이션의 의존성에 관련된 패키지를 설치할 때는 각각을 별도의 디렉티브로 지정하지 않고&lt;br /&gt;
+  하나의 RUN 디렉티브로 묶어서 한꺼번에 설치하는 것이 좋다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Andrew Fong</name></author><summary type="html">용어 정리</summary></entry><entry><title type="html">트러블 슈팅 도커 - 도커 개념</title><link href="http://localhost:4000/docker/2020/12/04/trouble-shooting-docker.html" rel="alternate" type="text/html" title="트러블 슈팅 도커 - 도커 개념" /><published>2020-12-04T00:00:00+09:00</published><updated>2020-12-04T00:00:00+09:00</updated><id>http://localhost:4000/docker/2020/12/04/trouble-shooting-docker</id><content type="html" xml:base="http://localhost:4000/docker/2020/12/04/trouble-shooting-docker.html">&lt;p&gt;내가 &lt;code class=&quot;highlighter-rouge&quot;&gt;트러블 슈팅 도커&lt;/code&gt; 라는 책을 읽고 기억에 남는 부분을 기록하기 위한 포스팅이다.&lt;/p&gt;
 
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;GKE&lt;/code&gt;란? Cloud Build를 사용하여 Kubernetes에 애플리케이션을 배포를 도와준다.&lt;/p&gt;</content><author><name>Andrew Fong</name></author><summary type="html">저번편에는 Dockerfile 만들고 빌드 하는거 까지 포스팅을 하였다.</summary></entry><entry><title type="html">GCP CI/CD (1)</title><link href="http://localhost:4000/gcp/2020/08/29/gcp-cicd.html" rel="alternate" type="text/html" title="GCP CI/CD (1)" /><published>2020-08-29T00:00:00+09:00</published><updated>2020-08-29T00:00:00+09:00</updated><id>http://localhost:4000/gcp/2020/08/29/gcp-cicd</id><content type="html" xml:base="http://localhost:4000/gcp/2020/08/29/gcp-cicd.html">&lt;p&gt;ec2-small&lt;/p&gt;
-&lt;ol&gt;
-=======
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-11-20T14:58:12+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Hydeout</title><subtitle>The &lt;a href=&quot;http://hyde.getpoole.com&quot; target=&quot;_blank&quot;&gt;Hyde&lt;/a&gt; theme for &lt;a href=&quot;http://jekyllrb.com&quot; target=&quot;_blank&quot;&gt;Jekyll&lt;/a&gt;, refreshed.</subtitle><author><name>Andrew Fong</name></author><entry><title type="html">dockerfile 생성</title><link href="http://localhost:4000/docker/2020/11/19/docker-term.html" rel="alternate" type="text/html" title="dockerfile 생성" /><published>2020-11-19T00:00:00+09:00</published><updated>2020-11-19T00:00:00+09:00</updated><id>http://localhost:4000/docker/2020/11/19/docker-term</id><content type="html" xml:base="http://localhost:4000/docker/2020/11/19/docker-term.html">&lt;p&gt;php 7.3 버전 대에 있는 컨테이너가 필요해서, 내가 필요한 패키지들을 갖고 와서 컨테이너를 만들려고 한다.&lt;/p&gt;
+&lt;h3 id=&quot;도커-개념&quot;&gt;도커 개념&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;docker container (도커 컨테이너)&lt;br /&gt;
+  &lt;code class=&quot;highlighter-rouge&quot;&gt;- 빌드 &amp;amp; 테스트&lt;/code&gt; &lt;br /&gt;
+  &lt;code class=&quot;highlighter-rouge&quot;&gt;- 자동화&lt;/code&gt;&lt;br /&gt;
+  &lt;code class=&quot;highlighter-rouge&quot;&gt;- 배치&lt;/code&gt; &lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;가장 핵심적인 작업 &lt;code class=&quot;highlighter-rouge&quot;&gt;이미지 빌드 -&amp;gt; 애플리케이션 -&amp;gt; 컨테이너&lt;/code&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;docker build =&amp;gt; image (결과물)&lt;/li&gt;
+  &lt;li&gt;docker images
+    &lt;ul&gt;
+      &lt;li&gt;설치 하는데 필요한 레이어, 배쉬 셸에서 직접 하나씩 생성&lt;/li&gt;
+      &lt;li&gt;애플리케이션 담은 이미지&lt;/li&gt;
+      &lt;li&gt;빌드하는 도커 파일 작성 (자동으로 생성)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;도커 핵심 개념 및 기능은 레이어드 이미지
+    &lt;ul&gt;
+      &lt;li&gt;이미지 계층화 &amp;amp; 이미지 콘텐츠 관리 기능 &lt;br /&gt;
+  (컨테이너)를 내가 그림판으로 그렸다.. (최대한 책에 나온것처럼 비슷하게 그리려 노력함)&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/40929370/101312306-c5388e80-3896-11eb-84d5-b7f87cdc6711.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+    &lt;p&gt;컨테이너를 이미지 레이어 방식으로 구성하면 매우 효율적이다.
+  이미지 =&amp;gt; 담긴 내용 참조할 때 이미지를 궝하는 레이어 중에서 해당레이어만으로 지정하면 됌.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;docker build
+    &lt;ul&gt;
+      &lt;li&gt;소스 리포지터리는 루트로 지정하지 않는다.&lt;/li&gt;
+      &lt;li&gt;docker build 명령은 도커파일이 담긴 디렉터리와 그 아래 디렉터리 전체를 빌드 컨텍스트(build Context)로 사용한다&lt;/li&gt;
+      &lt;li&gt;루트 (/)를 소스 리포지리로 지정하면 하드디스크에 담긴 전체 내용이 도커 데몬으로 전달 됀다.&lt;/li&gt;
+      &lt;li&gt;대부분의 도커파일을 별도의 빈 디렉터리에 담아 두는것이 좋다.
+  ##### 명령을 명시하는 순서 &amp;amp; 문법 중요하다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Andrew Fong</name></author><summary type="html">내가 트러블 슈팅 도커 라는 책을 읽고 기억에 남는 부분을 기록하기 위한 포스팅이다.</summary></entry><entry><title type="html">dockerfile 생성</title><link href="http://localhost:4000/docker/2020/11/19/docker-term.html" rel="alternate" type="text/html" title="dockerfile 생성" /><published>2020-11-19T00:00:00+09:00</published><updated>2020-11-19T00:00:00+09:00</updated><id>http://localhost:4000/docker/2020/11/19/docker-term</id><content type="html" xml:base="http://localhost:4000/docker/2020/11/19/docker-term.html">&lt;p&gt;php 7.3 버전 대에 있는 컨테이너가 필요해서, 내가 필요한 패키지들을 갖고 와서 컨테이너를 만들려고 한다.&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;FROM alpine:3.12
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -31,8 +76,12 @@
 &lt;p&gt;** 참고&lt;/p&gt;
 
 &lt;p&gt;git hub Tim de Pater&lt;br /&gt; 
-https://github.com/TrafeX/docker-php-nginx&lt;/p&gt;</content><author><name>Andrew Fong</name></author><summary type="html">php 7.3 버전 대에 있는 컨테이너가 필요해서, 내가 필요한 패키지들을 갖고 와서 컨테이너를 만들려고 한다.</summary></entry><entry><title type="html">GCP CI/CD (1)</title><link href="http://localhost:4000/gcp/2020/08/29/gcp-cicd.html" rel="alternate" type="text/html" title="GCP CI/CD (1)" /><published>2020-08-29T00:00:00+09:00</published><updated>2020-08-29T00:00:00+09:00</updated><id>http://localhost:4000/gcp/2020/08/29/gcp-cicd</id><content type="html" xml:base="http://localhost:4000/gcp/2020/08/29/gcp-cicd.html">&lt;ol&gt;
->>>>>>> 9a947a3e1fcf244e1cd8f9d29a23e3bbdd0c68e3
+https://github.com/TrafeX/docker-php-nginx&lt;/p&gt;</content><author><name>Andrew Fong</name></author><summary type="html">php 7.3 버전 대에 있는 컨테이너가 필요해서, 내가 필요한 패키지들을 갖고 와서 컨테이너를 만들려고 한다.</summary></entry><entry><title type="html">GCP CI/CD (2)</title><link href="http://localhost:4000/gcp/2020/08/31/gcp-cicd-gke.html" rel="alternate" type="text/html" title="GCP CI/CD (2)" /><published>2020-08-31T00:00:00+09:00</published><updated>2020-08-31T00:00:00+09:00</updated><id>http://localhost:4000/gcp/2020/08/31/gcp-cicd-gke</id><content type="html" xml:base="http://localhost:4000/gcp/2020/08/31/gcp-cicd-gke.html">&lt;p&gt;저번편에는 Dockerfile 만들고 빌드 하는거 까지 포스팅을 하였다.&lt;/p&gt;
+
+&lt;p&gt;이번 포스팅에서는 &lt;code class=&quot;highlighter-rouge&quot;&gt;GKE&lt;/code&gt;를 이용하여 배포 하는 포스팅을 작성할 예정이다.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;GKE&lt;/code&gt;란? Cloud Build를 사용하여 Kubernetes에 애플리케이션을 배포를 도와준다.&lt;/p&gt;</content><author><name>Andrew Fong</name></author><summary type="html">저번편에는 Dockerfile 만들고 빌드 하는거 까지 포스팅을 하였다.</summary></entry><entry><title type="html">GCP CI/CD (1)</title><link href="http://localhost:4000/gcp/2020/08/29/gcp-cicd.html" rel="alternate" type="text/html" title="GCP CI/CD (1)" /><published>2020-08-29T00:00:00+09:00</published><updated>2020-08-29T00:00:00+09:00</updated><id>http://localhost:4000/gcp/2020/08/29/gcp-cicd</id><content type="html" xml:base="http://localhost:4000/gcp/2020/08/29/gcp-cicd.html">&lt;p&gt;ec2-small&lt;/p&gt;
+&lt;ol&gt;
   &lt;li&gt;CI/CD 하고 싶은 프로젝트에 Dockerfile 을 작성해준다. &lt;br /&gt;
 나는 typescript로 되어져 있는 토이프로젝트 Dockerfile 작성해 줄 것이다.&lt;/li&gt;
 &lt;/ol&gt;
@@ -96,11 +145,7 @@ GCP 참고 문서
     - 이 `.yaml` 파일은 깃허브에 소스코드와 함께 위치해야한다.
 - 트리거는 GCP Cloud Build 페이지에서 트리거를 생성한다.
     - 트리거에서 어떤 브랜치에 어떤 요청이 왔을 때 어떤 `.yaml`을 실행할 지 정할 수 있다.
-<<<<<<< HEAD
     - 브랜치에 따라 특정 트리거를 다르게 발동 시킬 수 있다. --&gt;</content><author><name>Andrew Fong</name></author><summary type="html">ec2-small CI/CD 하고 싶은 프로젝트에 Dockerfile 을 작성해준다. 나는 typescript로 되어져 있는 토이프로젝트 Dockerfile 작성해 줄 것이다.</summary></entry><entry><title type="html">pipeline (CI/CD)</title><link href="http://localhost:4000/concept/2020/08/29/concept-pipeline.html" rel="alternate" type="text/html" title="pipeline (CI/CD)" /><published>2020-08-29T00:00:00+09:00</published><updated>2020-08-29T00:00:00+09:00</updated><id>http://localhost:4000/concept/2020/08/29/concept-pipeline</id><content type="html" xml:base="http://localhost:4000/concept/2020/08/29/concept-pipeline.html">&lt;p&gt;여러 문서를 보다보면 &lt;code class=&quot;highlighter-rouge&quot;&gt;파이프라인&lt;/code&gt; 이라는 단어를 많이 볼 수 있을것이다.&lt;br /&gt;
-=======
-    - 브랜치에 따라 특정 트리거를 다르게 발동 시킬 수 있다. --&gt;</content><author><name>Andrew Fong</name></author><summary type="html">CI/CD 하고 싶은 프로젝트에 Dockerfile 을 작성해준다. 나는 typescript로 되어져 있는 토이프로젝트 Dockerfile 작성해 줄 것이다.</summary></entry><entry><title type="html">pipeline (CI/CD)</title><link href="http://localhost:4000/concept/2020/08/29/concept-pipeline.html" rel="alternate" type="text/html" title="pipeline (CI/CD)" /><published>2020-08-29T00:00:00+09:00</published><updated>2020-08-29T00:00:00+09:00</updated><id>http://localhost:4000/concept/2020/08/29/concept-pipeline</id><content type="html" xml:base="http://localhost:4000/concept/2020/08/29/concept-pipeline.html">&lt;p&gt;여러 문서를 보다보면 &lt;code class=&quot;highlighter-rouge&quot;&gt;파이프라인&lt;/code&gt; 이라는 단어를 많이 볼 수 있을것이다.&lt;br /&gt;
->>>>>>> 9a947a3e1fcf244e1cd8f9d29a23e3bbdd0c68e3
 정확하게는 모르고 대충 큰뜻만 알고있다가 gcp ci/cd 포스팅을 하게되면서 의미를 정확하게 짚고 넘어가려고 &lt;br /&gt;
 파이프라인에 대해 포스팅을 해보려고 한다. &lt;br /&gt;&lt;/p&gt;
 
@@ -394,209 +439,4 @@ apt-get install nginx-y
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;http://35.216.37.188/   &lt;br /&gt; 
-gcp 이용해서 서버 구동완료하였다.&lt;/p&gt;</content><author><name>Andrew Fong</name></author><summary type="html">내가 올려놓은 소스들을 실제로 웹서버 에서 테스트 해보기 위해서 gcp 에서 웹 서버를 만드는 방법을 찾아보았다. 프로젝트 생성을 했다는 전제조건으로 포스팅을 해보려고 한다.</summary></entry><entry><title type="html">GCP 레지스트리 등록</title><link href="http://localhost:4000/gcp/2020/06/20/gcp-registry.html" rel="alternate" type="text/html" title="GCP 레지스트리 등록" /><published>2020-06-20T00:00:00+09:00</published><updated>2020-06-20T00:00:00+09:00</updated><id>http://localhost:4000/gcp/2020/06/20/gcp-registry</id><content type="html" xml:base="http://localhost:4000/gcp/2020/06/20/gcp-registry.html">&lt;p&gt;GCP 에서 docker image 를 pull&amp;amp;push 관리 하기 위해서 기록
-    - gcp에 docker 이미지 올려놓는 이 ??&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/40929370/85203347-1932d380-b348-11ea-8d5a-efc0db2e52f5.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;b&gt;google Container Registry API&lt;/b&gt; 사용 설정을 눌러 준다.&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Google Cloud SDK 설치&lt;/strong&gt;&lt;/p&gt;
-
-    &lt;p&gt;GCP로부터 이미지를 pull &amp;amp;  push 할 때, gcloud 명령어가 필요하기 때문에 Cloud SDK 설치해야 한다.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;​	gcloud init 쳐서 해주고 그 후,  gcloud auth login 해줘서 인증 해줘야 한다.&lt;/p&gt;
-
-&lt;p&gt;그리고 나서 google Cloud Platform &amp;gt; 목록 &amp;gt; IAM 및  관리자 &amp;gt; 서비스  계정&lt;/p&gt;
-
-&lt;p&gt;내가 만들어야 할 서비스 프로젝트 계정 만들어주고 계정 권한은 프로젝트 &amp;gt; 소유자로 만들어준다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/40929370/85216408-3d7dc700-b3bf-11ea-95a9-58ec4810c5c0.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;그 후, 다음으로 넘어가서 키 만들고 json 형식으로 만들고 완료 눌러서 마무리 합니다.&lt;/p&gt;
-
-&lt;p&gt;(만들어진 키는 보관해야합니다.)&lt;/p&gt;
-
-&lt;p&gt;키를 만들면서 다운로드된 json 파일을 리눅스의 /usr/lib64/google-cloud-sdk/bin 으로 옮깁니다.&lt;/p&gt;
-
-&lt;p&gt;이제 아래 명령어를 통해 서비스 계정 인증을 위해 아래 명령어를 입력해줍니다. (만약 gcloud 커맨드를 찾지 못한다면 /usr/lib64/google-cloud-sdk/bin 으로 이동하셔서 ./gcloud 로 사용 해주세요)&lt;/p&gt;
-
-&lt;div class=&quot;language-dockerfile highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;gcloud auth activate-service-account --key-file=/usr/lib64/google-cloud-sdk/bin/[옮긴 json파일명]
-gcloud auth configure-docker
-
-&lt;span class=&quot;c&quot;&gt;# gcloud 커맨드를 인식하지 못할 경우&lt;/span&gt;
-cd /usr/lib64/google-cloud-sdk/bin/
-./gcloud auth activate-service-account --key-file=/usr/lib64/google-cloud-sdk/bin/[옮긴 json파일명]
-./gcloud auth configure-docker
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;json 파일도 인증이 완료 되었다면 리눅스에서 삭제 해줍니다. (gcloud CLI가 키를 저장하여 리눅스에서 삭제해도 계속 유지된다고 합니다)&lt;/p&gt;
-
-&lt;h3 id=&quot;도커-이미지-업로드--다운로드&quot;&gt;도커 이미지 업로드 / 다운로드&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;도커 이미지를 업로드 하기 전 이미지의 태그를 설정해줘야 합니다.
-    &lt;div class=&quot;language-dockerfile highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# docker tag [로컬 이미지명][Google Container Registry 호스트명]/[프로젝트ID]/[이미지명]&lt;/span&gt;
-ex) docker tag jellystore asia.gcr.io/jellystore/jellyStore
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Google Container Registry  호스트 명은 이미지  저장위치에 따라 아래중 하나를 사용하면된다.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;us.gcr.io  - 미국&lt;/li&gt;
-  &lt;li&gt;eu.gcr.io - 유럽&lt;/li&gt;
-  &lt;li&gt;asia.gcr.io - 아시아&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker build -t hostname/project_id/dockerImage
-
-docker push hostname/project_id/dockerImage
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/40929370/86599971-58188880-bfda-11ea-9420-d08206997910.png&quot; alt=&quot;image&quot; /&gt;
-올라가져 있는걸 확인 할 수 있다.. !&lt;/p&gt;</content><author><name>Andrew Fong</name></author><summary type="html">GCP 에서 docker image 를 pull&amp;amp;push 관리 하기 위해서 기록 - gcp에 docker 이미지 올려놓는 이 ??</summary></entry><entry><title type="html">jupyter 컨테이너 생성 및 구동</title><link href="http://localhost:4000/algorithm/2020/04/25/setting.html" rel="alternate" type="text/html" title="jupyter 컨테이너 생성 및 구동" /><published>2020-04-25T00:00:00+09:00</published><updated>2020-04-25T00:00:00+09:00</updated><id>http://localhost:4000/algorithm/2020/04/25/setting</id><content type="html" xml:base="http://localhost:4000/algorithm/2020/04/25/setting.html">&lt;p&gt;알고리즘을 공부 하려고 인터넷 강의를 샀었는데 주피터란 프로그램을 설치 하라고 해서 docker을 이용해서 사용하려고 합니다.&lt;br /&gt;
-혹시나 까먹을 것같아서 기록용으로 작성합니다.&lt;/p&gt;
-
-&lt;p&gt;원래는 docker hub 에 올라와 져 있는 이미지를 이용해서 컨테이너를 띄우려고 했는데&lt;br /&gt;
-도커파일을 이용해서 컨테이너를 작업한 적 이 없어서 직접 Dockerfile 만들고 컨테이너를 띄우려고 합니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;a cursor=&quot;pointer&quot; href=&quot;https://tobelinuxer.tistory.com/26&quot; target=&quot;_blank&quot;&gt;https://tobelinuxer.tistory.com/26&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt; 참고해서 만들었습니다.&lt;/p&gt;
-
-&lt;p&gt;Dockerfile&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-Dockerfile&quot;&gt;FROM ubuntu:latest
-
-MAINTAINER eunju &quot;eunjju1209@gmail.com&quot;
-
-# RUN apt-get update &amp;amp;&amp;amp; apt-get -y update
-RUN apt-get update -y
-
-# RUN apt-get install -y build-essential python3.6 python3-pip
-RUN apt-get install -y python-pip python-dev build-essential
-
-RUN pip install jupyter
-
-RUN pip install matplotlib
-
-RUN jupyter notebook --generate-config --allow-root
-
-RUN echo  &quot;c.NotebookApp.password = u'sha1:6a3f528eec40:6e896b6e4828f525a6e20e5411cd1c8075d68619'&quot; &amp;gt;&amp;gt; /root/.jupyter/jupyter_notebook_config.py
-
-EXPOSE 8888
-
-ENTRYPOINT jupyter notebook --allow-root --ip=0.0.0.0 --port=8888 --no-browser
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;pip
-    &lt;ul&gt;
-      &lt;li&gt;파이썬으로 작성된 패키지 소프트웨어를 관리하는 패키지 관리 시스템입니다. &lt;br /&gt;
-  그래서, python-pip 을 설치해줘야 합니다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-ubuntu&quot;&gt;    docker run -it --name jupyter --rm -p 8888:8888 -v `pwd`:/home/root/test jupyter
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;–rm =&amp;gt; 컨테이너 일회성으로 띄어주는것, 컨테이너 종료 하면 바로 컨테이너 삭제된다. &lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;위치 루트를 /home/root/test 에 넣어줘서 거기가 컨테이너 안에서의 루트이다. &lt;br /&gt;
-그리고 /home/root/test 에 들어가면 내가 작업한 Dockerfile 이 있다.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-ubuntu&quot;&gt;    docker run -it --name jupyter -p 8888:8888 -v `pwd`:/home/root/test jupyter
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;나는 알고리즘을 공부할때마다, 주피터 띄어줄꺼니까 위에 rm 명령어를 빼고 이미지를 run 시켜줄 것 이다.&lt;/p&gt;</content><author><name>Andrew Fong</name></author><summary type="html">알고리즘을 공부 하려고 인터넷 강의를 샀었는데 주피터란 프로그램을 설치 하라고 해서 docker을 이용해서 사용하려고 합니다. 혹시나 까먹을 것같아서 기록용으로 작성합니다.</summary></entry><entry><title type="html">의미있는 맥락을 추가하라</title><link href="http://localhost:4000/cleancode/2020/02/10/clean-code.html" rel="alternate" type="text/html" title="의미있는 맥락을 추가하라" /><published>2020-02-10T00:00:00+09:00</published><updated>2020-02-10T00:00:00+09:00</updated><id>http://localhost:4000/cleancode/2020/02/10/clean-code</id><content type="html" xml:base="http://localhost:4000/cleancode/2020/02/10/clean-code.html">&lt;p&gt;이 소제목의 내용을 보고 반성을 할 수 있게 만든 내용이였다. &lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;하나의 &lt;code class=&quot;highlighter-rouge&quot;&gt;function&lt;/code&gt; 안에서 여러가지 액션이 일어나야 하는 경우가 있는데,
-하나의 함수 안에서 여러개의 역할을 하는걸 한번에 다 넣는 경우가 있는데, 
-이렇게 하면 가독성이 떨어진다는걸 알지만 시간이 없다는 핑계와 나중에 리팩토링을 할거라고 생각하고 몇개의 함수를 만든적 있다.&lt;/p&gt;
-
-&lt;p&gt;책에서 권장하지 않는 예제 소스가 있었는데 매우, 내가 회사에서 짜놓은 소스와 비슷해서 반성의 의미로 적어놓으려고 한다.&lt;/p&gt;
-
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;printGuessStatistics&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;candidate&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;verb&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;  &lt;span class=&quot;n&quot;&gt;pluralModifier&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-        
-        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;count&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;number&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;no&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;verb&lt;/span&gt;    &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;are&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;pluralModifier&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;s&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;count&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;number&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;1&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;verb&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;is&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;pluralModifier&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;number&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Interger&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;verb&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;  &lt;span class=&quot;s&quot;&gt;&quot;are&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;pluralModifier&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;s&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-        
-        &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;guessMessage&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-            &lt;span class=&quot;s&quot;&gt;&quot;There %s %s %s%s&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;verb&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;candidate&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pluralModifier&lt;/span&gt; 
-        &lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-        
-        &lt;span class=&quot;n&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;guessMessage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;위에 있는 소스가 내가 회사에서 적어놓을 만한 소스이다.. &lt;br /&gt;
-내가 반성하고자 하는건 if, elseif scope 안에서 처리하는 부분을 function 으로 안 만들고 
- 재사용성 없이 만든 부분을 반성하고자 쓰는것이다.&lt;/p&gt;
-
-&lt;p&gt;책에서 권장한, 맥락이 분명한 변수&lt;/p&gt;
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;GuessStatisticsMessage&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;verb&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pluralModifier&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-        
-        &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;make&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;candidate&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;createPluralDependentMessageParts&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-                &lt;span class=&quot;s&quot;&gt;&quot;There %s  %s %s%s&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;verb&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;candidate&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;  &lt;span class=&quot;n&quot;&gt;pluralModifier&lt;/span&gt;
-            &lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-    
-        
-        &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;  &lt;span class=&quot;nf&quot;&gt;createPluralDependentMessageParts&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;count&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-                &lt;span class=&quot;n&quot;&gt;thereAreNoLetters&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-            &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;count&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-                &lt;span class=&quot;n&quot;&gt;thereIsOneLetter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-            &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-                &lt;span class=&quot;n&quot;&gt;thereAreManyLetters&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-            &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-        
-        &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;thereAreManyLetters&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;number&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Integer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;verb&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;are&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;pluralModifier&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;s&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-        
-        &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;thereIsOneLetter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;number&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;1&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;verb&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;is&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;pluralModifier&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-        
-        &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;thereArenoLetters&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;number&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;no&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;verb&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;are&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;pluralModifier&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;s&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;사실 모든 소스는 재 사용성을 고려해서 모든걸 만들어야 되는걸 알지만
-실제로 잘 지켜지지 않고 실천하지 못하는 부분을 반성해야 할 것같다.&lt;/p&gt;</content><author><name>Andrew Fong</name></author><summary type="html">이 소제목의 내용을 보고 반성을 할 수 있게 만든 내용이였다.</summary></entry></feed>
+gcp 이용해서 서버 구동완료하였다.&lt;/p&gt;</content><author><name>Andrew Fong</name></author><summary type="html">내가 올려놓은 소스들을 실제로 웹서버 에서 테스트 해보기 위해서 gcp 에서 웹 서버를 만드는 방법을 찾아보았다. 프로젝트 생성을 했다는 전제조건으로 포스팅을 해보려고 한다.</summary></entry></feed>

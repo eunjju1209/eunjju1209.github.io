@@ -3,30 +3,69 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:bundler" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="9cacb39c-a7f0-4dee-a828-9bb47a4df706" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2020-08-29-gcp-cicd.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2020-08-29-gcp-cicd.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2020-12-04-trouble-shooting-docker.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2020-12-04-trouble-shooting-docker.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/2017/06/01/hello-hydeout.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/2017/06/01/hello-hydeout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/404.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/algorithm/2020/04/25/setting.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/algorithm/2020/04/25/setting.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/algorithm/2020/08/04/algorithm-alignment.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/algorithm/2020/08/04/algorithm-alignment.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/algorithm/2020/08/05/algorithm-graph.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/algorithm/2020/08/05/algorithm-graph.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/algorithm/2020/08/12/algorithm-programmers-trip.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/algorithm/2020/08/12/algorithm-programmers-trip.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/category/Algorithm.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/category/Algorithm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/category/Clean.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/category/Clean.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/category/Docker.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/category/Docker.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/category/GCP.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/category/GCP.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/category/concept.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/category/concept.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/cleancode/2020/02/10/clean-code.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/cleancode/2020/02/10/clean-code.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/concept/2020/08/29/concept-pipeline.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/concept/2020/08/29/concept-pipeline.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/docker/2020/02/09/docker-compose.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/docker/2020/02/09/docker-compose.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/docker/2020/02/09/docker-inspect.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/docker/2020/02/09/docker-inspect.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/docker/2020/02/09/docker-link.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/docker/2020/02/09/docker-link.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/docker/2020/02/09/docker-volume.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/docker/2020/02/09/docker-volume.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/docker/2020/11/19/docker-term.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/docker/2020/11/19/docker-term.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/feed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/feed.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/gcp/2020/06/20/gcp-registry.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/gcp/2020/06/20/gcp-registry.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/gcp/2020/07/20/gcp-webserver.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/gcp/2020/07/20/gcp-webserver.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/gcp/2020/08/29/gcp-cicd.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/gcp/2020/08/29/gcp-cicd.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/gcp/2020/08/31/gcp-cicd-gke.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/gcp/2020/08/31/gcp-cicd-gke.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/page2/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/page2/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/page3/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/page3/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/search.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/tags.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/tags.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +92,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/_posts" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -66,17 +105,17 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/_posts" />
+      <recent name="$PROJECT_DIR$/_site/docker/2020/02/09" />
+      <recent name="$PROJECT_DIR$/_site/docker" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/_posts" />
       <recent name="$PROJECT_DIR$/category" />
       <recent name="$PROJECT_DIR$/_layouts" />
       <recent name="$PROJECT_DIR$/_site/category" />
       <recent name="$PROJECT_DIR$" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/_posts" />
-      <recent name="$PROJECT_DIR$/_site/docker/2020/02/09" />
-      <recent name="$PROJECT_DIR$/_site/docker" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -114,11 +153,22 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="WindowStateProjectService">
-    <state x="-1675" y="144" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1598188714162">
-      <screen x="-1920" y="23" width="1920" height="1057" />
+    <state x="-1194" y="209" key="RollbackChangesDialog" timestamp="1607318700819">
+      <screen x="-1920" y="25" width="1920" height="956" />
     </state>
-    <state x="-1675" y="144" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.877/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1598188714162" />
+    <state x="-1194" y="209" key="RollbackChangesDialog/0.25.1792.1095/-1920.25.1920.956@-1920.25.1920.956" timestamp="1607318700819" />
     <state x="499" y="154" key="VCS.ChangeListViewerDialog" timestamp="1598722128951">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -127,15 +177,11 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="421" y="198" width="598" height="503" key="find.popup/0.0.1440.900/-1920.-83.1920.1080@0.0.1440.900" timestamp="1598710211523" />
-    <state x="421" y="216" width="598" height="490" key="find.popup/0.23.1440.877/-1920.-99.1920.1057@0.23.1440.877" timestamp="1598585003736" />
     <state x="479" y="262" width="836" height="847" key="search.everywhere.popup" timestamp="1605766393973">
       <screen x="0" y="25" width="1792" height="1095" />
     </state>
     <state x="385" y="195" width="671" height="695" key="search.everywhere.popup/0.0.1440.900/-1920.-83.1920.1080@0.0.1440.900" timestamp="1598718870473" />
     <state x="385" y="213" width="671" height="678" key="search.everywhere.popup/0.23.1440.877/-1920.-60.1920.1057@0.23.1440.877" timestamp="1598816358474" />
-    <state x="385" y="213" width="670" height="676" key="search.everywhere.popup/0.23.1440.877/-1920.-79.1920.1057@0.23.1440.877" timestamp="1597225954357" />
-    <state x="385" y="213" width="671" height="677" key="search.everywhere.popup/0.23.1440.877/-1920.-99.1920.1057@0.23.1440.877" timestamp="1598584888780" />
-    <state x="-1407" y="252" width="894" height="815" key="search.everywhere.popup/0.23.1440.877/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1598186684758" />
     <state x="479" y="262" width="836" height="847" key="search.everywhere.popup/0.25.1792.1095/-1920.25.1920.970@0.25.1792.1095" timestamp="1605766393973" />
   </component>
 </project>

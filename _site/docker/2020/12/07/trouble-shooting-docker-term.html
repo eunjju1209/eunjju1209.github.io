@@ -11,7 +11,7 @@
 
   <title>
     
-      404: Page not found &middot; Hydeout
+      트러블 슈팅 도커 - 도커 용어 정리 &middot; Hydeout
     
   </title>
 
@@ -37,7 +37,7 @@
 </head>
 
 
-  <body class="default">
+  <body class="post">
 
     <div id="sidebar">
   <header>
@@ -249,9 +249,133 @@
 </div>
 
     <main class="container">
-      <div class="page">
-  <h1 class="page-title">404: Page not found</h1>
-  <p class="lead">Sorry, we've misplaced that URL or it's pointing to something that doesn't exist. <a href="/">Head back home</a> to try finding it again.</p>
+      <header>
+  <h1 class="post-title">트러블 슈팅 도커 - 도커 용어 정리</h1>
+</header>
+<div class="content">
+  <div class="post-meta">
+  <span class="post-date">07 Dec 2020</span>
+  <span class="post-categories">
+    
+      &bull;
+
+      
+      
+      
+
+      
+        <a href="/category/Docker">
+          Docker
+        </a>
+      
+    
+  </span>
+</div>
+
+
+  <div class="post-body">
+    <h2 id="용어-정리">용어 정리</h2>
+
+<ul>
+  <li>FROM <br /></li>
+  <li>이미지를 가져올 (pull) 할 베이스
+    <ul>
+      <li>이미지에 대해 수행할 연산을 논리적으로 묶어서 레이어의 수를 최소화 하는 것이 좋다.</li>
+      <li>예를 들어 애플리케이션의 의존성에 관련된 패키지를 설치할 때는 각각을 별도의 디렉티브로 지정하지 않고<br />
+  하나의 RUN 디렉티브로 묶어서 한꺼번에 설치하는 것이 좋다.</li>
+    </ul>
+  </li>
+</ul>
+
+
+    
+
+
+
+<div class="post-tags">
+  
+</div>
+  </div>
+
+  
+  <section class="comments">
+    <h2>Comments</h2>
+    
+  <div id="disqus_thread">
+    <button class="disqus-load" onClick="loadDisqusComments()">
+      Load Comments
+    </button>
+  </div>
+  <script>
+
+  /**
+  *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW
+  *  TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+  *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT:s
+  *  https://disqus.com/admin/universalcode/#configuration-variables
+  */
+  var disqus_config = function () {
+    this.page.url = "http://localhost:4000/docker/2020/12/07/trouble-shooting-docker-term.html";
+    this.page.identifier = "" ||
+                           "http://localhost:4000/docker/2020/12/07/trouble-shooting-docker-term.html";
+  }
+  function loadDisqusComments() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = '//eunjju.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  }
+  (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = '//eunjju.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+
+  </script>
+  <noscript>
+    Please enable JavaScript to view the
+    <a href="https://disqus.com/?ref_noscript">comments powered by Disqus</a>.
+  </noscript>
+
+
+
+  </section>
+
+  <section class="related">
+  <h2>Related Posts</h2>
+  <ul class="posts-list">
+    
+      <li>
+        <h3>
+          <a href="/docker/2020/12/04/trouble-shooting-docker.html">
+            트러블 슈팅 도커 - 도커 개념
+            <small>04 Dec 2020</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/docker/2020/11/19/docker-term.html">
+            dockerfile 생성
+            <small>19 Nov 2020</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/gcp/2020/08/31/gcp-cicd-gke.html">
+            GCP CI/CD (2)
+            <small>31 Aug 2020</small>
+          </a>
+        </h3>
+      </li>
+    
+  </ul>
+</section>
+
 </div>
 
     </main>

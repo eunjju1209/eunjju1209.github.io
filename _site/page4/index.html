@@ -253,7 +253,7 @@
   
 <div class="pagination">
   <a class="pagination-item newer"
-     href="/">
+     href="/page3">
     Newer
   </a>
 </div>
@@ -265,12 +265,12 @@
   
   <article class="post-body">
     <h2 class="post-title">
-      <a href="/concept/2020/08/29/concept-pipeline.html">
-        pipeline (CI/CD)
+      <a href="/docker/2020/02/09/docker-inspect.html">
+        Docker inspect
       </a>
     </h2>
     <div class="post-meta">
-  <span class="post-date">29 Aug 2020</span>
+  <span class="post-date">09 Feb 2020</span>
   <span class="post-categories">
     
       &bull;
@@ -280,8 +280,8 @@
       
 
       
-        <a href="/category/concept">
-          concept
+        <a href="/category/Docker">
+          Docker
         </a>
       
     
@@ -290,9 +290,9 @@
 
 
     
-      <p>여러 문서를 보다보면 <code class="highlighter-rouge">파이프라인</code> 이라는 단어를 많이 볼 수 있을것이다.<br />
-정확하게는 모르고 대충 큰뜻만 알고있다가 gcp ci/cd 포스팅을 하게되면서 의미를 정확하게 짚고 넘어가려고 <br />
-파이프라인에 대해 포스팅을 해보려고 한다. <br /></p>
+      <ul>
+  <li>docker inspect 란?</li>
+</ul>
 
 
     
@@ -303,19 +303,19 @@
       
 
       
-        <a href="/concept/2020/08/29/concept-pipeline.html">More &hellip;</a>
+        <a href="/docker/2020/02/09/docker-inspect.html">More &hellip;</a>
       
     
   </article>
   
   <article class="post-body">
     <h2 class="post-title">
-      <a href="/algorithm/2020/08/12/algorithm-programmers-trip.html">
-        프로그래머스 - 여행계획(javascript)
+      <a href="/docker/2020/02/09/docker-compose.html">
+        Docker-Compose
       </a>
     </h2>
     <div class="post-meta">
-  <span class="post-date">12 Aug 2020</span>
+  <span class="post-date">09 Feb 2020</span>
   <span class="post-categories">
     
       &bull;
@@ -325,8 +325,8 @@
       
 
       
-        <a href="/category/Algorithm">
-          Algorithm
+        <a href="/category/Docker">
+          Docker
         </a>
       
     
@@ -335,8 +335,8 @@
 
 
     
-      <p>PHP 개발을 주로 하고 있고 전 회사에서 잠깐 typescript로 개발 경험이 있어서 알고리즘을 풀 때 
-자바스크립트로 선택해서 풀고있습니다.</p>
+      <p>회사에서 최근에 작업하는 프로젝트가 있는데 <br />
+이 프로젝트를 띄우려면 컨테이너가 3개가 띄어줘야지 내 로컬에서 실행 시킬 수 있었다.</p>
 
 
     
@@ -347,127 +347,108 @@
       
 
       
-        <a href="/algorithm/2020/08/12/algorithm-programmers-trip.html">More &hellip;</a>
+        <a href="/docker/2020/02/09/docker-compose.html">More &hellip;</a>
       
     
   </article>
   
   <article class="post-body">
     <h2 class="post-title">
-      <a href="/algorithm/2020/08/05/algorithm-graph.html">
-        그래프 (DFS&BFS)
+      <a href="/2017/06/01/hello-hydeout.html">
+        Hello Hydeout
       </a>
     </h2>
     <div class="post-meta">
-  <span class="post-date">05 Aug 2020</span>
+  <span class="post-date">01 Jun 2017</span>
   <span class="post-categories">
-    
-      &bull;
-
-      
-      
-      
-
-      
-        <a href="/category/Algorithm">
-          Algorithm
-        </a>
-      
     
   </span>
 </div>
 
 
     
-      <p>너비 우선 탐색 (Breadth-First Search)</p>
+      <p>Hydeout updates the original <a href="https://github.com/poole/hyde">Hyde</a>
+theme for <a href="http://jekyllrb.com">Jekyll</a> 3.x and adds new functionality.</p>
 
+<h3 id="keep-it-simple">Keep It Simple</h3>
 
-    
+<p>In keeping with the original Hyde theme, Hydeout aims to keep the overall
+design lightweight and plugin-free. JavaScript is currently limited only
+to Disqus and Google Analytics (and is only loaded if you provide configuration
+variables).</p>
 
-    
-      
-      
-      
+<p>Hydeout makes heavy use of Flexbox in its CSS. If Flexbox is not available,
+the CSS degrades into a single column layout.</p>
 
-      
-        <a href="/algorithm/2020/08/05/algorithm-graph.html">More &hellip;</a>
-      
-    
-  </article>
-  
-  <article class="post-body">
-    <h2 class="post-title">
-      <a href="/algorithm/2020/08/04/algorithm-alignment.html">
-        정렬
-      </a>
-    </h2>
-    <div class="post-meta">
-  <span class="post-date">04 Aug 2020</span>
-  <span class="post-categories">
-    
-      &bull;
+<h3 id="customization">Customization</h3>
 
-      
-      
-      
+<p>Hydeout replaces Hyde’s class-based theming with the use
+of the following SASS variables:</p>
 
-      
-        <a href="/category/Algorithm">
-          Algorithm
-        </a>
-      
-    
-  </span>
-</div>
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$sidebar-bg-color</span><span class="p">:</span> <span class="mh">#202020</span> <span class="o">!</span><span class="nb">default</span><span class="p">;</span>
+<span class="nv">$sidebar-fg-color</span><span class="p">:</span> <span class="no">white</span> <span class="o">!</span><span class="nb">default</span><span class="p">;</span>
+<span class="nv">$sidebar-sticky</span><span class="p">:</span> <span class="bp">true</span> <span class="o">!</span><span class="nb">default</span><span class="p">;</span>
+<span class="nv">$layout-reverse</span><span class="p">:</span> <span class="bp">false</span> <span class="o">!</span><span class="nb">default</span><span class="p">;</span>
+<span class="nv">$link-color</span><span class="p">:</span> <span class="mh">#268bd2</span> <span class="o">!</span><span class="nb">default</span><span class="p">;</span>
+</code></pre></div></div>
 
+<p>To override these variables, create your own <code class="highlighter-rouge">assets/css/main.scss</code> file.
+Define your own variables, then import in Hydeout’s SCSS, like so:</p>
 
-    
-      <p>바이너리 탐색 &gt; 이진트리를 보고 유무 탐색</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+# Jekyll needs front matter for SCSS files
+---
 
+$sidebar-bg-color: #ac4142;
+$link-color: #ac4142;
+$sidebar-sticky: false;
+@import "hydeout";
+</code></pre></div></div>
 
-    
+<p>See the <a href="https://github.com/fongandrew/hydeout/blob/master/_sass/hydeout/_variables.scss">_variables</a> file for other variables
+you can override.</p>
 
-    
-      
-      
-      
+<p>You can also insert custom head tags (e.g. to load your own stylesheets) by
+defining your own <code class="highlighter-rouge">_includes/custom-head.html</code> or insert tags at the end
+of the body (e.g. for custom JS) by defining your own
+<code class="highlighter-rouge">_includes/custom-foot.html</code>.</p>
 
-      
-        <a href="/algorithm/2020/08/04/algorithm-alignment.html">More &hellip;</a>
-      
-    
-  </article>
-  
-  <article class="post-body">
-    <h2 class="post-title">
-      <a href="/gcp/2020/07/20/gcp-webserver.html">
-        GCP 웹서버 구축
-      </a>
-    </h2>
-    <div class="post-meta">
-  <span class="post-date">20 Jul 2020</span>
-  <span class="post-categories">
-    
-      &bull;
+<h3 id="new-features">New Features</h3>
 
-      
-      
-      
+<ul>
+  <li>
+    <p>Hydeout also adds a new tags page (accessible in the sidebar) and a new
+“category” layout for dedicated category pages.</p>
+  </li>
+  <li>
+    <p>Category pages are automatically added to the sidebar. All other pages
+must have <code class="highlighter-rouge">sidebar_link: true</code> in their front matter to show up in
+the sidebar.</p>
+  </li>
+  <li>
+    <p>A simple redirect-to-Google search is available. If you want to use
+Google Custom Search or Algolia or something with more involved,
+override the <code class="highlighter-rouge">search.html</code>.</p>
+  </li>
+  <li>
+    <p>Disqus integration is ready out of the box. Just add the following to
+your config file:</p>
 
-      
-        <a href="/category/GCP">
-          GCP
-        </a>
-      
-    
-  </span>
-</div>
+    <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">disqus</span><span class="pi">:</span>
+  <span class="na">shortname</span><span class="pi">:</span> <span class="s">my-disqus-shortname</span>
+</code></pre></div>    </div>
 
+    <p>If you don’t want Disqus or want to use something else, override
+<code class="highlighter-rouge">comments.html</code>.</p>
+  </li>
+  <li>
+    <p>For Google Analytics support, define a <code class="highlighter-rouge">google_analytics</code> variable with
+your property ID in your config file.</p>
+  </li>
+</ul>
 
-    
-      <p>내가 올려놓은 소스들을 실제로 웹서버 에서 테스트 해보기 위해서 gcp 에서 웹 서버를 만드는 방법을 찾아보았다.
-프로젝트 생성을 했다는 전제조건으로 포스팅을 해보려고 한다.</p>
-
+<p>There’s also a bunch of minor tweaks and adjustments throughout the
+theme. Hope this works for you!</p>
 
     
 
@@ -476,21 +457,12 @@
       
       
 
-      
-        <a href="/gcp/2020/07/20/gcp-webserver.html">More &hellip;</a>
       
     
   </article>
   
 
   
-<div class="pagination">
-  <a class="pagination-item older"
-     href="/page3">
-    Older
-  </a>
-</div>
-
 
 </div>
     </main>
