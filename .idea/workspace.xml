@@ -36,11 +36,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9cacb39c-a7f0-4dee-a828-9bb47a4df706" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2020-12-04-trouble-shooting-docker.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2020-12-04-trouble-shooting-docker.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2020-12-07-trouble-shooting-docker-term.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2020-12-07-trouble-shooting-docker-term.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/docker/2020/12/07/trouble-shooting-docker-term.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/docker/2020/12/07/trouble-shooting-docker-term.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/feed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/feed.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2020-02-09-docker-inspect.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2020-02-09-docker-inspect.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,11 +148,12 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="421" y="198" width="598" height="503" key="find.popup/0.0.1440.900/-1920.-83.1920.1080@0.0.1440.900" timestamp="1598710211523" />
-    <state x="479" y="262" width="836" height="847" key="search.everywhere.popup" timestamp="1605766393973">
-      <screen x="0" y="25" width="1792" height="1095" />
+    <state x="-1407" y="253" width="896" height="817" key="search.everywhere.popup" timestamp="1607321325426">
+      <screen x="-1920" y="25" width="1920" height="1055" />
     </state>
     <state x="385" y="195" width="671" height="695" key="search.everywhere.popup/0.0.1440.900/-1920.-83.1920.1080@0.0.1440.900" timestamp="1598718870473" />
     <state x="385" y="213" width="671" height="678" key="search.everywhere.popup/0.23.1440.877/-1920.-60.1920.1057@0.23.1440.877" timestamp="1598816358474" />
     <state x="479" y="262" width="836" height="847" key="search.everywhere.popup/0.25.1792.1095/-1920.25.1920.970@0.25.1792.1095" timestamp="1605766393973" />
+    <state x="-1407" y="253" width="896" height="817" key="search.everywhere.popup/0.25.1792.996/-1920.25.1920.1055@-1920.25.1920.1055" timestamp="1607321325426" />
   </component>
 </project>
