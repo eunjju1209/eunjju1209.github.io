@@ -1,12 +1,43 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-12-07T14:26:15+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Hydeout</title><subtitle>The &lt;a href=&quot;http://hyde.getpoole.com&quot; target=&quot;_blank&quot;&gt;Hyde&lt;/a&gt; theme for &lt;a href=&quot;http://jekyllrb.com&quot; target=&quot;_blank&quot;&gt;Jekyll&lt;/a&gt;, refreshed.</subtitle><author><name>Andrew Fong</name></author><entry><title type="html">트러블 슈팅 도커 - 도커 용어 정리</title><link href="http://localhost:4000/docker/2020/12/07/trouble-shooting-docker-term.html" rel="alternate" type="text/html" title="트러블 슈팅 도커 - 도커 용어 정리" /><published>2020-12-07T00:00:00+09:00</published><updated>2020-12-07T00:00:00+09:00</updated><id>http://localhost:4000/docker/2020/12/07/trouble-shooting-docker-term</id><content type="html" xml:base="http://localhost:4000/docker/2020/12/07/trouble-shooting-docker-term.html">&lt;h2 id=&quot;용어-정리&quot;&gt;용어 정리&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-12-07T15:08:02+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Hydeout</title><subtitle>The &lt;a href=&quot;http://hyde.getpoole.com&quot; target=&quot;_blank&quot;&gt;Hyde&lt;/a&gt; theme for &lt;a href=&quot;http://jekyllrb.com&quot; target=&quot;_blank&quot;&gt;Jekyll&lt;/a&gt;, refreshed.</subtitle><author><name>Andrew Fong</name></author><entry><title type="html">트러블 슈팅 도커 - 도커 용어 정리</title><link href="http://localhost:4000/docker/2020/12/07/trouble-shooting-docker-term.html" rel="alternate" type="text/html" title="트러블 슈팅 도커 - 도커 용어 정리" /><published>2020-12-07T00:00:00+09:00</published><updated>2020-12-07T00:00:00+09:00</updated><id>http://localhost:4000/docker/2020/12/07/trouble-shooting-docker-term</id><content type="html" xml:base="http://localhost:4000/docker/2020/12/07/trouble-shooting-docker-term.html">&lt;h2 id=&quot;용어-정리&quot;&gt;용어 정리&lt;/h2&gt;
 
+&lt;h4 id=&quot;from-&quot;&gt;FROM &lt;br /&gt;&lt;/h4&gt;
 &lt;ul&gt;
-  &lt;li&gt;FROM &lt;br /&gt;&lt;/li&gt;
   &lt;li&gt;이미지를 가져올 (pull) 할 베이스
     &lt;ul&gt;
-      &lt;li&gt;이미지에 대해 수행할 연산을 논리적으로 묶어서 레이어의 수를 최소화 하는 것이 좋다.&lt;/li&gt;
-      &lt;li&gt;예를 들어 애플리케이션의 의존성에 관련된 패키지를 설치할 때는 각각을 별도의 디렉티브로 지정하지 않고&lt;br /&gt;
-  하나의 RUN 디렉티브로 묶어서 한꺼번에 설치하는 것이 좋다.&lt;/li&gt;
+      &lt;li&gt;이미지에 대해 수행할 연산을 논리적으로 묶어서 레이어의 수를 최소화 하는 것이 좋다.
+        &lt;ul&gt;
+          &lt;li&gt;예를 들어 애플리케이션의 의존성에 관련된 패키지를 설치할 때는 각각을 별도의 디렉티브로 지정하지 않고 하나의 RUN 디렉티브로 묶어서 한꺼번에 설치하는 것이 좋다.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;이미지 정의
+    &lt;ul&gt;
+      &lt;li&gt;로컬 이미지&lt;/li&gt;
+      &lt;li&gt;도커 공용 레지스트리&lt;/li&gt;
+      &lt;li&gt;사설 레지스트리&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;FROM&lt;/code&gt; 지점에서 부터 빌드 작업 시작&lt;/li&gt;
+  &lt;li&gt;로컬 이미지 제작에 사용할 베이스 이미지 지정&lt;/li&gt;
+  &lt;li&gt;도커파일에 제일 먼저 나와야 한다.&lt;/li&gt;
+  &lt;li&gt;빌드 하는데 반드시 필요한 요소&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;maintainer&quot;&gt;MAINTAINER&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;빌드할 이미지의 제작자 명시&lt;/li&gt;
+  &lt;li&gt;옵션 값이므로 없어도 문제없음.&lt;/li&gt;
+  &lt;li&gt;FROM 뒤 어느곳에 둬도 상관 없다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;env&quot;&gt;ENV&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;도커 파일에 환경변수 설정&lt;/li&gt;
+  &lt;li&gt;ENV &lt;키&gt; &lt;값&gt;
+&lt;/값&gt;&lt;/키&gt;    &lt;ul&gt;
+      &lt;li&gt;ENV &lt;키1&gt;=&lt;값1&gt; &lt;키2&gt;=&lt;값2&gt;&lt;/값2&gt;&lt;/키2&gt;&lt;/값1&gt;&lt;/키1&gt;&lt;/li&gt;
+      &lt;li&gt;ENV “키1 값1 키2 값2” -&amp;gt; 빈 공간이 있을때는 &lt;code class=&quot;highlighter-rouge&quot;&gt;&quot; &quot;&lt;/code&gt; 으로 감싸줘야 한다.&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ul&gt;</content><author><name>Andrew Fong</name></author><summary type="html">용어 정리</summary></entry><entry><title type="html">트러블 슈팅 도커 - 도커 개념</title><link href="http://localhost:4000/docker/2020/12/04/trouble-shooting-docker.html" rel="alternate" type="text/html" title="트러블 슈팅 도커 - 도커 개념" /><published>2020-12-04T00:00:00+09:00</published><updated>2020-12-04T00:00:00+09:00</updated><id>http://localhost:4000/docker/2020/12/04/trouble-shooting-docker</id><content type="html" xml:base="http://localhost:4000/docker/2020/12/04/trouble-shooting-docker.html">&lt;p&gt;내가 &lt;code class=&quot;highlighter-rouge&quot;&gt;트러블 슈팅 도커&lt;/code&gt; 라는 책을 읽고 기억에 남는 부분을 기록하기 위한 포스팅이다.&lt;/p&gt;
@@ -39,15 +70,15 @@
 
     &lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/40929370/101312306-c5388e80-3896-11eb-84d5-b7f87cdc6711.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
 
-    &lt;p&gt;컨테이너를 이미지 레이어 방식으로 구성하면 매우 효율적이다.
-  이미지 =&amp;gt; 담긴 내용 참조할 때 이미지를 궝하는 레이어 중에서 해당레이어만으로 지정하면 됌.&lt;/p&gt;
+    &lt;p&gt;컨테이너를 이미지 레이어 방식으로 구성하면 매우 효율적이다.&lt;br /&gt;
+  이미지 =&amp;gt; 담긴 내용 참조할 때 이미지를 권하는 레이어 중에서 해당레이어만으로 지정하면 됌.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;docker build
     &lt;ul&gt;
       &lt;li&gt;소스 리포지터리는 루트로 지정하지 않는다.&lt;/li&gt;
       &lt;li&gt;docker build 명령은 도커파일이 담긴 디렉터리와 그 아래 디렉터리 전체를 빌드 컨텍스트(build Context)로 사용한다&lt;/li&gt;
       &lt;li&gt;루트 (/)를 소스 리포지리로 지정하면 하드디스크에 담긴 전체 내용이 도커 데몬으로 전달 됀다.&lt;/li&gt;
-      &lt;li&gt;대부분의 도커파일을 별도의 빈 디렉터리에 담아 두는것이 좋다.
+      &lt;li&gt;대부분의 도커파일을 별도의 빈 디렉터리에 담아 두는것이 좋다.&lt;br /&gt;
   ##### 명령을 명시하는 순서 &amp;amp; 문법 중요하다.&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
