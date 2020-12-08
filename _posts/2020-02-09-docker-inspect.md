@@ -20,6 +20,6 @@ docker run 실행후, 매개변수느 command full 볼려면 inspect 치고 컨�
 
 docker linke 공부하면서, 나의 redis 컨테이너 내부 ip가 궁금해서, 
 
-`docker inspect -f "{{.NetworkSettings.IPAddress}}" redis`
+docker inspect -f `'{{NetworkSettings.IPAddress}}'` redis
 쳐서 내부 ip 를 검색해서 알 수 있었다.
 ![image](https://user-images.githubusercontent.com/40929370/74098253-59dc3e00-4b59-11ea-8cb1-b144010cd1d7.png)

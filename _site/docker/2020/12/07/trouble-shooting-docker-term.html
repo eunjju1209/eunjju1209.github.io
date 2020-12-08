@@ -276,6 +276,12 @@
   <div class="post-body">
     <h2 id="용어-정리">용어 정리</h2>
 
+<p>이 책을 보다보면 이러한 용어가 많이 나오는데 이 용어에 대해서 먼저 정리를 해야될 것 같다.</p>
+<h5 id="인스트럭션">인스트럭션</h5>
+<ul>
+  <li><code class="highlighter-rouge">컴퓨터가 어느 정보를 가지고 어떠한 처리를 하는가를 나타낸다.</code></li>
+</ul>
+
 <h4 id="from-">FROM <br /></h4>
 <ul>
   <li>이미지를 가져올 (pull) 할 베이스
@@ -316,7 +322,99 @@
       <li>ENV “키1 값1 키2 값2” -&gt; 빈 공간이 있을때는 <code class="highlighter-rouge">" "</code> 으로 감싸줘야 한다.</li>
     </ul>
   </li>
+  <li>여러개의 환경변수 정의 할 때 하나의 인스트럭션으로 표현된다.
+    <ul>
+      <li>환경변수는 이미지에서 컨테이너 생성할 때 사용할 수 있다.</li>
+      <li><code class="highlighter-rouge">docker inspect &lt; 이미지 &gt;</code></li>
+      <li><code class="highlighter-rouge">docker run</code> 명령을 실행할 때, <code class="highlighter-rouge">--env &lt;키&gt; = &lt;값&gt;</code> 옵션 지정 하면 환경변수의 값 변경이 가능하다.</li>
+    </ul>
+  </li>
 </ul>
+
+<h4 id="run">RUN</h4>
+<ul>
+  <li>명령을 실행 해서 그 결과를 새로운 레이어로 생성한다.</li>
+  <li>RUN 인스트럭션으로 전달한 명령은 이 인스트럭션이 나오기 전에 있던 레이어에서 실행된다.
+<code class="highlighter-rouge">따라서 순서에 주의해야한다.</code></li>
+</ul>
+
+<p>** 주요 구문</p>
+
+<p><code class="highlighter-rouge">RUN &lt;명령&gt;</code></p>
+<ul>
+  <li>
+    <명령>으로 명시한 명령은 셸(`/bin/sh -c`)에서 실행된다.
+
+</명령>
+  </li>
+</ul>
+<p><code class="highlighter-rouge">RUN ["실행파일", "매개변수1", "매개변수2"]</code> <br />
+실행할 명령을 <code class="highlighter-rouge">실행파일</code> (절대경로) 과 <code class="highlighter-rouge">매개변수</code> 형태로 지정했다.</p>
+
+<p>베이스 이미지 /bin/sh 없을때 지정해야 한다.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>여기서 지정하는 실행 파일이 베이스 이미지에 존재하는 유일한 실행파일
+실행한 결과를 토대로 레이어 생성
+</code></pre></div></div>
+
+<p><code class="highlighter-rouge">RUN ["/bins/bash", "-c", "echo True!"]</code></p>
+
+<p><code class="highlighter-rouge">RUN &lt;명령1&gt; ; &lt;명령2&gt;</code></p>
+
+<p>이렇게 작성하면 여러개의 명령을 <code class="highlighter-rouge">;</code> 로 구분해 지정할 수 있다.<br />
+RUM 인스트럭션은 이렇게 지정된 명령을 한꺼번에 실행하며, 명령의 결과를 모아서 하나의 레이어로 빌드한다.</p>
+
+<p><code class="highlighter-rouge">도커 컨테이너의 파일 시스템과 컨텍스트에서 실행할 수 있는것 이라면 무엇이든 적을 수 있다.</code></p>
+
+<h4 id="add">ADD</h4>
+<ul>
+  <li>로컬파일 시스템이나 원격 URL에 있는 파일이나 디렉터리를 이미지로 복사할 때 사용된다.</li>
+</ul>
+
+<p><code class="highlighter-rouge">ADD &lt;소스파일&gt; &lt;목적지 디렉터리&gt;</code><br />
+여기서 <소스파일> 빌드 컨텍스트에 상대적인 위치로 지정한다.</소스파일></p>
+
+<p><code class="highlighter-rouge">목적지 디렉터리</code></p>
+<ul>
+  <li>현재 작업 디렉토리에 대한 상대경로로 지정해도 되고 절대경로로 지정해도 된다.</li>
+</ul>
+
+<p><code class="highlighter-rouge"> ADD &lt;파일1&gt; &lt;파일2&gt; &lt;파일3&gt; &lt;목적지&gt;</code><br />
+여러개의 파일을 복사할 수 있도록 지정할 수 있다.<br />
+이때 소스파일의 경로는 반드시 빌드 컨텍스트의 상대경로로 지정</p>
+
+<p><code class="highlighter-rouge">ADD &lt;소스디렉토리&gt; &lt;목적지 디렉토리&gt;</code><br />
+소스디렉토리 담긴 내용이 목적지에 복사 된다.
+<br /> 이때 파일 시스템의 메타데이터도 함께 복사된다
+<br /> <code class="highlighter-rouge">디렉토리는 복사되지 않는다.</code></p>
+
+<h4 id="cmd">CMD</h4>
+<ul>
+  <li>컨테이너가 실행될 때 디폴트 값을 전달하기 위한 용도로 주로 사용<br />
+이때, 디폴트 값으로 실행파일을 지정할 때는 반드시 <code class="highlighter-rouge">ENTRYPOINT</code> 인스트럭션도 함께 지정해야 한다.</li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> - docker run 명령에 대한 인자를 지정했다면, CMD 인스트럭션에 지정된 디폴트 값을 무시한다.
+ - 컨테이너를 구동할 때 마다 동일한 실행파일을 실행 시키고 싶다면, CMD &amp; ENTRYPOINT 조합하는것이 좋다.
+</code></pre></div></div>
+
+<h3 id="cmd-vs-run">CMD vs RUN</h3>
+<ul>
+  <li>RUN
+    <ul>
+      <li>이미지를 빌드하는 동안 실제로 명령을 실행한 후, 결과를 커밋해서 레이어 추가</li>
+    </ul>
+  </li>
+  <li>CMD
+    <ul>
+      <li>빌드하는 동안 실행 안함.</li>
+      <li>컨테이너에서 실행할 이미지를 지정하기만 한다.</li>
+      <li>도커파일은 하나의 CMD만 실행 가능하다.
+  (여러개 나오는 경우는 마지막의 CMD만 실행 가능하다.)</li>
+    </ul>
+  </li>
+</ul>
+
 
     
 

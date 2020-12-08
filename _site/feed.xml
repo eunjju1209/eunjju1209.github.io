@@ -1,4 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-12-07T15:08:02+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Hydeout</title><subtitle>The &lt;a href=&quot;http://hyde.getpoole.com&quot; target=&quot;_blank&quot;&gt;Hyde&lt;/a&gt; theme for &lt;a href=&quot;http://jekyllrb.com&quot; target=&quot;_blank&quot;&gt;Jekyll&lt;/a&gt;, refreshed.</subtitle><author><name>Andrew Fong</name></author><entry><title type="html">트러블 슈팅 도커 - 도커 용어 정리</title><link href="http://localhost:4000/docker/2020/12/07/trouble-shooting-docker-term.html" rel="alternate" type="text/html" title="트러블 슈팅 도커 - 도커 용어 정리" /><published>2020-12-07T00:00:00+09:00</published><updated>2020-12-07T00:00:00+09:00</updated><id>http://localhost:4000/docker/2020/12/07/trouble-shooting-docker-term</id><content type="html" xml:base="http://localhost:4000/docker/2020/12/07/trouble-shooting-docker-term.html">&lt;h2 id=&quot;용어-정리&quot;&gt;용어 정리&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-12-08T16:10:28+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Hydeout</title><subtitle>The &lt;a href=&quot;http://hyde.getpoole.com&quot; target=&quot;_blank&quot;&gt;Hyde&lt;/a&gt; theme for &lt;a href=&quot;http://jekyllrb.com&quot; target=&quot;_blank&quot;&gt;Jekyll&lt;/a&gt;, refreshed.</subtitle><author><name>Andrew Fong</name></author><entry><title type="html">트러블 슈팅 도커 - 도커 용어 정리</title><link href="http://localhost:4000/docker/2020/12/07/trouble-shooting-docker-term.html" rel="alternate" type="text/html" title="트러블 슈팅 도커 - 도커 용어 정리" /><published>2020-12-07T00:00:00+09:00</published><updated>2020-12-07T00:00:00+09:00</updated><id>http://localhost:4000/docker/2020/12/07/trouble-shooting-docker-term</id><content type="html" xml:base="http://localhost:4000/docker/2020/12/07/trouble-shooting-docker-term.html">&lt;h2 id=&quot;용어-정리&quot;&gt;용어 정리&lt;/h2&gt;
+
+&lt;p&gt;이 책을 보다보면 이러한 용어가 많이 나오는데 이 용어에 대해서 먼저 정리를 해야될 것 같다.&lt;/p&gt;
+&lt;h5 id=&quot;인스트럭션&quot;&gt;인스트럭션&lt;/h5&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;컴퓨터가 어느 정보를 가지고 어떠한 처리를 하는가를 나타낸다.&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h4 id=&quot;from-&quot;&gt;FROM &lt;br /&gt;&lt;/h4&gt;
 &lt;ul&gt;
@@ -40,6 +46,97 @@
       &lt;li&gt;ENV “키1 값1 키2 값2” -&amp;gt; 빈 공간이 있을때는 &lt;code class=&quot;highlighter-rouge&quot;&gt;&quot; &quot;&lt;/code&gt; 으로 감싸줘야 한다.&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
+  &lt;li&gt;여러개의 환경변수 정의 할 때 하나의 인스트럭션으로 표현된다.
+    &lt;ul&gt;
+      &lt;li&gt;환경변수는 이미지에서 컨테이너 생성할 때 사용할 수 있다.&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;docker inspect &amp;lt; 이미지 &amp;gt;&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;docker run&lt;/code&gt; 명령을 실행할 때, &lt;code class=&quot;highlighter-rouge&quot;&gt;--env &amp;lt;키&amp;gt; = &amp;lt;값&amp;gt;&lt;/code&gt; 옵션 지정 하면 환경변수의 값 변경이 가능하다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;run&quot;&gt;RUN&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;명령을 실행 해서 그 결과를 새로운 레이어로 생성한다.&lt;/li&gt;
+  &lt;li&gt;RUN 인스트럭션으로 전달한 명령은 이 인스트럭션이 나오기 전에 있던 레이어에서 실행된다.
+&lt;code class=&quot;highlighter-rouge&quot;&gt;따라서 순서에 주의해야한다.&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;** 주요 구문&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;RUN &amp;lt;명령&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;명령&gt;으로 명시한 명령은 셸(`/bin/sh -c`)에서 실행된다.
+
+&lt;/명령&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;RUN [&quot;실행파일&quot;, &quot;매개변수1&quot;, &quot;매개변수2&quot;]&lt;/code&gt; &lt;br /&gt;
+실행할 명령을 &lt;code class=&quot;highlighter-rouge&quot;&gt;실행파일&lt;/code&gt; (절대경로) 과 &lt;code class=&quot;highlighter-rouge&quot;&gt;매개변수&lt;/code&gt; 형태로 지정했다.&lt;/p&gt;
+
+&lt;p&gt;베이스 이미지 /bin/sh 없을때 지정해야 한다.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;여기서 지정하는 실행 파일이 베이스 이미지에 존재하는 유일한 실행파일
+실행한 결과를 토대로 레이어 생성
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;RUN [&quot;/bins/bash&quot;, &quot;-c&quot;, &quot;echo True!&quot;]&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;RUN &amp;lt;명령1&amp;gt; ; &amp;lt;명령2&amp;gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;이렇게 작성하면 여러개의 명령을 &lt;code class=&quot;highlighter-rouge&quot;&gt;;&lt;/code&gt; 로 구분해 지정할 수 있다.&lt;br /&gt;
+RUM 인스트럭션은 이렇게 지정된 명령을 한꺼번에 실행하며, 명령의 결과를 모아서 하나의 레이어로 빌드한다.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;도커 컨테이너의 파일 시스템과 컨텍스트에서 실행할 수 있는것 이라면 무엇이든 적을 수 있다.&lt;/code&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;add&quot;&gt;ADD&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;로컬파일 시스템이나 원격 URL에 있는 파일이나 디렉터리를 이미지로 복사할 때 사용된다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;ADD &amp;lt;소스파일&amp;gt; &amp;lt;목적지 디렉터리&amp;gt;&lt;/code&gt;&lt;br /&gt;
+여기서 &lt;소스파일&gt; 빌드 컨텍스트에 상대적인 위치로 지정한다.&lt;/소스파일&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;목적지 디렉터리&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;현재 작업 디렉토리에 대한 상대경로로 지정해도 되고 절대경로로 지정해도 된다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt; ADD &amp;lt;파일1&amp;gt; &amp;lt;파일2&amp;gt; &amp;lt;파일3&amp;gt; &amp;lt;목적지&amp;gt;&lt;/code&gt;&lt;br /&gt;
+여러개의 파일을 복사할 수 있도록 지정할 수 있다.&lt;br /&gt;
+이때 소스파일의 경로는 반드시 빌드 컨텍스트의 상대경로로 지정&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;ADD &amp;lt;소스디렉토리&amp;gt; &amp;lt;목적지 디렉토리&amp;gt;&lt;/code&gt;&lt;br /&gt;
+소스디렉토리 담긴 내용이 목적지에 복사 된다.
+&lt;br /&gt; 이때 파일 시스템의 메타데이터도 함께 복사된다
+&lt;br /&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;디렉토리는 복사되지 않는다.&lt;/code&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;cmd&quot;&gt;CMD&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;컨테이너가 실행될 때 디폴트 값을 전달하기 위한 용도로 주로 사용&lt;br /&gt;
+이때, 디폴트 값으로 실행파일을 지정할 때는 반드시 &lt;code class=&quot;highlighter-rouge&quot;&gt;ENTRYPOINT&lt;/code&gt; 인스트럭션도 함께 지정해야 한다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; - docker run 명령에 대한 인자를 지정했다면, CMD 인스트럭션에 지정된 디폴트 값을 무시한다.
+ - 컨테이너를 구동할 때 마다 동일한 실행파일을 실행 시키고 싶다면, CMD &amp;amp; ENTRYPOINT 조합하는것이 좋다.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;cmd-vs-run&quot;&gt;CMD vs RUN&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;RUN
+    &lt;ul&gt;
+      &lt;li&gt;이미지를 빌드하는 동안 실제로 명령을 실행한 후, 결과를 커밋해서 레이어 추가&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;CMD
+    &lt;ul&gt;
+      &lt;li&gt;빌드하는 동안 실행 안함.&lt;/li&gt;
+      &lt;li&gt;컨테이너에서 실행할 이미지를 지정하기만 한다.&lt;/li&gt;
+      &lt;li&gt;도커파일은 하나의 CMD만 실행 가능하다.
+  (여러개 나오는 경우는 마지막의 CMD만 실행 가능하다.)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;</content><author><name>Andrew Fong</name></author><summary type="html">용어 정리</summary></entry><entry><title type="html">트러블 슈팅 도커 - 도커 개념</title><link href="http://localhost:4000/docker/2020/12/04/trouble-shooting-docker.html" rel="alternate" type="text/html" title="트러블 슈팅 도커 - 도커 개념" /><published>2020-12-04T00:00:00+09:00</published><updated>2020-12-04T00:00:00+09:00</updated><id>http://localhost:4000/docker/2020/12/04/trouble-shooting-docker</id><content type="html" xml:base="http://localhost:4000/docker/2020/12/04/trouble-shooting-docker.html">&lt;p&gt;내가 &lt;code class=&quot;highlighter-rouge&quot;&gt;트러블 슈팅 도커&lt;/code&gt; 라는 책을 읽고 기억에 남는 부분을 기록하기 위한 포스팅이다.&lt;/p&gt;
 
 &lt;h3 id=&quot;도커-개념&quot;&gt;도커 개념&lt;/h3&gt;
@@ -78,9 +175,10 @@
       &lt;li&gt;소스 리포지터리는 루트로 지정하지 않는다.&lt;/li&gt;
       &lt;li&gt;docker build 명령은 도커파일이 담긴 디렉터리와 그 아래 디렉터리 전체를 빌드 컨텍스트(build Context)로 사용한다&lt;/li&gt;
       &lt;li&gt;루트 (/)를 소스 리포지리로 지정하면 하드디스크에 담긴 전체 내용이 도커 데몬으로 전달 됀다.&lt;/li&gt;
-      &lt;li&gt;대부분의 도커파일을 별도의 빈 디렉터리에 담아 두는것이 좋다.&lt;br /&gt;
-  ##### 명령을 명시하는 순서 &amp;amp; 문법 중요하다.&lt;/li&gt;
+      &lt;li&gt;대부분의 도커파일을 별도의 빈 디렉터리에 담아 두는것이 좋다.&lt;br /&gt;&lt;/li&gt;
     &lt;/ul&gt;
+
+    &lt;p&gt;##### 명령을 명시하는 순서 &amp;amp; 문법 중요하다.&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;</content><author><name>Andrew Fong</name></author><summary type="html">내가 트러블 슈팅 도커 라는 책을 읽고 기억에 남는 부분을 기록하기 위한 포스팅이다.</summary></entry><entry><title type="html">dockerfile 생성</title><link href="http://localhost:4000/docker/2020/11/19/docker-term.html" rel="alternate" type="text/html" title="dockerfile 생성" /><published>2020-11-19T00:00:00+09:00</published><updated>2020-11-19T00:00:00+09:00</updated><id>http://localhost:4000/docker/2020/11/19/docker-term</id><content type="html" xml:base="http://localhost:4000/docker/2020/11/19/docker-term.html">&lt;p&gt;php 7.3 버전 대에 있는 컨테이너가 필요해서, 내가 필요한 패키지들을 갖고 와서 컨테이너를 만들려고 한다.&lt;/p&gt;
 
